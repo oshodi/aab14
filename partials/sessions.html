@@ -1,0 +1,34 @@
+<div class="content sessions panel">
+    <div class="panel-body">
+        <h2>Sessions</h2>
+        <p>Agile and beyond is now accepting submissions for session talks.  Please submit yours today!</p>
+
+        <a href="#/Presenters" class="btn btn-primary btn-lg">Submit a proposal today!</a>
+
+
+
+
+        <h2>Archived Sessions</h2>
+        <a href="#" data-ng-click="getSessions($event)" eat-click>2012</a>
+        <a href="#" data-ng-click="getSessions($event)" eat-click>2013</a>
+        <!--<a href="#" data-ng-click="getSessions($event)" eat-click>2014</a>-->
+
+
+
+        <div class="list-group" data-ng-repeat="timeslot in sessionData">
+
+                <h4 class="list-group-item-heading">{{timeslot.time || timeslot.lable}}</h4>
+                <p data-ng-repeat="session in timeslot.sessions" class="list-group-item-text">
+                    <a href="#" class="list-group-item" eat-click data-ng-click="session.info = !session.info">
+                        {{session.title || session.sessionTitle}} - {{session.speaker || (session.firstName)}} {{session.lastName}}
+
+                    <span class="session-description" data-ng-class="{true: 'hidden', false:''}[!session.info] ">
+                        {{session.description || session.sessionAbstract}}
+                    </span>
+                    </a>
+
+                </p>
+
+        </div>
+    </div>
+</div>

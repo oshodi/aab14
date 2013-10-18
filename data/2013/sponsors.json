@@ -1,0 +1,110 @@
+[
+    {
+        "level": "Platinum",
+        "id": "0",
+        "sponsors": [
+            {
+                "name": "Pillar",
+                "image": "PillarBlue_BusinessAgility.png",
+                "url": "http://www.pillartechnology.com/",
+                "description": "Pillar is an industry leading Software Development firm thanks to their innovative agile approach, Speed to Value. Their employees work hard every day. Their customers are time and time again delighted by their creativity and dedication. By utilizing the varying expertise that their members provide, Pillar continues to push forward with service and quality that stands above the rest. abc"
+            },
+            {
+                "name": "VersionOne",
+                "image": "V1_logo_Subheadline-COLOR-150x26.png",
+                "url": "http://www.versionone.com/",
+                "description": "VersionOne is recognized by agile practitioners as the leader in agile management tools. By simplifying the process of planning and tracking agile software projects, we help development teams consistently deliver software faster. Since 2002, companies such as Adobe, Boeing, Intuit, Lilly, Lockheed Martin, Oppenheimer, Qualcomm, Sabre and Siemens have turned to VersionOne to help provide greater value to their customers."
+            },
+            {
+                "name": "LeanKit Kanban",
+                "image": "leankit-logo-color-150x36.png",
+                "url": "http://leankitkanban.com/",
+                "description": "Kanban is extremely effective in helping teams to collaborate better and deliver faster. A physical kanban approach (plain-old sticky notes on a whiteboard) is great for co-located teams, but not everyone has that luxury and even then it has some limitations. Even the most engaged CIO can't regularly visit hundreds of whiteboards. Your offshore team may have trouble moving stickys from 10 1/2 time zones away. And the metrics get kind of tedious to track manually. Most developers we know would rather code than count stickys. LeanKit is designed to be just as simple to use as physical kanban. If you put it up on a touchscreen in your team area, it practically IS physical kanban. But your boards are available from anywhere, including iPhones and iPads, updated in real-time. A slew of colors, icons, and avatars take your visual signalling to the next level. And the system tracks the metrics for you, providing analytics on bottlenecks, cycle time, work distribution, process efficiency, and variability â€“ for a single board or a whole company. It's kanban for the Agile enterprise."
+            },
+            {
+                "name": "Rally Software",
+                "image": "rally-standard-med-300x186.jpg",
+                "url": "http://www.rallydev.com/",
+                "description": "Rally Software is a leading global provider of cloud-based solutions for managing Agile software development. The Rally Agile application lifecycle management (ALM) platform transforms the way organizations manage the software development lifecycle by closely aligning software development and strategic business objectives, facilitating collaboration, increasing transparency and automating manual processes. Companies use Rally to accelerate the pace of innovation, improve productivity and more effectively adapt to rapidly changing customer needs and competitive dynamics. Rally supports 144,000 paid users and more than 1,000 customers, including 35 of the Fortune 100 companies."
+            }
+        ]
+    },
+    {
+        "level": "Exclusive Open Space Sponsor",
+        "id": "1",
+        "sponsors": [
+            {
+                "name": "SolutionsIQ",
+                "image": "solutionsiq-150x64.png",
+                "url": "http://www.solutionsiq.com/",
+                "description": "As a global provider of Agile transformation services, SolutionsIQ has a deep understanding of large-scale Agile change management. We offer a comprehensive solution to companies seeking to adopt Agile practices, from the team level to executive management. Our training, coaching, and management consulting services help companies navigate the complex cross-functional changes required for transition, and address their impact on corporate culture, governance, and release/portfolio management. Please visit our website to learn more."
+            }
+        ]
+    },
+    {
+        "level": "Exclusive Caffeine Cantina Sponsor",
+        "id": "1",
+        "sponsors": [
+            {
+                "name": "Cengage Learning",
+                "image": "cengage.learning.gold_.jpg",
+                "url": "http://www.cengage.com/",
+                "description": "Cengage Learning is a leading provider of innovative teaching, learning and research solutions for the academic, professional and library markets worldwide. The company’s products and services are designed to foster academic excellence and professional development, increase student engagement, improve learning outcomes and deliver authoritative information to people whenever and wherever they need it. Through the company’s unique position within both the library and academic markets, Cengage Learning is providing integrated learning solutions that bridge from the library to the classroom."
+            }
+        ]
+    },
+    {
+        "level": "Gold",
+        "id": "2",
+        "sponsors": [
+            {
+                "name": "RIIS",
+                "image": "riis.gold_.jpg",
+                "url": "http://riis.com/",
+                "description": "RIIS is a growing IT consulting firm, based in Southfield. At RIIS, we use technology to make business more efficient and leave our clients' businesses better for it. We are a company of independent thinkers with experience in executable requirements, continuous integration and Agile software development in the mobile space and on the web."
+            },
+            {
+                "name": "PMI",
+                "image": "PMI_Logo_Blue_RGB.jpg",
+                "url": "http://www.pmi.org/pmi-acp",
+                "description": "PMI is the world's largest project management member association, representing more than half a million practitioners in more than 185 countries. As a global thought leader and knowledge resource, PMI advances the profession through its global standards and credentials, collaborative chapters and virtual communities and academic research. And, now with more and more organizations applying Agile techniques in the management of successful projects, PMI has responded by launching Agile resources, such as the Community of Practice and Agile certification (PMI-ACP), to support practitioners who want to demonstrate to employers their level of professionalism in Agile practices of project management."
+            },
+            {
+                "name": "IBM",
+                "image": "ibmpos_blurgb-150x58.jpg",
+                "url": "http://www-01.ibm.com/software/rational/",
+                "description": "IBM Rational's agile solution includes agile practices, process improvement services, training and mentoring services, and products to help companies effectively adopt and tailor agile strategies to meet the unique challenges faced by software delivery teams. Rational software helps companies drive greater value from their software investments and deliver innovative products and services. It enables organizations to seize business opportunities, achieve precision in desired business outcomes, and execute with reduced risk and cost."
+            }
+        ]
+    },
+    {
+        "level": "Silver",
+        "id": "3",
+        "sponsors": [
+            {
+                "name": "Agile BPI",
+                "image": "agilebpi.png",
+                "url": "http://www.agilebpi.com",
+                "description": "At Agile BPI, LLC, we are passionate about bringing pride, joy, and common sense into the workplace. We do this while delivering bottom line results in days and weeks, not months and years! Companies are seeing significant improvements in their software delivery operations and with our agile approach to process improvement, they achieve similar results throughout the rest of the organization. After all, it doesn't make sense to deliver working software quicker if you aren't automating the right things! By combining agile software development with our business process improvement methodology, it is possible to achieve “organization agility” for a sustainable competitive advantage."
+            },
+            {
+                "name": "X by 2, Inc",
+                "image": "xby2.gold_-150x101.png",
+                "url": "http://www.xby2.com/",
+                "description": "X by 2 is a team of software architecture specialists, bilingual in business and technology, who set the standard for architecture excellence in the insurance and healthcare industries. Careers with X by 2 offer rapid growth, constant learning, and the immediate chance to make an impact. From day one at X by 2, you'll be working side-by-side with our senior architects, contributing to high-impact projects and meeting with our clients face-to-face. It's a true meritocracy – fueled by a diversity of backgrounds, cultures, and experiences."
+            },
+            {
+                "name": "ASPE, Inc",
+                "image": "SDLC-logo-sm.png",
+                "url": "http://www.aspe-sdlc.com/agileandbeyond",
+                "description": "ASPE - SDLC - Real skills. Real training. Real-world experience.\n\nASPE-SDLC is a training firm committed to providing you with the best skills, tools, and techniques to successfully transform complex business challenges into strategic systems capabilities. We provide real-world, unbiased, pragmatic training and consulting on all aspects of the software development life cycle. Our catalog includes courses in Agile Software Development, Project Management, Business Requirements & Analysis, and Software Testing. Our training courses are offered via public open enrollment classes taught in over 75 cities in North America or can be custom tailored to your needs through our highly regarded onsite (private) delivery practice. We also offer the industry's most realistic online training courses by utilizing Cisco WebEx's technology.\n\nOur courses incorporate real, hands-on experience from real professionals in all of our training courses in order to maximize the amount of knowledge and skills you acquire. Too often, students leave a course learning information, but not being able to apply it to real-world situations. Our goal is for you to be able to actualize the skills and tools you learn in the course and having no doubt that you can apply them within your organization on a daily basis."
+            },
+            {
+                "name": "Atomic Object",
+                "image": "atomicobject.jpg",
+                "url": "http://atomicobject.com/",
+                "description": "Atomic Object builds custom mobile, web, and embedded applications for startups, Fortune 500 companies and everyone in between. Our 40 person company was founded in Grand Rapids and has now opened a second office in Detroit. We were early pioneers and continue to innovate with agile software development practices such as pair programming and test-driven, iterative development processes. We are at the forefront of integrating user experience design with the agile development process. Our focus on software craftsmanship allows us to practice across many technical domains including Ruby on Rails, .Net, Clojure, CoffeeScript, Node.js, Java, etc."
+            }
+        ]
+    }
+]

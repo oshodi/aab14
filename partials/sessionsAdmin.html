@@ -1,0 +1,43 @@
+<div class="content register panel">
+    <div class="panel-body">
+        <h1>Admin Dashboard</h1>
+
+
+        <!-- dashboard -->
+        <div class="container" data-ng-show="!isLoggedIn">
+
+            <div class="col-lg-4">
+                <h5>Session Submissions</h5>
+                <ul>
+                    <li><a href="javascript:void(0)" data-ng-click="getSessions($event)" eat-click>Submitted: {{submittedSessions}}</a></li>
+                    <li>Accepted: {{acceptedSessions}}</li>
+                </ul>
+
+
+            </div>
+        </div>
+
+
+        <div id="session_table" data-ng-show="showSessions" data-ng-show="isAuthenticated">
+            <div class="list-group {{session.selected}}" data-ng-repeat="session in allSessions" data-ng-controller="itemController">
+                <div class="list-group-item" id="{{session.id}}">
+                    <div class="pull-right" data-ng-show="auth.isAuthenticated">
+                        <a href="#" class="glyphicon glyphicon-thumbs-up" data-vote="1" data-ng-click="voteSession($event,session)" eat-click >&nbsp;</a>
+                        <a href="#" class="glyphicon glyphicon-thumbs-down" data-vote="-1" data-ng-click="voteSession($event,session)" eat-click >&nbsp;</a>
+                    </div>
+                    <h4 class="list-group-item-heading">{{session.sessionTitle}}</h4>
+                    <pre class="list-group-item-text">{{session.sessionAbstract}}</pre>
+                    <a eat-click href="javascript:void(0)" data-ng-click="session.speakerInfo = !session.speakerInfo">Presenter Information <span class="glyphicon glyphicon-arrow-right"></span> </a>
+                    <div class="presenter-information alert alert-success" data-ng-class="{true: 'hidden', false:''}[!session.speakerInfo] ">
+                        <ul>
+                            <li data-ng-show="session.firstName"><strong>Presenter: </strong> {{session.firstName}} {{session.middleName}} {{session.lastName}}</li>
+                            <li data-ng-show="session.twitter"><strong>Twitter: </strong> <a href="https://www.twitter.com/{{session.twitter}}">{{session.twitter}}</a></li>
+                            <li data-ng-show="session.personalSite"><strong>Personal site: </strong><a href="http://{{session.personalSite}}">{{session.personalSite}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

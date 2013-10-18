@@ -1,0 +1,489 @@
+[
+        {
+            "time": "7:30am - 8:30am",
+            "id": "0",
+            "sessions": [
+                {
+                    "sid": 1,
+                    "pid": "0",
+                    "title": "Registration / Light Breakfast",
+                    "speaker": "Attrium",
+                    "description": "Register, Eat, and Network",
+                    "room": "Atrium",
+                    "updated": "false",
+                    "sched": "sched"
+                }
+            ]
+        },
+        {
+            "time": "8:30am - 8:45am",
+            "id": "1",
+            "sessions": [
+                {
+                    "sid": 2,
+                    "pid": "1",
+                    "title": "Opening & Introduction",
+                    "speaker": "Jay Aho",
+                    "description": "Welcome from conference chair",
+                    "room": "Grand Hall",
+                    "updated": true,
+                    "sched": "sched"
+                }
+            ]
+        },
+        {
+            "time": "8:45am - 9:45am",
+            "id": "2",
+            "sessions": [
+                {
+                    "sid": 3,
+                    "pid": "2",
+                    "title": "Opening Keynote",
+                    "speaker": "David J. Anderson",
+                    "description": "Even more than being faster, stronger, and better, decision makers and technical teams rely on predictability to succeed. Kanban delivers greater predictability to existing development methods for new project development as well as maintenance and support work. Organizations are using kanban to successfully match their capabilities to their expectations and needs for reliable configuration management, code quality, effective deployment and delivery cadence. How do they maintain the flexibility to navigate the ever-changing business environment and still predictably deliver critical work?\n\nBy using measurement, formulas and a scientific approach to change management, we can balance the factors of observed capability, staffing, and delivery targets to achieve predictable outcomes. By analyzing and understanding the nature of the work we do, we can allocate our efforts appropriately. By being methodical in our approach to continuous improvement, we can minimize disruption and achieve lasting benefit.",
+                    "room": "Grand Hall",
+                    "updated": "true",
+                    "sched": "sched"
+                }
+            ]
+        },
+        {
+            "time": "9:45am - 10:00am",
+            "id": "3",
+            "sessions": [
+                {
+                    "sid": 4,
+                    "pid": "3",
+                    "title": "Break",
+                    "speaker": "",
+                    "description": "",
+                    "room": "",
+                    "updated": "false",
+                    "sched": "sched"
+                }
+            ]
+        },
+        {
+            "time": "10:00am - 10:45am",
+            "id": "4",
+            "sessions": [
+                {
+                    "sid": 5,
+                    "pid": "4",
+                    "title": "Cucumber Acceptance Tests: Writing with the Future in Mind",
+                    "speaker": "Jeff Morgan",
+                    "description": "Acceptance Test Driven Development is a very popular topic these days. Everybody's excited about the idea of writing tests prior to development. And yet many teams run into difficulties as they attempt to implement this practice. It is all too easy to fall into the trap of writing acceptance tests that specify every keystroke and button click. Acceptance tests that are tightly coupled to the system under tests are the norm. Most software changes over time and our tests need to be able to adapt to that change. Join Cheezy as he shares the experience and insight he has gained while working with numerous teams implementing ATDD. Cheezy will take us on a journey of discovery where he demonstrates techniques to write Acceptance Tests that describe the essence of what they are specifying while hiding unnecessary details that obfuscate their meaning. Cheezy will also demonstrate how to structure and layer your test code to reduce brittleness and fragility so they will retain their usefulness well into the future.",
+                    "room": "Grand Hall 1",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 6,
+                    "pid": "4",
+                    "title": "Introduction to Kanban with the GetKanban Game",
+                    "speaker": "Chris Hefley",
+                    "description": "Learn the basics of Kanban in a 90-minute, hands-on simulation. Using the award-winning GetKanban game, we'll explore the principles and mechanics of using Kanban to manage your development process. You'll learn about WIP limits, how to spot bottlenecks, and how to calculate and interpret the basic Kanban metrics around lead time and variability.",
+                    "room": "203",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 7,
+                    "pid": "4",
+                    "title": "Hold the Sprinkles! Cupcakes, layers, and Agile UX design requirements",
+                    "speaker": "Carissa Demetris",
+                    "description": "Are you a business analyst working in an Agile environment? Ever feel like you're missing the big picture, focusing on iterations of details? Agile teams can often get caught up in a single product feature, iterating on that one feature to its most complete state. While this approach gives the user fully-fleshed functionality in one area, often the larger workflow is forgotten. We know that a complete and meaningful user experience is important for product success, but prioritizing requirements across the entire user workflow can be challenging.\n\nUsing the concepts from story mapping, this presentation will show how you can use a layered design approach to create the most valuable end-to-end user experience. Applied at this level, story mapping helps to identify the basic set of requirements for the workflow, and illustrates options for layering enhancements and embellishments. This technique builds on traditional use cases and workflows and adds a visual map to create a complete user experience with the right level of functionality.\n\nParticipants will hear examples of how this method has been applied at ProQuest, LLC and learn how to use this simple, effective method to start designing the end-to-end user experience in an Agile way. They will also take away tips for thinking agilely when designing their next project, and they will take away cupcakes.\n\nThis presentation is intended to be the second of two complementary presentations. The first is 'Better User Requirements through Story Mapping,' by Helene Gidley. Story Mapping works to define scope, timeframe, and content, while keeping the big picture in mind. Together these presentations will provide the attendee with practical experience and tools for improving requirements and design in their organizations.",
+                    "room": "105",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 8,
+                    "pid": "4",
+                    "title": "Get the Hell Out of Your Way! Making Self-Managing Teams a Reality!",
+                    "speaker": "Tricia Broderick",
+                    "description": "ScrumMasters, Project Managers, Lead Developers and Executives ‰ÛÒ Are your teams unengaged, lacking ownership and/or inefficient? If you are struggling with the lack of self-managing teams within your Agile implementation despite knowing the possible benefits and following the methods (Scrum, Kanban, etc), this session is for you. In it we will focus on getting to the root of what prevents self-managing productive teams, why it is so easy to fall into that trap and what you can change to break the cycle.",
+                    "room": "Grand Hall 2",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 9,
+                    "pid": "4",
+                    "title": "Workshop: Product Owner Safari",
+                    "speaker": "Elena Yatzeck",
+                    "description": "The Product Owner navigates a terrifying corporate landscape. Unlike the rest of the team, safely huddled together at pairing stations in the cozy team room, you need to sally forth with your pith helmet, your whip and your machete to wrangle 'the business.' Every day, you wrestle any number of constituencies into an orderly functional and prioritization scheme: market, customers, system users, executives, peers, and shareholders. You know enough to make all of the software value decisions, large and small. You know about return on investment and yet you can also user acceptance test all twenty-five pages of the elaborate widget transformation form without any missteps. But you are always available to answer questions for the team. It's amazing!\n\nThis workshop walks you through an entire simulated agile project in the boots of a Product Owner to equip you appropriately to handle this tricky role. Simulations will acquaint you with the basics, and for each project stage, you will also receive pointers for further reading. Weapons of choice will include concepts from Jim Highsmith's notion of the 'Value Triangle,' along with Lean Startup, Feature Injection, Behavior-Driven Development, XP Release Planning, and Continuous Delivery.\n\nNote that this safari provides you with basic training only‰ÛÒyou will need to prove these concepts out for yourselves at home to get really good at them.",
+                    "room": "106",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 10,
+                    "pid": "4",
+                    "title": "Value Driven: Using Value to Drive Agile",
+                    "speaker": "Matt Van Vleet",
+                    "description": "When organizations implement Agile they often struggle because Agile becomes the goal. Agile is a technique or better yet a philosophy not a goal. Creating Value (monetary or otherwise ) is what organizations strive to achieve. This presentation covers how to:\n\nModel what is valuable to your organization\nDefine opportunities and needs in terms of value\nMap your day to day work to value\nWith Value as your guide Agile will thrive.",
+                    "room": "Grand Hall 3",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 11,
+                    "pid": "4",
+                    "title": "Personal Kanban",
+                    "speaker": "Gerry Kirk",
+                    "description": "Are you or people in your organization feeling overwhelmed with their workload? Do they feel they are not getting the results they want from the actions they are taking? Does everything seem urgently important? This session is for individuals who want to create more value for their organizations and themselves through improved personal performance.",
+                    "room": "103",
+                    "updated": "true",
+                    "sched": "sched"
+                }
+            ]
+        },
+        {
+            "time": "10:45am - 11:00am",
+            "id": "5",
+            "sessions": [
+                {
+                    "sid": 12,
+                    "pid": "5",
+                    "title": "Break",
+                    "speaker": "",
+                    "description": "",
+                    "room": "",
+                    "updated": "false",
+                    "sched": "sched"
+                }
+            ]
+        },
+        {
+            "time": "11:00am - 11:45am",
+            "id": "6",
+            "sessions": [
+                {
+                    "sid": 13,
+                    "pid": "6",
+                    "title": "Metrics that Matter",
+                    "speaker": "Todd Kaufman",
+                    "description": "Visibility is a key benefit of agile teams. Stakeholders and product owners who are new to agile are consistently delighted by the frequent feedback they get from BVCs and CI servers. Then their team with an average velocity of 32 points has a 10 point week immediately before a release. Defects begin to creep up in the finished software even though code coverage is at 95%. How can the numbers LIE like this?\n\nIt takes us all awhile to realize that the numbers don't lie. We just don't use them in a way that makes sense. This talk will cover a number of metrics commonly used on agile and non-agile teams and we'll openly discuss what they are good for and where they are commonly misused.",
+                    "room": "Grand Hall 3",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 13,
+                    "pid": "6",
+                    "title": "Leadership and Transformation Panel",
+                    "speaker": "TBD",
+                    "description": "",
+                    "room": "Grand Hall 2",
+                    "updated": "false",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 14,
+                    "pid": "6",
+                    "title": "Lessons from the trenches: Applying a disciplined, scalable, agile approach for greater short and long term success",
+                    "speaker": "Paul Gorans",
+                    "description": "If you are having trouble implementing agile within your company, or having challenges scaling agile to an initiative larger than one Scrum team, then this presentation is for you!",
+                    "room": "105",
+                    "updated": "true",
+                    "sched": "sched"
+                }
+            ]
+        },
+        {
+            "time": "11:45am - 1:00pm",
+            "id": "7",
+            "sessions": [
+                {
+                    "sid": 15,
+                    "pid": "7",
+                    "title": "Lunch",
+                    "speaker": "",
+                    "description": "Lunch will be served in the atrium",
+                    "room": "Atrium",
+                    "updated": "true",
+                    "sched": "sched"
+                }
+            ]
+        },
+        {
+            "time": "1:00pm - 2:00pm",
+            "id": "8",
+            "sessions": [
+                {
+                    "sid": 16,
+                    "pid": "8",
+                    "title": "Keynote - Making The Entire Organization Agile",
+                    "speaker": "Steve Denning",
+                    "description": "Traditional management has failed. To deal with a radically different marketplace and workplace, today the whole organization must be focused on creating a stream of additional value to customers through continuous innovation and delivering it sooner. In short, delight the customer. This reinvention of management reflects in part an application of Agile/Scrum thinking to the whole organization.\n\nDrawing on his award-winning book, The Leader's Guide to Radical Management (Jossey-Bass, 2010), Steve Denning shows how the reinvention of management involves five fundamental shifts in terms of the firm's goal, the role of managers, the way work is coordinated, the shift from value to values and the shift in communications shift from command to conversation.",
+                    "room": "Grand Hall",
+                    "updated": "true",
+                    "sched": "sched"
+                }
+            ]
+        },
+        {
+            "time": "2:00pm - 2:15pm",
+            "id": "9",
+            "sessions": [
+                {
+                    "sid": 17,
+                    "pid": "9",
+                    "title": "Break",
+                    "speaker": "",
+                    "description": "",
+                    "room": "",
+                    "updated": "false",
+                    "sched": "sched"
+                }
+            ]
+        },
+        {
+            "time": "2:15pm - 3:00pm",
+            "id": "10",
+            "sessions": [
+                {
+                    "sid": 18,
+                    "pid": "10",
+                    "title": "Github and the Software Startup: Do what works and nothing else",
+                    "speaker": "Nathan Hughes",
+                    "description": "Github can solve problems the lean software startup faces. Using the Detroit Labs startup experience and real daily workflow, walk through workflows that allow a team to use first class development practices with zero operations support and a few dollars/month. Structured to follow the theoretical growth of software startup Detroit Labs, we'll talk about:\n\n\n- Day one: Github organizations and teams\n- Week one: Single developer development workflow\n- Week two: Github as a deploy device to your EC2 instances\n- Week three: Development team development workflow\n- Week four: Managing shared code libraries amongst Detroit Blabs developers",
+                    "room": "103",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 19,
+                    "pid": "10",
+                    "title": "A day in the life of agile",
+                    "speaker": "Lisa Ho & Tracy Beeson",
+                    "description": "This session will seek to give a glimpse into what an agile team could look like by chronicling a day in the life of various team members from a software design and development company that has been successfully practicing agile for 10+ years. We will simulate a day working at Menlo Innovations by showing attendees a snapshot of each hour of an actual day at Menlo using photos and brief explanations of how we practice agile. Attendees will gain insight into how to implement agile practices within their own organization across the various roles.",
+                    "room": "Grand Hall 3",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 20,
+                    "pid": "10",
+                    "title": "Badly drawn boy: Using simple object models to promote communication and understanding across agile teams",
+                    "speaker": "Carol Morton & Kealy Opelt",
+                    "description": "Projects fail when developers, analysts, designers and architects don't share a common understanding of the clients' business goals and end users' needs. Traditional object modeling, with all its arcane boxes, arrows and abstract relationships, is usually the province of developers and architects. What's needed is a way for a multifunctional team to create a common vocabulary. Why not rethink object modeling in an agile way? In 90 minutes, you will iterate through simple ways to visualize a shared understanding of key business elements and even have fun in the process.",
+                    "room": "105",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 21,
+                    "pid": "10",
+                    "title": "Why 5 beats 50: How to succeed with small teams",
+                    "speaker": "Justin Searls",
+                    "description": "Perhaps you've heard the old XP joke, \"if you can't fit a requirement on an index card, you should get a smaller card.\" The same counter-intuitive epiphany applies to team size, too: if a team of 10 is failing, a team of 20 may only succeed in failing more slowly. And yet, the first solution proscribed to struggling teams is usually to add more people to them. This talk will set out to challenge the line-of-thinking that tends to lead to that conclusion.\nAnd that's not all! In addition to team size and composition, we'll cover a lot of ground about setting teams up for success, including: the effects of high-pressure environments on cognition, the danger of letting metrics become targets, and how to incorporate non-technical roles effectively.",
+                    "room": "Grand Hall 2",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 22,
+                    "pid": "10",
+                    "title": "Writing Cleaner Tests",
+                    "speaker": "Matthew LaForest",
+                    "description": "So you understand Test Driven Development now, you have crossed the entryway from newbie in Agile land to a competent developer. Now you find new experiences:\n\n\n- When you come back to tests after a few weeks or a month it is difficult to understand what they are doing.\n- When you change code in one section of your program, there is a ripple effect through your test code, even within modules that should be unaffected.\n- Your tests seem brittle which you normally solve by just running them again.\n\nThis workshop will discuss methods for making your tests more readable, via tools such as Hamcrest and BDD Spec style frameworks. And it will demonstrate the benefits of using mocking frameworks, such as Mockito, to test in isolation to improve the durability of your tests.\n\nThis session will require a working Java installation, and a web browser, for Javascript testing. The samples will be available on Github.",
+                    "room": "203",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 23,
+                    "pid": "10",
+                    "title": "Agile Pathologies: Backyards of Agile Shops",
+                    "speaker": "Rajeev Singh",
+                    "description": "Agile adoptions usually fail at first. You know something is broken in your team, but not sure where and what. You often don't know what made you successful. Worse yet, success from one team doesn't replicate to another. If you are a manager, or want to be one, and have ever wondered if Agile is a fit for you or your organization, this session is meant for you. Learn from stories of chaos, ineffective product owner, ineffective Agile coaches, and disheartened teams. Rajeev shares his war stories of emotional and behavioral problems he has observed on teams. He creates awareness around your pathologies and discusses specific amendments. Understand a new perspective on comprehending the ecosystem required for agility. Rajeev shares his secret sauce for success on his client engagements at ThoughtWorks.",
+                    "room": "106",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 24,
+                    "pid": "10",
+                    "title": "Power Up Your Agile Planning and Analysis: Deliver Value Via Structured Conversations",
+                    "speaker": "Ellen Gottesdiener",
+                    "description": "For continual value delivery, stakeholders must partner to develop a shared understanding of the product needs. How does this partnership gain a focused yet holistic understanding of the highest-value requirements? How do they effectively plan the project so that the delivery team builds the right product, at the right time? Learn how to go beyond user stories and engage in \"structured conversations\" to explore and evaluate product requirements and clearly identify what to build and when. You'll use these conversations to fuel your daily work, groom your backlog, and quickly analyze requirements and allocate them to delivery cycles.",
+                    "room": "Grand Hall 1",
+                    "updated": "true",
+                    "sched": "sched"
+                }
+            ]
+        },
+        {
+            "time": "3:00pm - 3:15pm",
+            "id": "11",
+            "sessions": [
+                {
+                    "sid": 25,
+                    "pid": "11",
+                    "title": "Break",
+                    "speaker": "",
+                    "description": "",
+                    "room": "",
+                    "updated": "false",
+                    "sched": "sched"
+                }
+            ]
+        },
+        {
+            "time": "3:15pm - 4:00pm",
+            "id": "12",
+            "sessions": [
+                {
+                    "sid": 26,
+                    "pid": "12",
+                    "title": "Practice to Learn: Using Code Katas to Explore Software Development",
+                    "speaker": "James Hood",
+                    "description": "Code Katas help develop habits, but they can also be a familiar solution applied to an unfamiliar toolset. In this ninety-minute hands-on session participants will have an opportunity to dissect a well-known code kata and then use that kata to test drive a number of different languages. Through this experience we expect the participants to gain a better understanding of each of the languages and what it would take to begin work in each ‰ÛÓ including how to start writing tests in the language. The class is a fast-paced ride through many languages focusing on fast feedback and learning through the use of a common, repeatable problem domain.",
+                    "room": "203",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 27,
+                    "pid": "12",
+                    "title": "Hands On Agile Immersion",
+                    "speaker": "Damon Poole",
+                    "description": "This introduces Agile to the whole team and is for anybody involved in development: management, product managers, business analysts, designers, developers, testers, DBAs, technical writers, project managers, etc. You'll form into cross-functional teams, pick your own software product to build, and become completely immersed in the principles and practices of Agile via a series of whole team hands-on exercises. Bring an existing team or join a team during the session.\n\nTopics covered include user stories, story points, Planning Poker, cross functional and self-organizing teams, backlogs, iterations, and release planning. Not only will you have an eye-opening Agile experience, this is also a great team-building exercise.",
+                    "room": "Grand Hall 3",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 28,
+                    "pid": "12",
+                    "title": "Emergent Patterns for Kanban Systems in IT Operations",
+                    "speaker": "Dominica DeGrandis",
+                    "description": "Early adopters of Kanban in the IT services realm are designing systems which consider high levels of interrupt driven work and big differences in task size. This work doesn't typically drive revenue and thus creates unique challenges. Add to that, the conundrum of handling dependencies, distributed teams, and shared resources, a kanban design for IT Ops may look very different than a Kanban design for development. This talk covers real world examples from IT teams working to optimize the whole of their organization.",
+                    "room": "103",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 29,
+                    "pid": "12",
+                    "title": "You Can't Spell Agile Testing without ET",
+                    "speaker": "Matt Barcomb",
+                    "description": "Do you ever get a creeping feeling there is more to agile development than test automation and clean code? Have you wondered about broader quality considerations beyond the stories cards? Have you tried to use structured exploratory testing to better inform quality issues, but struggled with how it works in an agile context? If so, then what you need is a refreshing aromatic blend of exploratory and agile approaches!\n\nMatt Barcomb and Lanette Creamer share their ideas, experiences and approaches on how agile teams can visualize quality both at and beyond the story level as well as share the results of testing outcomes with stakeholders. Learn what exploratory charters are and how to make them adaptive test ideas. Discover how agile teams can integrate exploratory testing techniques in an iterative incremental way, syncing to changes in the product dynamically. Finally, take away techniques for involving the whole team in setting priorities for holistic quality initiatives.",
+                    "room": "105",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 30,
+                    "pid": "12",
+                    "title": "Play Hard: Innovation Games&reg;",
+                    "speaker": "Gerry Kirk",
+                    "description": "Two of the most important decisions an organization makes are:\n\n\nDeciding what features to deliver\nDeciding when to deliver a feature\nDelivering the wrong features too early can lead to failure. Delivering them too late, or for the wrong market segment, can lead to a competitive disadvantage and lost sales. In this hands-on workshop, Gerry will show you how to use collaborative play with customers to discover how they think and what they value. Gerry also explores using this information to effectively prioritize and release the features customers want ‰ÛÒ when they want them.",
+                    "room": "Grand Hall 2",
+                    "updated": "true",
+                    "sched": "sched"
+                }
+            ]
+        },
+        {
+            "time": "4:00pm - 4:15pm",
+            "id": "13",
+            "sessions": [
+                {
+                    "sid": 31,
+                    "pid": "13",
+                    "title": "Break",
+                    "speaker": "",
+                    "description": "",
+                    "room": "",
+                    "updated": "false",
+                    "sched": "sched"
+                }
+            ]
+        },
+        {
+            "time": "4:15pm - 5:00pm",
+            "id": "14",
+            "sessions": [
+                {
+                    "sid": 32,
+                    "pid": "14",
+                    "title": "Agile User Studies: Affordable, Iterative, Scalable, Team-Based User Feedback",
+                    "speaker": "Derek Poppink",
+                    "description": "Most Agile practitioners would agree that regular customer feedback is essential, but many teams struggle to obtain that information. Traditional usability tests seem too abstract, expensive, and time consuming. I will present a methodology that allows any team or practitioner to conduct affordable, iterative, team-based user studies. I will also share the result of applying this methodology at Cengage Learning over two years, multiple Agile teams, and dozens of projects.",
+                    "room": "Grand Hall 1",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 33,
+                    "pid": "14",
+                    "title": "Fast feedback flows throw better Build pipelines",
+                    "speaker": "Sudhindra Rao",
+                    "description": "As projects near the delivery date deployment on production machines and making them work in those environments starts becoming a time sink. Also late discoveries of production readiness issues only adds to further indiscipline. Continuous Integration builds help in failing fast and give the ability to adapt.\n\nWell designed build pipelines can greatly improve how a team is armed in dealing with surprises. But figuring out the right pipeline stages is very context specific. Various factors : team size, platform, technology, size of the application, test coverage, application response speed, etc. affect how a pipeline behaves. Hence build pipelines have to be tuned with these factors in mind. This talk will focus on how such constraints pose challenges and ways we have overcome them in the past. In this talk I will discuss few different cases of applications and how their pipelines were designed to allow the team function to their best ability.\n\nDepending on available time I should be able to cover pipelines at ‰ÛÒ a large healthcare system, a large hosting service provider, an ebay like bidding site, an iphone service to help with elections, a service integration at a large retailer, at the least.",
+                    "room": "103",
+                    "updated": "true",
+                    "sched": "sched"
+                },
+                {
+                    "sid": 34,
+                    "pid": "14",
+                    "title": "The Floor is Lava: Develop Your Awesome Through Improv",
+                    "speaker": "Nathan Hughes",
+                    "description": "As software professionals we are expected to get better at what we know, and learn what we don't. Opportunities abound for developing our technical chops. But what if we need help in our softer skills? Or to unlearn habits that hold us back?\n\nIn this talk Nathan Hughes will share his insight on why we often struggle with the non-code side of our worlds, and the surprising lessons he learned while learning and performing improv.",
+                    "room": "105",
+                    "updated": "true",
+                    "sched": "sched"
+                }
+            ]
+        },
+        {
+            "time": "5:00pm - 5:15pm",
+            "id": "15",
+            "sessions": [
+                {
+                    "sid": 35,
+                    "pid": "15",
+                    "title": "Break",
+                    "speaker": "",
+                    "description": "",
+                    "room": "",
+                    "updated": "false",
+                    "sched": "sched"
+                }
+            ]
+        },
+        {
+            "time": "5:15pm - 6:00pm",
+            "id": "16",
+            "sessions": [
+                {
+                    "sid": 36,
+                    "pid": "16",
+                    "title": "Retrospective",
+                    "speaker": "",
+                    "description": "",
+                    "room": "Grand Hall",
+                    "updated": "true"
+                }
+            ]
+        },
+        {
+            "time": "6:00pm - ??",
+            "id": "17",
+            "sessions": [
+                {
+                    "sid": 37,
+                    "pid": "17",
+                    "title": "Afterglow: Bailey's sponsored by TekSystems",
+                    "speaker": "",
+                    "description": "",
+                    "room": "Bailey's",
+                    "updated": "true",
+                    "sched": "sched"
+                }
+            ]
+        }
+]

@@ -1,0 +1,448 @@
+[
+    {
+        "time": "WIFI Information",
+        "id": 40,
+        "sessions": [
+            {
+                "sid": 1,
+                "time": "All Day",
+                "title": "Wifi Details",
+                "copresenter": "",
+                "speaker": "ID: AAB2013",
+                "description": "SSID: AAB2013, Password: AGILE",
+                "pid": 0,
+                "room": "PW: AGILE2013"
+            }
+        ]
+    },
+    {
+        "time": "7:30 AM - 8:30 AM",
+        "id": 50,
+        "sessions": [
+            {
+                "sid": 1,
+                "time": "7:30 AM - 8:30 AM",
+                "title": "Registration / Breakfast / Sponsors ",
+                "copresenter": "",
+                "speaker": " ",
+                "description": "Continental Breakfast and Networking",
+                "pid": 0,
+                "room": "Great Lakes Center"
+            }
+        ]
+    },
+    {
+        "time": "8:30 AM - 8:45 AM",
+        "id": 0,
+        "sessions": [
+            {
+                "sid": 1,
+                "time": "8:30 AM - 8:45 AM",
+                "title": "Conference Open",
+                "copresenter": "",
+                "speaker": " ",
+                "description": "Continental Breakfast and Networking",
+                "pid": 0,
+                "room": "Grand Ball Room"
+            }
+        ]
+    },
+    {
+        "time": "8:45 AM - 9:45 AM",
+        "id": 1,
+        "sessions": [
+            {
+                "sid": 2,
+                "time": "8:45 AM - 9:45 AM",
+                "title": "Keynote - My Favorite Anti-Patterns: 5 Hilarious (and Depressingly Common) Software Project Management Missteps",
+                "copresenter": "",
+                "speaker": "Jim Benson",
+                "description": "Jim Benson, long-time Agilist and creator of Personal Kanban, will discuss five anti-patterns he sees with nearly every software development team and organization he works with. You will recognize them all. These universal anti-pattern stymie our productivity, efficiency, and effectiveness as software professionals.\\n\\nPersonal Kanban has two core practices derived from the big-K Kanban (visualize and limit work-in-progress) and, like its enterprise sibling, Personal Kanban can be your improvement engine. You can apply it to achieve clarity in meetings and conversations, to avoid bottlenecks in improvement initiatives, to handle tasks during the sprint, to guide your professional development, and to deal with other types of demand. This session will give you both an explanation and hands-on experience with Personal Kanban.",
+                "pid": 0,
+                "room": "Grand Ball Room"
+            }
+        ]
+    },
+    {
+        "time": "10:00 AM - 4:45 PM",
+        "id": 60,
+        "sessions": [
+            {
+                "sid": 60,
+                "time": "10:00 AM - 4:45 PM",
+                "title": "Open Spaces",
+                "copresenter": "",
+                "speaker": "Sponsor: Solutions IQ",
+                "description": "This is a unique opportunity to create your own sessions that are tailored to your specific needs, interests and expertise",
+                "pid": 0,
+                "room": "Great Lakes Center"
+            }
+        ]
+    },
+    {
+        "time": "10:00 AM - 10:45 AM",
+        "id": 2,
+        "sessions": [
+            {
+                "sid": 3,
+                "time": "10:00 AM - 10:45 AM",
+                "title": "Mythbusting coaching and mentoring!",
+                "copresenter": "",
+                "speaker": "Tricia Broderick",
+                "description": "Who hasn’t played a game of corporate bingo? Well, if we did start playing Agile bingo, coaching and mentoring would definitely be a spot. Despite these roles existing long before Agile, the volume of myths associated to them is staggering. Join me as we unveil the truth behind the fundamental myths of coaching and mentoring within the Agile community.",
+                "pid": 0,
+                "room": "Room 2"
+            },
+            {
+                "sid": 4,
+                "time": "10:00 AM - 10:45 AM",
+                "title": "Slaying the myths of agile.",
+                "copresenter": "",
+                "speaker": "Daniel Davis",
+                "description": "This is a talk covering the top myths of agile, focused on the things people tend to believe agile is going to fix… but doesn’t. Each myth is broken down to better explain it, identify it’s Agile aspects and correlate it with traditional terms. We’ll be highlighting why agile does not directly fix the problem auto-magically, but most often does have practical ways to bring it to light faster, solve it more effectively or even avoid the issue all together.",
+                "pid": 1,
+                "room": "Room 5"
+            }
+        ]
+    },
+    {
+        "time": "10:00 AM - 11:45 AM",
+        "id": 3,
+        "sessions": [
+            {
+                "sid": 5,
+                "time": "10:00 AM - 11:45 AM",
+                "title": "Life is a Highway: Find the Fast Lane",
+                "copresenter": "",
+                "speaker": "Gerry Kirk",
+                "description": "Are you or people in your organization feeling overwhelmed with their workload? Do they feel they are not getting the results they want from the actions they are taking? Does everything seem urgently important? Despite our best intentions, life has a way of becoming complicated. People, tasks, responsibilities, deadlines, and even recreation all compete for our attention. Like a freeway during rush our, the human brain slows to a crawl with the stress of juggling multiple priorities.\n\nThis session will introduce you to Personal Kanban, which is based on Lean principles and has proved to be a valuable tool for personal effectiveness and improvement. The effectiveness comes not from machine-like productivity and utilization, but from creating value and doing the right thing at the right time.\n\nPersonal Kanban has two core practices derived from the big-K Kanban (visualize and limit work-in-progress) and, like its enterprise sibling, Personal Kanban can be your improvement engine. You can apply it to achieve clarity in meetings and conversations, to avoid bottlenecks in improvement initiatives, to handle tasks during the sprint, to guide your professional development, and to deal with other types of demand. This session will give you both an explanation and hands-on experience with Personal Kanban.",
+                "pid": 0,
+                "room": "Room 1"
+            },
+            {
+                "sid": 6,
+                "time": "10:00 AM - 11:45 AM",
+                "title": "Fly-weight Agile: Just enough process to get rid of\n",
+                "copresenter": "Diane Zajac-Woodie",
+                "speaker": "Matt Barcomb",
+                "description": "Agile claims to value “individuals and interactions over processes and tools”, but there sure does seems to be a lot of dogmatic, process-oriented “agile” out there! Sure, process is important, it provides consistency and repeatability for teams but those processes should also help support those individuals…and their interactions.\n\nThis session will briefly review many of the common lean and agile processes and technical practices typically implemented. Next, attendees will be shown various ways of combining practices from each to create a light-weight system that can be adapted to almost any team environment using hands-on activities to illustrate how. Finally, the session will close by discussing common patterns that would allow a team to further simplify, and in some cases even eliminate, even these light-weight practices leaving only a Fly-weight process behind.",
+                "pid": 1,
+                "room": "Room 4"
+            },
+            {
+                "sid": 7,
+                "time": "10:00 AM - 11:45 AM",
+                "title": "Managing Responses to Change",
+                "copresenter": " Andrew Annet",
+                "speaker": "Jason Litte",
+                "description": "People often cite “resistance to change” as a reason for Agile failure. Resistance is a response and I don’t believe people actively ‘resist’ change. A handful of surveys since 1996 show only 30% of change initiatives are successful so the stuggles the Agile community faces isn’t new. In this session I will describe how Agile practitioners can merge with Change Management practitioners using Lean Change as a method for managing responses to change.",
+                "pid": 2,
+                "room": "Room 5"
+            },
+            {
+                "sid": 8,
+                "time": "10:00 AM - 11:45 AM",
+                "title": "You Are Outlining, You Just Don't Know it Yet\n",
+                "copresenter": "",
+                "speaker": "Patrick Welsh",
+                "description": "The Art of Software Outlining\n\nTo outline, transitive verb, is defined by Merrium Webster as “to indicate the principal features or different parts of” any body of information.\n\nAny writer of large texts knows that this outlining activity is central to how you organize a hierarchy of material and their titles. Much of the most brain-bending work in writing large sets of texts (for example) is continuously deciding what things deserve to be Volumes, Chapters, Sections, Subsections, and so on.\n\nWhen you write software, you are constantly outlining, whether you know it or not. Whether you are working at the level of a Gherkin DSL, a project, a package/gem/assembly, a class, a method, or whatever, these are the atomic outline operations you are constantly performing, based on your “feel” for the quality and SRP-compliance of each unit:\n\ndeleting,\nrenaming,\nsplitting,\ncombining,\npromoting,\ndemoting\n\nLet’s look together out how “outlining” as a way to think about continuous structural refactoring, at any level of a software hierarchy, is a broadly useful metaphor. We’ll be looking at rough requirements text, Gherkin Given When Then scenarios, and Java project structures (projects, source, folders, packages, classes, methods). We will outline till we drop.",
+                "pid": 3,
+                "room": "Room 7"
+            },
+            {
+                "sid": 9,
+                "time": "10:00 AM - 11:45 AM",
+                "title": "Amplify your Agile Analysis",
+                "copresenter": "",
+                "speaker": "Paul Reed",
+                "description": "Analysis models are powerful for eliciting and confirming products needs(requirements). Analysis models—both visual (diagrammatic) and textual (tables or descriptive text) help agile teams powerfully clarify needs, expose misunderstanding and conflicts and—especially when combined with real examples—enable you to specify testable requirements. That’s not all. They also unleash creativity, provide the big picture, and powerfully engage your business partners. Multi‐modeling ‐ using two or more models together – compounds their value.\n\nJoin Paul in crafting a subset of interrelated models that provide powerful insights for analyzing product needs so you can amplify how you obtain and retain a shared understand of needs.",
+                "pid": 4,
+                "room": "Room 3"
+            }
+        ]
+    },
+    {
+        "time": "11:00 AM - 11:45 AM",
+        "id": 4,
+        "sessions": [
+            {
+                "sid": 11,
+                "time": "11:00 AM - 11:45 AM",
+                "title": "A hands-on introduction to Exploratory Testing",
+                "copresenter": "",
+                "speaker": "Matt Heusser",
+                "description": "Between scripted (documented, slow, expensive, boring) testing and automated testing lies a third choice – Exploratory Testing. Often mis-understood and sometimes done poorly, Exploratory Testing involves simulataneous test design, execution, reporting and learning. In this hands-on introduction, attendees will bring a laptop, pair with a buddy, hear a little theory, and then get to testing. We’ll have some more theory, then test a second application. Then we’ll conduct a brief retrospective to talk about how these techniques can combine to improve coverage of the application, reducing time-to-done, and allow teams to compress testing into iterations, sprints, and other timeboxes.",
+                "pid": 0,
+                "room": "Room 2"
+            },
+            {
+                "sid": 12,
+                "time": "11:00 AM - 11:45 AM",
+                "title": "Teamwork Ain't Always Easy",
+                "copresenter": "",
+                "speaker": "Michael \"Doc\" Norton",
+                "description": "Teamwork ain’t always easy. From meetings where everybody has something to say but nothing gets done to poor decisions being made because the most senior or most forceful team member won the argument; sometimes you long for the days of high-walled cubicles and lone ranger coding. Long no more.\n\nIn this workshop, you will learn about two simple techniques that drastically improve a team’s ability to work together toward common goals with less conflict and more genuine collaboration.\n\nSound like a group hug session? Only if that’s what your team decides to do. This is a hands on, practical approach to common problems teams of all sizes face.",
+                "pid": 1,
+                "room": "Room 5"
+            }
+        ]
+    },
+    {
+        "time": "11:45 AM - 1:00 PM",
+        "id": 5,
+        "sessions": [
+            {
+                "sid": 13,
+                "time": "11:45 AM - 1:00 PM",
+                "title": "LUNCH",
+                "copresenter": "",
+                "speaker": "",
+                "description": "",
+                "pid": 0,
+                "room": "Great Lakes Center"
+            }
+        ]
+    },
+    {
+        "time": "1:00 PM - 1:45 PM",
+        "id": 6,
+        "sessions": [
+            {
+                "sid": 14,
+                "time": "1:00 PM - 1:45 PM",
+                "title": "Lean Change - Using Lean Startup for Organizational Change",
+                "copresenter": " Gerry Kirk",
+                "speaker": "Jason Little",
+                "description": "Lean Startup is best used in situations where there is high uncertainty. Organizational Change is highly un-certain which is why so many organizations struggle with Agile Transformation or Adoption.\n\nIn this session we’ll show how we’re applying Lean Startup principles to organizational change and mixing in ideas from classic change management to run a medium to large organizational transformation.\n\nLean Change focuses on ‘Minimum Viable Changes’ and involves the change recipients to validate the approach to the change before implementing it.",
+                "pid": 0,
+                "room": "Room 6"
+            },
+            {
+                "sid": 17,
+                "time": "1:00 PM - 1:45 PM",
+                "title": "Keeping it real. Facts that begin serious discussions.",
+                "copresenter": "",
+                "speaker": "Bill Wagner",
+                "description": "One of the most difficult challenges for any agile team is to provide measurements and metrics for business stakeholders that reflect reality rather than wishful thinking. Teams and stakeholders crave good news. Self-reporting can lead to subconscious inflation.\n\nThis session explores different metrics that we’ve used to engage business stakeholders in conversations about project status, changing requirements and priorities, and the effect of those changes on timelines and budgets. These discussions show stakeholders how the team’s understanding of the requirements changes as the project progresses, how requirements have grown, and what actions may help keep runaway projects in check.\n\nI’ll show you the tools I use, the metrics that we capture and how we use those to suggest actions.\n\nWhen you’re having an honest conversation, driven by the cold hard facts, both stakeholders and developers are motivated to cooperate on features and compromises. By doing so, you can deliver meaningful applications while costs are mitigated.",
+                "pid": 3,
+                "room": "Room 2"
+            },
+            {
+                "sid": 15,
+                "time": "1:00 PM - 1:45 PM",
+                "title": "Pair Coaching: How you can coach, encourage and nurture your team toward a healthy pairing practice",
+                "copresenter": "",
+                "speaker": "Angela Harms",
+                "description": "Jerry Weinberg says “no matter what the problem is, it’s always a people problem.” This is especially true for pairing. You can have a perfect CI setup, big monitiors, extra keyboards, and fast tests, but this won’t fix the most interesting pairing challenges. (Like when you wonder what to say when your pair is hunched over the keyboard, or when you know that your pair is lost, but it’s easier not to bring it up…) When you’re in the coaching role, learn what you can do to overcome the barriers and create real pairing flow.",
+                "pid": 1,
+                "room": "Room 5"
+            },
+            {
+                "sid": 16,
+                "time": "1:00 PM - 1:45 PM",
+                "title": "Kanban: Myths, Legends, and Utter Nonsense",
+                "copresenter": "",
+                "speaker": "Chris Hefley",
+                "description": "Kanban is one of the hottest topics in the Agile world today. Thousands of teams the world over have benefited from using Kanban, applying it to all kinds of work, including using it to augment and improve their existing agile implementations.\n\nUnfortunately, it has also become a magnet for misunderstanding, misinformation, and outright falsehood. Kanban isn’t just the latest in a string of agile methodologies. It’s not just for advanced teams or maintenance teams. It’s not an either-or-choice between Kanban and Scrum, and it’s not turning software development into a factory.\n\nToo many people have been missing out on the benefits of Kanban because of all this strife and division. In this session we’ll have a genuine authority on Kanban explain how we got here, and how to see through the fog of misinformation to how your organization can realize the benefits of adding a little Kanban to whatever it is you already do.\n\nChris Hefley is a founding fellow of the Lean Systems Society, a Lean-Kanban University certified Kanban Coaching Professional, a Brickell Key Award nominee, and the CEO of LeanKit, the leader in Kanban software.",
+                "pid": 2,
+                "room": "Room 7 "
+            }
+        ]
+    },
+    {
+        "time": "1:00 PM - 2:45 PM",
+        "id": 7,
+        "sessions": [
+            {
+                "sid": 10,
+                "time": "10:00 AM - 11:45 AM",
+                "title": "Let your WHO and WHY drive you WHAT and HOW",
+                "copresenter": "Renee Pinter",
+                "speaker": "Carol Treat Morton",
+                "description": "Whether you are working on a long-range high-budget project or a quick turn-around engagement, end-user adoption is a key business driver. Regardless of your resources, how can you insure that the users’ needs will be met? This hands-on workshop session is designed to help you master the tools to make those critical user-focused decisions. You’ll practice using personas and goals as tools to prioritize feature sets and drive critical design decisions that maximize value.",
+                "pid": 5,
+                "room": "Room 1"
+            },
+            {
+                "sid": 18,
+                "time": "1:00 PM - 2:45 PM",
+                "title": "Break Down the Silos: Using Visual Collaboration to Foster Teamwork",
+                "copresenter": "Maria Matarelli",
+                "speaker": "Dan Neumann",
+                "description": "Silos kill the ability for teams to deliver. Teams need more than a notion that they ought to collaborate; they need techniques to support that desire. This session explores the use of large, visible tools and techniques that lead to increased collaboration among team members. This session briefly begins with an overview of the challenges many organizations face when moving to an Agile team environment, and then spends the remainder of the time sharing tools to support that desire to collaborate.",
+                "pid": 1,
+                "room": "Room 3"
+            },
+            {
+                "sid": 19,
+                "time": "1:00 PM - 2:45 PM",
+                "title": "A Day in the Life of an Agile Team",
+                "copresenter": "Tracy Beeson",
+                "speaker": "Justin Wheeler",
+                "description": "This session will seek to give a glimpse into what an agile team could look like by chronicling a day in the life of various team members from a software design and development company that has been successfully practicing agile for 10+ years. We will be your tour guides, walking you through pictures of an actual day of work at our organization and sharing the stories of what we do, how we do it, and the challenges therein within the context of that particular day. In addition we will address the “why” behind what we do, since what we do changes based on the situation. Attendees will be able to see a glimpse of a team culture centered around collaboration and learning.",
+                "pid": 2,
+                "room": "Room 4"
+            }
+        ]
+    },
+    {
+        "time": "2:00 PM - 2:45 PM",
+        "id": 8,
+        "sessions": [
+            {
+                "sid": 20,
+                "time": "2:00 PM - 2:45 PM",
+                "title": "Refactor Your Software Career",
+                "copresenter": "",
+                "speaker": "Jeff Hoover",
+                "description": "Does the hope of landing your 'perfect job' feel like a pipe dream? Have you heard about the importance of networking, but would much rather code than attend 'meet-and-greet's, shaking hands and collecting business cards? In this session, you will learn how to augment your natural instinct to “work on stuff” with specific practices that will build your network while increasing your tech skills and marketability. Drawing on his three-year journey from stagnant coder to passionate agile craftsperson/coach, Jeff will share how 'social' coding events like GiveCamp and CodeRetreat give you experience and visibility, and the surprising way that agile developers outside your company will gladly help you gain experience. You will also take away a number of non-technical practices that can help you become a more desirable candidate and ultimately land yourself a job you’ll love.",
+                "pid": 0,
+                "room": "Room 2"
+            }
+        ]
+    },
+    {
+        "time": "2:00 PM - 3:45 PM",
+        "id": 9,
+        "sessions": [
+            {
+                "sid": 21,
+                "time": "2:00 PM - 3:45 PM",
+                "title": "Quality is a Team Sport",
+                "copresenter": "",
+                "speaker": "Jeff \"Cheezy\" Morgan",
+                "description": "Who is responsible for quality on an Agile team? The answer is “Everybody”. And yet this is rarely the case. Often the Testers write their test cases and automation in isolation and execute them after development is finished. Developers write their code without talking to the testers except to understand how to reproduce the latest discovered defect. Product Owners elaborate requirements in isolation and then hand them off to the team only to check back at the end of the sprint. Business Analysts spend their time in meetings away from the team working on documents that have questionable usefulness. Join Cheezy as he paints a different picture. With the help of volunteers from the audience performing skits, he will demonstrate practices that foster collaboration between all team members that have the side effects of dramatically improving quality. These practices also help teams achieve a better flow resulting in a more streamlined development effort. This new picture is a picture of teamwork and quality assurance",
+                "pid": 0,
+                "room": "Room 6"
+            },
+            {
+                "sid": 20,
+                "time": "2:00 PM - 3:45 PM",
+                "title": "Agile Android",
+                "copresenter": "",
+                "speaker": "Godfrey Nolan",
+                "description": "There’s no reason why agile practices and Android can’t go hand in hand. Learn how to add TDD (test driven development or unit tests) and BDD (Behavior Driven Development or functional tests) as well as Continuous Integration environment to your next Android project. This class will walk you through how to quickly get started adding agile best practices to your Android projects.",
+                "pid": 1,
+                "room": "Room 5"
+            },
+            {
+                "sid": 22,
+                "time": "2:00 PM - 3:45 PM",
+                "title": "Better Metrics for your Team\n",
+                "copresenter": "",
+                "speaker": "Nayan Hajratwala",
+                "description": "Are you still measuring the performance of your team with Velocity, Estimates vs. Actuals, Code Coverage, Cyclomatic Complexity, and “style violations”? Are your business stakeholders still in the dark about when they can expect new features? If so, you’re missing the boat.\n\nThe good news is that there are more powerful and reliable metrics that are cheaper to derive. Trust me, you will love these metrics and they will love you back.\n\nYou’ll walk away from this session understanding the purpose of capturing metrics, how few you actually need, and participate in an interactive game showing you how to capture them.",
+                "pid": 2,
+                "room": "Room 7 "
+            }
+        ]
+    },
+    {
+        "time": "3:00 PM - 3:45 PM",
+        "id": 10,
+        "sessions": [
+            {
+                "sid": 23,
+                "time": "3:00 PM - 3:45 PM",
+                "title": "Stickies, Standups, and Skyscrapers:  A UX Case Study in Collaboration and Communication",
+                "copresenter": "",
+                "speaker": "Tonya McCarley",
+                "description": "What do stickies, standups, and skyscrapers have in common? Books at JSTOR!\n\nThe introduction of Books at JSTOR involved developing new business models to support a new product, immersion in agile methodology, and usability testing and design jams to bridge both geographical and communication gaps. Our team journeyed from standard UX best practices down into the development weeds, up into the strategic stratosphere of our Manhattan-based stakeholders… and back again!\n\nThis case study will examine how various UX methods were used to bridge the gulf between the very specific sprint-sized work in an agile environment to the holistic view of the project, with a focus on lessons learned and thoughts about how to improve on our next adventure.",
+                "pid": 0,
+                "room": "Room 3"
+            },
+            {
+                "sid": 24,
+                "time": "3:00 PM - 3:45 PM",
+                "title": "Building a Learning Organization From Any Level",
+                "copresenter": "",
+                "speaker": "Matt Barcomb",
+                "description": "Learning organizations sound great to just about everyone. But how do you actually create them? Attempting to promote learning in many organizations can seem daunting at best and impossible at worst…especially if you don’t feel particularly empowered to do so.\n\nThis session will focus on what you can do. We will briefly discuss how to set up learning environments and common organizational pitfalls. Next, we will review various ideas that have been put into practice in the real world from many levels within an organization. Finally, as a group we will work together to discover tangible learning ideas that each attendee will be able to put into practice quickly and practically.",
+                "pid": 1,
+                "room": "Room 1"
+            }
+        ]
+    },
+    {
+        "time": "3:00 PM - 4:45 PM",
+        "id": 11,
+        "sessions": [
+            {
+                "sid": 25,
+                "time": "3:00 PM - 4:45 PM",
+                "title": "Eating Your Own Dog Food!",
+                "copresenter": "DJ Daugherty",
+                "speaker": "Matt VanVleet",
+                "description": "There are many Agile Practices that sound radical and often people ask “Do you do that on your own internal projects?”. Well yes we do. This presentation will walk through a project that uses advanced agile practices. This project does crazy things like:\n\nDeploy to production several times a week\nThrow out the backlog every week or two\nTrack value not points\netc.\nCome learn how we “Eat our own dog food” and you will likely find an Agile Practice that you could get additional value from.",
+                "pid": 0,
+                "room": "Room 4"
+            },
+            {
+                "sid": 26,
+                "time": "3:00 PM - 4:45 PM",
+                "title": "The Creative Product Owner",
+                "copresenter": "",
+                "speaker": "Allen Bennett",
+                "description": "As the product owner you must unleash the creativity in your team to create truly extraordinary products in extraordinary ways. The product owner can learn to be creative and learn to energize, exercise, engage and enable the creativity of the empowered team.\nThis presentation will examine the tools that will help the product owner to create like Leonardo Da Vinci, innovate like Thomas Edison and have the entrepreneurial vision of Steve Jobs.\n\nBy examining what made others great the product owner can unleash the creativity in their teams to create better products. The product owner needs to improve creativity, but must turn ideas into profitable reality, at the same time giving the customers what they really want.\nOn the path toward creating value the product owner must represent the customer to the team. One of the techniques we will examine is how the product owner can use improvisational role play to think like a customer. While having fun this will increase energy in the team, capture hidden knowledge and enable the team to break out of confining boxes.\n\nThe Product Owner is the one person responsible for a project’s success. He or she is also responsible for meeting or exceeding the customer’s expectations. The product owner can also share responsibility with the scrum master for the creativity of the team. A highly creative and collaborative team can produce a more useful, cost effective product.\n\nThis will be a presentation with exercises to immediately practice some of these creative tools.\nThis presentation will also enable the scrum master to help the product owner to examine their own creative styles and energize the team",
+                "pid": 1,
+                "room": "Room 2"
+            }
+        ]
+    },
+    {
+        "time": "4:00 PM - 4:45 PM",
+        "id": 12,
+        "sessions": [
+            {
+                "sid": 27,
+                "time": "4:00 PM - 4:45 PM",
+                "title": "Applying Design Thinking and Complexity Theory in Agile Organizations",
+                "copresenter": "",
+                "speaker": "Jean Tabaka",
+                "description": "Design thinking is emerging as a way to guide organizations in how to accept mystery and move through heuristics before moving to an algorithmic view of business. It also invites empathy into how we experiment with our innovations. Complexity theory asks us to be intentional about the systems in which we find ourselves and the transitions we must be prepared to make in and around our systems. Knowing the parameters of our ecosystem can help us tend to our weaknesses and try the probes/experiments that help us deliver value more effectively. By combining these two disciplines, I believe you can begin to balance exploration and exploitation in how you create and sustain Agile adoptions in your teams, groups, and organizations.",
+                "pid": 0,
+                "room": "Room 1"
+            },
+            {
+                "sid": 28,
+                "time": "4:00 PM - 4:45 PM",
+                "title": "Complacency in Agile",
+                "copresenter": "['Daniel Davis','Sandra Canzoneri']",
+                "speaker": "Kim Manuel",
+                "description": "Feeling like you are in a rut, tired of the same routine, not being selected for projects with new technology? If so, complacency may be setting in! Complacency is a silent enemy that can hide inside your agile team and steal your organization’s ability to be an industry leader and innovator. Complacency occurs all around us, but by raising awareness, we can avoid it to maintain a competitive advantage. In this session we will explore the pitfalls of complacency, how it stifles creativity, and what you can do to avoid it from a personal, team, and corporate perspective. This is designed to be an interactive session with audience participation so come prepared to share!",
+                "pid": 1,
+                "room": "Room 3"
+            },
+            {
+                "sid": 29,
+                "time": "4:00 PM - 4:45 PM",
+                "title": "Failing with Agility",
+                "copresenter": "",
+                "speaker": "Todd Kaufman",
+                "description": "Agile software development as a concept is now over a decade old. Companies both big and small are adopting or have already become “Agile”. Terms like daily standup, retrospectives, iterations, and acceptance criteria are all common parlance among developers, managers, and executives. Now that everyone is “Agile” we’ve been able to transform our IT shops into extremely efficient organizations that always meet deadliness, perform under budget, and exceed user’s expectations in terms of quality and usability. Right?\n\nWhy are many of the “Agile” organizations still struggling with the same problems that Agile was meant to solve. They work incrementally and iteratively, yet still cannot communicate to stakeholders when they’ll be done. They now have user stories instead of functional requirements yet still have no idea what the product owner is asking them to build. They leverage automated testing and continuous integration, yet still deliver defect after defect into production. What gives?\n\nMany organizations have been striving to implement the bare minimum to achieve “Agility”, but the core of the matter is that organizational change is extremely hard. Buying certifications, paying a coach for a few months, or asking people to stand up in meetings will not have a long term positive effect on your organization.\n\nThis talk will go into more detail on the common fallacies of agile adoption, some methods for course correcting, and how organizations should focus in order to truly achieve long lasting transformation and success.",
+                "pid": 2,
+                "room": "Room 6"
+            },
+            {
+                "sid": 30,
+                "time": "4:00 PM - 4:45 PM",
+                "title": "Inclusive and Accessible UX Practices - Using low-fidelity artifacts for whole product team collaboration",
+                "copresenter": "",
+                "speaker": "Brittany Hunter",
+                "description": "High-fidelity, carefully-annotated wireframes and design mockups are brittle and time-consuming to manage, often requiring expensive software and specialized skill to create and maintain. In this talk, Brittany will share a case study of how poly-skilled product teams of designers and developers at Atomic Object share tasks and collaborate on UX, focus on the user, and iterate on design quickly by using low-fidelity sketches, storyboards, and mockups. She will share techniques for creating flexible, easily-managed design artifacts, as well as discuss the benefits and caveats of these techniques.",
+                "pid": 3,
+                "room": "Room 5"
+            },
+            {
+                "sid": 31,
+                "time": "4:00 PM - 4:45 PM",
+                "title": "Flatland: The delight and horror of the self managing organization",
+                "copresenter": "",
+                "speaker": "Nathan Hughes",
+                "description": "By design, Detroit Labs is all cooks, no order takers. For us this is the best of times, but for others this is a confusing, scary, and impossible dream. I will talk about the challenges and successes of starting, growing, and scaling a flat organization full of self-managing teams, paying particular attention to:\n\nrecruiting & hiring\ntransparency\ndecision making\nproject assignments and continuity\nthe role of leadership\nscale: holacracy and sociocracy",
+                "pid": 4,
+                "room": "Room 7 "
+            }
+        ]
+    }
+]

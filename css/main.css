@@ -1,0 +1,120 @@
+#aab {
+  background: url("../img/bg/detroit_skyline_dramatic_900x675.jpg");
+  background-size: cover;
+}
+#aab .list-group.liked .list-group-item {
+  background: darkseagreen;
+}
+#aab .list-group.disliked .list-group-item {
+  background: palevioletred;
+}
+#aab .address {
+  font-size: 12px;
+  overflow: hidden;
+}
+#aab .address .adr div {
+  float: left;
+  margin-right: 5px;
+}
+#aab .home .jumbotron {
+  padding: 5px 20px;
+  overflow: hidden;
+}
+#aab .home .jumbotron .adr {
+  float: left;
+}
+#aab .home .jumbotron p {
+  float: left;
+  margin-left: 35%;
+  margin-top: -79px;
+}
+#aab .home .register-btn {
+  width: 50%;
+  margin: 25px auto 0 auto;
+}
+#aab .home .coming-soon {
+  background: url("../img/coming_soon.png") no-repeat left center;
+  background-size: 100%;
+  width: 150px;
+  height: 84px;
+  display: inline-block;
+  position: relative;
+  left: 185px;
+  top: -60px;
+  text-indent: -9999px;
+  transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  /* IE 9 */
+
+  -webkit-transform: rotate(-10deg);
+  /* Safari and Chrome */
+
+}
+#aab .nav .register {
+  padding: 6px;
+  color: #ffffff;
+  margin: 9px 0 0 10px;
+  text-transform: uppercase;
+}
+#aab .nav .user-login .dropdown-menu {
+  padding: 15px;
+  padding-bottom: 0px;
+  width: 300px;
+}
+#aab .navbar-brand {
+  background: url("../img/logo/aablogosm.png") no-repeat left center;
+  display: inline-block;
+  width: 199px;
+  height: 33px;
+  text-indent: -9999px;
+  margin: 10px 10px 0 5px;
+}
+#aab img.pull-left {
+  margin-right: 15px;
+}
+#aab .session-description {
+  display: block;
+  margin-top: 5px;
+  padding: 5px;
+}
+#aab .location address ul {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#aab .location address ul li {
+  list-style: none;
+}
+#aab .panel {
+  background-image: url("../img/bg/90white.png");
+  background-color: transparent;
+}
+#aab .table-bordered {
+  border: 1px solid #000;
+}
+#aab .table-bordered > thead > tr > th,
+#aab .table-bordered > tbody > tr > th,
+#aab .table-bordered > tfoot > tr > th,
+#aab .table-bordered > thead > tr > td,
+#aab .table-bordered > tbody > tr > td,
+#aab .table-bordered > tfoot > tr > td {
+  border: 1px solid #000;
+}
+#aab .list-group-item .list-group-item-text {
+  word-wrap: normal;
+  font-family: inherit;
+  line-height: 1.4em;
+}
+#aab .list-group-item a {
+  margin: 8px 0;
+  display: inline-block;
+}
+#aab .list-group-item .presenter-information ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#aab .list-group-item .presenter-information ul li {
+  list-style-type: none;
+}

@@ -1,0 +1,146 @@
+<div class="panel  ">
+    <div class="panel-body">
+        <section class="content">
+            <div class="container" data-ng-show="!acceptingProposals">
+                <h1>Proposal Submission</h1>
+                <p>Agile and Beyond proposal submission is currently closed.  Check back soon for more information.</p>
+            </div>
+            <div class="speaker_submission" data-ng-show="acceptingProposals">
+                <h1>Speaker Submission Form</h1>
+                <div class="alert alert-success">
+                    <a href="#" class="close" data-dismiss="alert">&times;</a>
+                    <p>Session proposals are being accepted! There is a need for both 45 minute and 90 minute sessions on a variety of agile/lean topics.</p>
+
+                    <p>Attendees will include developers, testers, user experience, business analysts, executives, and managers.  Some will be new to agile while others will have been doing agile for years.</p>
+
+                    <p>As a reminder, the Agile and Beyond conference is organized and run by volunteers. The low registration fee is a reflection of the generosity of our sponsors. While we pay registration fees for our speakers, we are unable to provide additional support in terms of hotel or travel. We are grateful for the speakers who donate their time and, in some cases, their travel to help this community organized conference.</p>
+
+                    <p>If you have any questions concerning session proposals, please contact <a href="mailto:nayan@chikli.com">Nayan Hajratwala</a>.</p>
+                </div>
+                <form name="submitProposal" ng-submit="addSpeakerApplication()" role="form">
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <label>Speaker Name</label>
+                        <div class="form-group form-inline">
+
+                            <input type="text" class="form-control col-md-3" placeholder="First" ng-model="user.firstName" required >
+                            <input type="text" class="form-control col-md-3" placeholder="Middle" ng-model="user.middleName" >
+                            <input type="text" class="form-control col-md-3" placeholder="Last" ng-model="user.lastName" >
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" class="email form-control span5" ng-model="user.email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Twitter</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">@</span>
+                                <input class="form-control" id="twitter-id" type="text" placeholder="Twitter Handle" ng-model="user.twitter">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Website/Blog</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">http://</span>
+                                <input type="text" id="personal-site" class="form-control" ng-model="user.personalSite">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Co-presenter</label>
+                            <input type="text" class="form-control" data-ng-model="user.copresenter">
+                        </div>
+                        <div class="form-group">
+                            <label>Co-presenter Email</label>
+                            <input type="text" class="form-control" data-ng-model="user.copresenterEmail">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Session Abstract</legend>
+
+                        <div class="form-group">
+                            <label>Session Title</label>
+                            <input type="text" id="session-title" class="form-control" ng-model="user.sessionTitle" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Session Abstract</label>
+                            <textarea id="session-abstract" class="form-control" rows="6" ng-model="user.sessionAbstract" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                        <span class="session-level " >
+                            <label>Session Level</label>
+                            <select ng-model="user.sessionLevel" required class="form-control">
+                                <option value="beginner">Beginner</option> <option value="intermediate">Intermediate</option> <option value="advanced">Advanced</option>
+                            </select>
+                        </span>
+                        <span class="session-level span2" >
+                            <label>Session length</label>
+                            <select ng-model="user.sessionLength" required class="form-control">
+                                <option value="90">90 Minute</option>
+                                <option value="45">45 Minute</option>
+                                <option value="both">45 or 90 Minutes</option>
+                            </select>
+                        </span>
+                        </div>
+
+                        <div class="form-group">
+                        <span class="session-audience span3">
+                            <label>Session Audience</label>
+                            <select ng-model="user.sessionAudience" required class="form-control">
+                                <option>Beginner</option>
+                                <option>Agile Engineering</option>
+                                <option>Team</option>
+                                <option>Organization</option>
+                                <option>Product Development</option>
+                                <option>Personal Development</option>
+                                <option>Other...</option>
+                            </select>
+                            <input type="text" data-ng-model="user.audienceOther" placeholder="<enter your category>" data-ng-show="showAudienceOtherInput">
+                        </span>
+                        <span class="session-level form-group">
+                            <label>Have You presented this before?</label>
+                            <input type="radio" name="session-presented" value="1" ng-model="user.sessionPresented" required> Yes
+                            <input type="radio" name="session-presented" value="0" ng-model="user.sessionPresented" required> No
+                        </span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Other Information</label>
+                            <p class="help-inline">
+                                Please provide additional information information about where you presented this session before. This could be the name of the conference or links to the presentation material or anything else you think would be helpful.
+                            </p>
+
+                            <textarea id="other-information" class="form-control" rows="6" ng-model="user.sessionInformation"></textarea>
+                        </div>
+
+                    </fieldset>
+
+                    <div class="form-actions form-group">
+                        <button type="submit" class="btn btn-primary" data-ng-disabled="isSubmitDisabled">Save changes</button>
+                        <button type="button" class="btn" data-ng-click="resetForm()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Submission Successful!</h4>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for submitting your proposal.  We will be contacting you in the near future with updates.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
