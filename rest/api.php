@@ -74,11 +74,13 @@
 			// Input validations
 			if(!empty($email) and !empty($password)){
 				if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-					$sql = mysql_query("SELECT id, first_name, email FROM users WHERE email = '$email' AND password = '".md5($password)."' LIMIT 1", $this->db);
+					$sql = mysql_query("SELECT id, first_name,last_name, email FROM users WHERE email = '$email' AND password = '".md5($password)."' LIMIT 1", $this->db);
 					if(mysql_num_rows($sql) > 0){
 						session_start();
 						$sessionid = session_id();
+
 						$result = mysql_fetch_array($sql,MYSQL_ASSOC);
+						$_SESSION['email'] = $result[0]['email'];
 						$success = array('data' => $result, "session" => $sessionid);
 						
 						// If success everythig is good send header as "OK" and user details
@@ -164,8 +166,7 @@
 					$success = array('status' => "Success", 
 						"msg" => "Successfully one record added",
 						"id" => mysql_insert_id(),
-						"email" => $user_email,
-						"pwd" => $this->_request['user_password']);
+						"email" => $user_email);
 					$this->response($this->json($success),200);
 				} else {
 					$error = array('status' => "Failed", "msg" => mysql_error());
@@ -339,14 +340,25 @@
         	return $totalNumberOfAcceptedSessions;
         }
 
+        private function getSessionId() {
+        	session_start();
+			$sessionid = array('current_session_id' => session_id());
+			
+			$this->response($this->json($sessionid), 200);
+        }
+
         private function getSessionData() {
         	$submittedSessions = $this->getNumberOfSessions();
         	$acceptedSessions = $this->getNumberOfAcceptedSessions();
+        	session_start();
+			$sessionid = session_id();
 
-        	$results = array('totalNumberOfSessionsSubmitted' => $submittedSessions, 'totalNumberOfAcceptedSessions' => $acceptedSessions);
+        	$results = array('totalNumberOfSessionsSubmitted' => $submittedSessions, 
+        		'totalNumberOfAcceptedSessions' => $acceptedSessions,
+        		'current_session' => $sessionid
+        		);
         	$this->response($this->json($results), 200);
         }
-		
 
 
 		/*

@@ -46,13 +46,15 @@ controllers.mainController = function($scope,$rootScope,Service) {
         Service.login($.param($scope.userModel)).success(function(data){
            $scope.auth.isAuthenticated = true;
            $scope.setUser(data);
+
+            window.currentUser = data;
         }).error(function(data) {
            console.log(data.status);
         });
     }
 
     $scope.setUser = function(data) {
-        $rootScope.auth.user = data;
+        $scope.auth.user = data;
     }
 }
 
@@ -203,12 +205,16 @@ controllers.userRegistrationController = function($scope,$http,Service,$rootScop
             success(function(data) {
                 var userLogin = {
                     email: data.email,
-                    pwd: data.pwd
+                    pwd: $scope.newUser.user_password
                 };
 
                 Service.login($.param(userLogin)).success(function(data){
                     $scope.auth.isAuthenticated = true;
                     $scope.auth.user = data;
+
+                    window.currentUser = data;
+
+
                 }).error(function(data) {
                     console.log(data.status);
                 });

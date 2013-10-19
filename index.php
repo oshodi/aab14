@@ -62,7 +62,7 @@
                     </div>
                 </li>
                 <li class="dropdown user-login" data-ng-show="auth.isAuthenticated">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Welcome, {{auth.user.first_name}} <strong class="caret"></strong></a>
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Welcome, {{auth.user.data.first_name}} <strong class="caret"></strong></a>
                     <div class="dropdown-menu">
                             <ul>
                                 <li>{{auth.user.email}}</li>
