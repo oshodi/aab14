@@ -18,13 +18,12 @@
         </div>
 
 
-        <div id="session_table" data-ng-show="showSessions" data-ng-show="isAuthenticated">
+        <div id="session_table">
             <div class="list-group {{session.selected}}" data-ng-repeat="session in allSessions" data-ng-controller="itemController">
                 <div class="list-group-item" id="{{session.id}}">
-                    <div class="pull-right" data-ng-show="auth.isAuthenticated">
-                        <a href="#" class="glyphicon glyphicon-thumbs-up" data-vote="1" data-ng-click="voteSession($event,session)" eat-click >&nbsp;</a>
-                        <a href="#" class="glyphicon glyphicon-thumbs-down" data-vote="-1" data-ng-click="voteSession($event,session)" eat-click >&nbsp;</a>
-                    </div>
+
+                    <a href="#" data-ng-show="auth.isAuthenticated" class="reviewBtn btn btn-primary btn-xs pull-right" data-ng-click="showVotePanel(session.id,$index,$event)" eat-click >review</a>
+
                     <h4 class="list-group-item-heading">{{session.sessionTitle}}</h4>
                     <pre class="list-group-item-text">{{session.sessionAbstract}}</pre>
                     <a eat-click href="javascript:void(0)" data-ng-click="session.speakerInfo = !session.speakerInfo">Presenter Information <span class="glyphicon glyphicon-arrow-right"></span> </a>
@@ -40,4 +39,25 @@
         </div>
 
     </div>
+</div>
+<div class="review" ng-style="review.positionReviewProp" data-ng-controller="ratingsWidget" data-ng-show="review.showWidget">
+    <header>
+        <span class="title">{{review.data.sessionTitle}}</span>  <a class="pull-right" eat-click data-ng-click="closeReview()"><span class="glyphicon glyphicon-remove-circle"></span>&nbsp</a> </header>
+    <article>
+        <p>What do you think of this proposal?</p>
+        <ul>
+            <li><label>Content: </label> <rating class="content_rating" value="review.contentRate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating></li>
+            <li><label>Speaker: </label> <rating class="speaker_rating" value="review.speakerRate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating></li>
+            <li><label>Applicability: </label> <rating class="applicability_rating" value="review.applicabilityRate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating></li>
+        </ul>
+
+        <textarea class="input-lg review-comment" data-ng-model="review.reviewComment"></textarea>
+    </article>
+
+    <footer>
+        <button class="btn btn-primary btn-sm review-submit" data-session-id="{{review.data.id}}" data-ng-click="saveRating($event)">Save Rating</button>
+        <a class="btn-link" href="#" data-ng-click="closeReview()" eat-click>Cancel</a>
+
+    </footer>
+</div>
 </div>

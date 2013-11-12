@@ -12,16 +12,16 @@
 
 		public $data = "";
 
-		// const DB_SERVER = "aabapi2.db.11845101.hostedresource.com";
-		// const DB_USER = "aabapi2";
-		// const DB_PASSWORD = "Ba1l3y12#";
-		// const DB = "aabapi2";
+		const DB_SERVER = "aabapi2.db.11845101.hostedresource.com";
+		const DB_USER = "aabapi2";
+		const DB_PASSWORD = "Ba1l3y12#";
+		const DB = "aabapi2";
 
 		
-		const DB_SERVER = "aabapi.db.9934665.hostedresource.com";
-		const DB_USER = "aabapi";
-		const DB_PASSWORD = "Ba1l3y12#";
-		const DB = "aabapi";
+		// const DB_SERVER = "aabapi.db.9934665.hostedresource.com";
+		// const DB_USER = "aabapi";
+		// const DB_PASSWORD = "Ba1l3y12#";
+		// const DB = "aabapi";
 		
 
 
@@ -81,6 +81,7 @@
 
 						$result = mysql_fetch_array($sql,MYSQL_ASSOC);
 						$_SESSION['email'] = $result[0]['email'];
+						setcookie("aabCookie", $result[0]['id'], time()+3600, "/", "example.com");
 						$success = array('data' => $result, "session" => $sessionid);
 						
 						// If success everythig is good send header as "OK" and user details

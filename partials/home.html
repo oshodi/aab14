@@ -25,7 +25,7 @@
                 </p>
             </div>
         </div>
-        <div class="container col-lg-6" data-ng-show="auth.isAuthenticated">
+        <div class="container col-lg-6" data-ng-show="acceptingProposals">
             <h2>Call for Proposals</h2>
             <p>Agile and Beyond 2014 will be accepting proposals starting September 30th. Due to the competitive nature of the selection process, we encourage prospective speakers to submit their proposals as early as possible. As with years past, we're looking forward to receiving your best proposals!.
                 <br><br>
@@ -33,8 +33,15 @@
                 <span class="coming-soon" data-ng-show="!acceptingProposals">coming soon</span>
             </p>
         </div>
+        <div class="container col-lg-6" data-ng-show="!acceptingProposals">
+            <h2>Call for Proposals has closed.  Register Now!</h2>
+            <p>WOW!  Thank you so much for taking the time to submit so many great proposals.  The response was overwhelming over the past couple of days.  The quality of all the talks will make choosing a program difficult but rewarding.  Over the next couple of weeks we will meet to review the proposals and post the schedule as soon as we can.  Check back soon.  In the meantime, Early bird registration is now open!  Register today!
+            <br/><br/>
+                <a class="btn btn-primary register" href="http://aab2014-es2.eventbrite.com/">Register Today!</a>
+            </p>
+        </div>
     </div>
-    <div class="panel-body">
+    <div class="panel-body" data-ng-show="hasSponsors">
         <div class="jumbotron">
             <h2>Sponsors</h2>
 

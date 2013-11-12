@@ -1,15 +1,33 @@
+
 var controllers = {};
 
 controllers.homeController = function() {};
 
-controllers.mainController = function($scope,$rootScope,Service) {
-
+controllers.mainController = function($scope,$rootScope,Service,$cookies) {
+    $scope.sessionData = {};
     $rootScope.acceptingProposals = false;
-    //$rootScope.isAuthenticated = false;
     $scope.auth = {};
+    $scope.review = {
+        showWidget: false
+    };
+
+    Service.getUserSessionId().success(function(data){
+        if(data.current_session_id === $cookies.userSession) {
+            //get user data
+            Service.getUserData($cookies.userId).success(function(data) {
+                $scope.auth.isAuthenticated = true;
+                data[0].session = $cookies.userSession;
+                $scope.setUser(data);
+            });
+        }
+
+
+    }).error(function(data) {
+       console.log(data.status);
+    });
 
     var startDate = new Date('Mon Sep 30 2013');
-    var endDate = new Date('Thu Oct 31 2013');
+    var endDate = new Date('Tue Nov 11 2013');
     var today = new Date();
 
     if((today >= startDate) && (today <= endDate)) {
@@ -22,13 +40,8 @@ controllers.mainController = function($scope,$rootScope,Service) {
         {'page': 'Sessions'},
         {'page': 'Presenters'},
         {'page': 'Sponsors'},
-        {'page': 'Team'},
-        {'page': 'Register','class':'true'}
+        {'page': 'Team'}
     ];
-
-
-
-
 
     $scope.setActive = function(item) {
         $scope.selected = item;
@@ -54,12 +67,18 @@ controllers.mainController = function($scope,$rootScope,Service) {
     }
 
     $scope.setUser = function(data) {
-        $scope.auth.user = data;
+        $scope.auth.user = {
+            first_name: data[0].first_name,
+            id: data[0].id,
+            session: data[0].session
+        }
+        $cookies.userSession = $scope.auth.user.session? $scope.auth.user.session : data[0].session;
+        $cookies.userId = data[0].id;
     }
 }
 
 controllers.sessionsController = function($scope, $http, Service) {
-    $scope.sessionData = null;
+
     $scope.sessionYear = "";
 
 
@@ -161,32 +180,44 @@ controllers.sessionsAdminController = function($scope,$http,Service) {
 
 }
 
-controllers.itemController = function($scope,$http) {
-    $scope.voteSession = function($event,session) {
+controllers.itemController = function($scope,$attrs) {
+    $scope.showVotePanel = function(id,index,event) {
+        $scope.review.positionReviewProp =  {
+            left: event.pageX - 220,
+            top: event.pageY -20
+        }
+        $scope.review.showWidget = true;
+       $scope.review.data = $scope.allSessions[index];
 
-        var vote_string = event.target.dataset.vote;
-        var voteObject = $.param({
-            session: session.id,
-            vote: vote_string,
-            userid: 89
-        });
+    }
 
 
-        $http({
-            method: 'POST',
-            url: 'rest/castVote',
-            data: voteObject,
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-        }).success(function() {
-                if(vote_string == 1) {
-                    session.selected = "liked";
-                } else {
-                    session.selected = "disliked";
-                }
-        });
 
-        var leaderBoardSql = "SELECT sessionid,SUM(votetype) as votetally FROM votes GROUP BY sessionid ORDER BY votetally DESC";
+}
 
+controllers.ratingsWidget = function($scope) {
+    $scope.review.speakerRate = 0;
+    $scope.review.contentRate = 0;
+    $scope.review.applicabilityRate = 0;
+    $scope.max = 5;
+    $scope.isReadonly = false;
+
+    $scope.hoveringOver = function(value) {
+        $scope.overStar = value;
+        $scope.percent = 100 * (value / $scope.max);
+    };
+
+    $scope.saveRating = function(event) {
+        $scope.review.user = $scope.auth.user;
+        console.log($scope.review);
+    }
+
+    $scope.closeReview = function() {
+        $scope.review.showWidget = false;
+        $scope.review.positionReviewProp =  {
+            left: "auto",
+            top: "auto"
+        }
     }
 }
 

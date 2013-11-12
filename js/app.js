@@ -1,4 +1,4 @@
-var app = angular.module('AgileAndBeyondApp',[]);
+var app = angular.module('AgileAndBeyondApp',['ui.bootstrap','ngCookies']);
 
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/Home',{
@@ -75,6 +75,18 @@ app.factory('Service', function($http) {
         },
         getSessionData: function() {
             return $http.get('rest/getSessionData');
+        },
+        getUserSessionId: function() {
+            return $http.get('rest/getSessionId');
+        },
+        getUserData: function(id) {
+            return $http.get('rest/user?id=' + id);
         }
+    }
+});
+
+app.directive('reviewWidget', function() {
+    return {
+        templateUrl:'partials/reviewWidget.html'
     }
 });
