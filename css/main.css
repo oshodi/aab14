@@ -192,6 +192,15 @@
 #aab #leader_table {
   margin: 35px 0 0 0;
 }
+#aab #leader_table table .include {
+  background: darkseagreen;
+}
+#aab #leader_table table .probable {
+  background: #ffff00;
+}
+#aab #leader_table table .out {
+  background: red;
+}
 .sessions .no-data {
   padding: 10px;
   background: #ffffff;

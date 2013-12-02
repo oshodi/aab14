@@ -136,7 +136,7 @@ controllers.sessionsAdminController = function($scope,$http,Service) {
     $scope.submittedSessions = 0;
     $scope.showSessions = false;
     $scope.showLeaders = false;
-    $scope.allSessions = {};
+    $scope.allSessions = null;
     $scope.leaderData = null;
 
 
@@ -154,16 +154,9 @@ controllers.sessionsAdminController = function($scope,$http,Service) {
     $scope.getLeaders = function($event) {
         $scope.showLeaders = $scope.showLeaders === false ? true: false;
         Service.getLeaderboard().success(function(data) {
-            console.log(data[0]);
             $scope.leaderData = data;
         });
-
     };
-
-
-
-
-
 }
 
 controllers.itemController = function($scope,$attrs,Service) {
