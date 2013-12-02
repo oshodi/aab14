@@ -155,6 +155,9 @@
 #aab .location address ul li {
   list-style: none;
 }
+#aab .panel {
+  zoom: 1;
+}
 #aab .table-bordered {
   border: 1px solid #000;
 }

@@ -432,6 +432,7 @@
         private function getOverallLeaderboard() {
         	if($this->get_request_method() != "GET"){
 				$this->response('',406);
+				
 			}
 
         	$sql = "SELECT votes.sessionid,COUNT(votes.sessionid) votes_total, 

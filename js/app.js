@@ -124,6 +124,7 @@ app.factory('Service', function($http) {
         },
         getLeaderboard: function() {
             return $http.get('rest/getOverallLeaderboard');
+
         }
     }
 });
