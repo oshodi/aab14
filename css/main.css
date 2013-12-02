@@ -1,6 +1,9 @@
-#aab {
-  background: url("../img/bg/detroit_skyline_dramatic_900x675.jpg");
-  background-size: cover;
+#aab .square {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#aab .panel-body {
+  padding: 15px 0 15px 0;
 }
 #aab .list-group.liked .list-group-item {
   background: darkseagreen;
@@ -16,17 +19,65 @@
   float: left;
   margin-right: 5px;
 }
-#aab .home .jumbotron {
-  padding: 5px 20px;
-  overflow: hidden;
+#aab .top {
+  height: 402px;
+  margin-bottom: 60px;
 }
-#aab .home .jumbotron .adr {
-  float: left;
+#aab .top .callout {
+  background: url(../img/bg/callout.png);
+  padding: 20px;
+  width: 968px;
+  height: 272px;
+  position: relative;
+  top: 55px;
+  left: 40px;
 }
-#aab .home .jumbotron p {
-  float: left;
-  margin-left: 35%;
-  margin-top: -79px;
+#aab .top .callout h1,
+#aab .top .callout h2,
+#aab .top .callout p {
+  color: #ffffff;
+}
+#aab .top .callout p {
+  padding-right: 60px;
+}
+#aab .top .callout a {
+  border-radius: 0;
+  padding: 10px 40px;
+}
+#aab .top.home {
+  background: url('../img/bg/detroit_bg.jpg') no-repeat;
+  background-position: right;
+}
+#aab .top.location {
+  background: url('../img/bg/adoba.jpg') no-repeat;
+  background-position: right;
+}
+#aab .top.session {
+  background: url('../img/bg/sessions.jpg') no-repeat;
+  background-position: right;
+}
+#aab .top.speaker {
+  background: url('../img/bg/speakers.jpg') no-repeat;
+  background-position: left;
+}
+#aab .top.team {
+  background: url('../img/bg/team.jpg') no-repeat;
+  background-position: left;
+}
+#aab .top.sponsor {
+  background: url('../img/bg/sponsors.jpg') no-repeat;
+  background-position: left;
+}
+#aab .home .sponsors .col-lg-3 {
+  text-align: center;
+  height: 130px;
+  vertical-align: middle;
+}
+#aab .home .sponsors .col-lg-3 img {
+  width: 130px;
+}
+#aab .home .sponsors .col-lg-3 h3 {
+  display: none;
 }
 #aab .home .register-btn {
   width: 50%;
@@ -50,19 +101,37 @@
   /* Safari and Chrome */
 
 }
-#aab .nav .register {
-  padding: 6px;
-  color: #ffffff;
-  margin: 9px 0 0 10px;
-  text-transform: uppercase;
-}
 #aab .nav .user-login .dropdown-menu {
   padding: 15px;
   padding-bottom: 0px;
   width: 300px;
 }
+#aab .nav .user-login .dropdown-menu ul {
+  padding: 0 0 20px 0;
+  margin: 0;
+  list-style-type: none;
+}
+#aab .navbar {
+  padding: 10px 0 10px 0;
+}
+#aab .navbar-nav {
+  margin: 14px 0 0 0;
+}
+#aab .navbar .navbar-nav a {
+  color: #000000;
+}
+#aab .navbar .navbar-nav a.register {
+  padding: 6px;
+  color: #ffffff;
+  margin: 9px 0 0 10px;
+  text-transform: uppercase;
+}
+#aab .navbar .navbar-nav > .active > a {
+  background: none;
+  color: #2b99ce;
+}
 #aab .navbar-brand {
-  background: url("../img/agilelogo.png") no-repeat left center;
+  background: url("../img/logo/agilelogo2.png") no-repeat left center;
   display: inline-block;
   width: 298px;
   height: 61px;
@@ -85,10 +154,6 @@
 }
 #aab .location address ul li {
   list-style: none;
-}
-#aab .panel {
-  background-image: url("../img/bg/90white.png");
-  background-color: transparent;
 }
 #aab .table-bordered {
   border: 1px solid #000;
@@ -121,6 +186,9 @@
 #aab .list-group-item .presenter-information ul li {
   list-style-type: none;
 }
+#aab #leader_table {
+  margin: 35px 0 0 0;
+}
 .sessions .no-data {
   padding: 10px;
   background: #ffffff;
@@ -130,7 +198,7 @@
   background: #ffffff;
 }
 .review {
-  width: 250px;
+  width: 350px;
   border: 1px solid #ccc;
   border-radius: 8px;
   position: absolute;
@@ -226,6 +294,43 @@
 .review article ul li .applicability_rating i {
   color: royalblue;
 }
+.review article .review-comment {
+  width: 98%;
+  font-size: 12px;
+  min-height: 100px;
+  padding: 5px;
+}
 .review footer {
   padding: 8px;
+}
+.admin .dash-widget {
+  overflow: hidden;
+}
+.admin .dash-widget img {
+  margin: 0 auto;
+  width: 48px;
+  height: 48px;
+  float: left;
+  margin-right: 8px;
+}
+.admin .dash-widget .data-content {
+  float: left;
+}
+.admin .dash-widget .data-content h5 {
+  border-bottom: 1px #333 dotted;
+  margin: 0 0 8px 0;
+  color: #2b99ce;
+}
+.admin .dash-widget .data-content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.admin .dash-widget .data-content ul li {
+  list-style-type: none;
+}
+.fixsessions td,
+.fixsessions th {
+  padding: 5px;
 }

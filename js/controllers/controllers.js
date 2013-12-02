@@ -3,28 +3,22 @@ var controllers = {};
 
 controllers.homeController = function() {};
 
-controllers.mainController = function($scope,$rootScope,Service,$cookies) {
+controllers.mainController = function($scope,$rootScope) {
     $scope.sessionData = {};
     $rootScope.acceptingProposals = false;
     $scope.auth = {};
+    //$scope.auth.isAuthenticated = false;
     $scope.review = {
         showWidget: false
     };
 
-    Service.getUserSessionId().success(function(data){
-        if(data.current_session_id === $cookies.userSession) {
-            //get user data
-            Service.getUserData($cookies.userId).success(function(data) {
-                $scope.auth.isAuthenticated = true;
-                data[0].session = $cookies.userSession;
-                $scope.setUser(data);
-            });
-        }
+    if($('#authorized').length > 0) {
+        $scope.auth.isAuthenticated = true;
+    }
 
 
-    }).error(function(data) {
-       console.log(data.status);
-    });
+    $scope.aUrl = $rootScope.location.absUrl();
+
 
     var startDate = new Date('Mon Sep 30 2013');
     var endDate = new Date('Tue Nov 11 2013');
@@ -50,31 +44,9 @@ controllers.mainController = function($scope,$rootScope,Service,$cookies) {
     $scope.setActive($scope.pages[0]);
 
 
-
     $scope.itemClass = function(item) {
         return item === $scope.selected ? 'active' : undefined;
     };
-
-    $scope.userLogin = function() {
-        Service.login($.param($scope.userModel)).success(function(data){
-           $scope.auth.isAuthenticated = true;
-           $scope.setUser(data);
-
-            window.currentUser = data;
-        }).error(function(data) {
-           console.log(data.status);
-        });
-    }
-
-    $scope.setUser = function(data) {
-        $scope.auth.user = {
-            first_name: data[0].first_name,
-            id: data[0].id,
-            session: data[0].session
-        }
-        $cookies.userSession = $scope.auth.user.session? $scope.auth.user.session : data[0].session;
-        $cookies.userId = data[0].id;
-    }
 }
 
 controllers.sessionsController = function($scope, $http, Service) {
@@ -113,7 +85,7 @@ controllers.speakerSubmissionController = function($scope, $http,$rootScope,Serv
         sessionTitle:"",
         sessionAbstract:"",
         sessionLevel:"",
-        sessionLength:"",
+        session_length:"",
         sessionAudience:"",
         audienceOther: "",
         sessionPresented:"",
@@ -163,7 +135,9 @@ controllers.sessionsAdminController = function($scope,$http,Service) {
     $scope.acceptedSessions = 0;
     $scope.submittedSessions = 0;
     $scope.showSessions = false;
+    $scope.showLeaders = false;
     $scope.allSessions = {};
+    $scope.leaderData = null;
 
 
     Service.getSessionData().success(function(data, status, headers, config) {
@@ -174,20 +148,58 @@ controllers.sessionsAdminController = function($scope,$http,Service) {
     });
 
     $scope.getSessions = function($event) {
-            $scope.showSessions = true;
+            $scope.showSessions = $scope.showSessions === false ? true: false;
     };
+
+    $scope.getLeaders = function($event) {
+        $scope.showLeaders = $scope.showLeaders === false ? true: false;
+        Service.getLeaderboard().success(function(data) {
+            console.log(data[0]);
+            $scope.leaderData = data;
+        });
+
+    };
+
+
+
 
 
 }
 
-controllers.itemController = function($scope,$attrs) {
+controllers.itemController = function($scope,$attrs,Service) {
     $scope.showVotePanel = function(id,index,event) {
+        $scope.review.speakerRate = 0;
+        $scope.review.contentRate = 0;
+        $scope.review.applicabilityRate = 0;
+        $scope.review.reviewComment = "";
+        $scope.review.sessionAudience = "Please choose one...";
+
+
+
         $scope.review.positionReviewProp =  {
-            left: event.pageX - 220,
+            left: event.pageX - 320,
             top: event.pageY -20
         }
         $scope.review.showWidget = true;
        $scope.review.data = $scope.allSessions[index];
+
+        var checkSession = {
+            userid: AAB_USER_ID,
+            sessionid: $scope.review.data.id
+        }
+
+        Service.getSessionVoteById($.param(checkSession)).success(function(data, status, headers, config) {
+
+            if(status === 200) {
+                $scope.review.speakerRate = data[0].speaker;
+                $scope.review.contentRate = data[0].content;
+                $scope.review.applicabilityRate = data[0].applicability;
+                $scope.review.reviewComment = data[0].note;
+                $scope.review.sessionAudience = data[0].audience;
+            }
+
+
+        });
 
     }
 
@@ -195,12 +207,14 @@ controllers.itemController = function($scope,$attrs) {
 
 }
 
-controllers.ratingsWidget = function($scope) {
+controllers.ratingsWidget = function($scope,Service) {
     $scope.review.speakerRate = 0;
     $scope.review.contentRate = 0;
     $scope.review.applicabilityRate = 0;
     $scope.max = 5;
     $scope.isReadonly = false;
+    var sessionVote = {}
+
 
     $scope.hoveringOver = function(value) {
         $scope.overStar = value;
@@ -208,8 +222,31 @@ controllers.ratingsWidget = function($scope) {
     };
 
     $scope.saveRating = function(event) {
-        $scope.review.user = $scope.auth.user;
-        console.log($scope.review);
+        $scope.review.user = AAB_USER_ID;
+
+        if($scope.review.contentRate < 1 || $scope.review.applicabilityRate  < 1 || $scope.review.speakerRate < 1 ) {
+            toastr.error('Darn it!  You gotta give a rating for all THREE options.  Thanks for understanding');
+            return;
+        }
+
+        var sessionVote = {
+            userid: $scope.review.user,
+            session: $scope.review.data.id,
+            content: $scope.review.contentRate,
+            applicability: $scope.review.applicabilityRate,
+            speaker: $scope.review.speakerRate,
+            note: $scope.review.reviewComment,
+            audience: $scope.review.sessionAudience
+        }
+
+        Service.castVote($.param(sessionVote)).success(function(data, status, headers, config) {
+            toastr.success('Your vote has been cast');
+            $scope.review.showWidget = false;
+
+        }).error(function(error) {
+                toastr.warning("Oh Snap!  there was an error. Our Bad.  Please Try again.");
+        });
+
     }
 
     $scope.closeReview = function() {
@@ -254,6 +291,38 @@ controllers.userRegistrationController = function($scope,$http,Service,$rootScop
                 console.log(data);
             });
     }
+}
+
+
+controllers.updateSession = function($scope,$location,Service) {
+    $scope.updatedSessions = {};
+    $scope.submitedLength = {};
+    $scope.audienceOptions = ["Agile Engineering"];
+    var sessionData = {
+        id: AAB_ID
+    }
+
+    if(sessionData.id) {
+        Service.getSessionsById($.param(sessionData)).success(function(data){
+            $scope.updatedSessions = data;
+        });
+    }
+
+    $scope.updateLengthOfSession = function() {
+
+        $.each($scope.submitedLength, function(id, length) {
+            var editdata = {
+                length: length,
+                sessionid: id
+            };
+
+            Service.updateSession($.param(editdata)).success(function(data) {
+                toastr.info('Your session(s) have been updated');
+            });
+        })
+
+    }
+
 }
 
 app.controller(controllers);

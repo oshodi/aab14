@@ -5,28 +5,8 @@
 
         <p>Please create an account to help you keep track of your personal schedule and keep your profile up to date</p>
 
-        <form name="userRegistration">
-            <div class="form-group">
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" class="form-control" data-ng-model="newUser.user_first">
-            </div>
-            <div class="form-group">
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" class="form-control" data-ng-model="newUser.user_last">
-            </div>
-            <div class="form-group">
-                <label for="emailAddress">Email Address:</label>
-                <input type="email" id="emailAddress" class="form-control" data-ng-model="newUser.user_email">
-            </div>
-
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" class="form-control" data-ng-model="newUser.user_password">
-            </div>
-
-            <div class="form-group">
-                <button class="btn btn-primary" data-ng-click="addNewUser()" eat-click>Submit</button>
-            </div>
-        </form>
+        <?php
+            include('user/register_form.php');
+        ?>
     </div>
 </div>

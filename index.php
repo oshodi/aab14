@@ -1,3 +1,10 @@
+<?php
+    define('QUADODO_IN_SYSTEM', true);
+    require_once('user/includes/header.php');
+    
+
+
+?>
 <!DOCTYPE html>
 <html lang="en" xmlns:ng="http://angularjs.org" lang="en" id="ng-app" ng-app="AgileAndBeyondApp">
 <head>
@@ -8,9 +15,10 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.min.css" rel="stylesheet" />
     <script src="js/respond.min.js"></script>
     <style>
         body {
@@ -27,6 +35,11 @@
     <!--[if lte IE 8]>
     <script src="js/json2.js"></script>
     <![endif]-->
+
+    <script type="text/javascript">
+    var AAB_USER_ID = '<?php echo $qls->user_info['id']; ?>';
+    </script>
+
 </head>
 
 <body id="aab" class="" data-ng-controller="mainController">
@@ -41,45 +54,51 @@
             <a class="navbar-brand" href="#">Agile &amp; Beyond 2014</a>
         </div>
         <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav pull-right">
                 <li data-ng-repeat="page in pages" data-ng-click="setActive(page)" data-ng-class="itemClass(page)"><a data-ng-class="{'btn btn-primary btn-sm register': page.class}" href="#/{{ page.page }}">{{ page.page }}</a></li>
                 <li><a class="btn btn-primary btn-sm register" href="http://aab2014-es2.eventbrite.com/">Register</a></li>
                 <li class="divider"></li>
-                <li class="dropdown user-login" data-ng-show="!auth.isAuthenticated && auth.on">
+                
+
+                <?php
+                    // Look in the USERGUIDE.html for more info
+                    if ($qls->user_info['username'] == '') {
+                ?>
+                <li class="dropdown user-login">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
                     <div class="dropdown-menu">
-                        <form name="user_login">
-                            <div class="form-group">
-                                <label>Email:</label>
-                                <input type="text" class="form-control" data-ng-model="userModel.email" required="true"></input>
-                            </div>
-                            <div class="form-group">
-                                <label>Password: </label>
-                                <input type="password" class="form-control" data-ng-model="userModel.pwd" required="true"/>
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-primary" data-ng-click="userLogin()" >Login</button>
-                                <a class="pull-right" href="#/AddUser">New? Create an Account</a>
-                            </div>
-                        </form>
+
+                        <?php
+                            include('user/login.php');
+                        ?>
 
                     </div>
                 </li>
-                <li class="dropdown user-login" data-ng-show="auth.isAuthenticated && auth.on">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Welcome, {{auth.user.first_name}} <strong class="caret"></strong></a>
+                <?php
+                }
+                else {
+                ?>
+                <li class="dropdown user-login">
+                    <input type="hidden" id="authorized" value="true" />
+                    <a class="dropdown-toggle" href="#" id="user" data-id="<?php echo $qls->user_info['id']; ?>" data-toggle="dropdown">Welcome, <?php echo $qls->user_info['username']; ?> <strong class="caret"></strong></a>
                     <div class="dropdown-menu">
+
                             <ul>
-                                <li>{{auth.user.email}}</li>
-                                <li><a href="#">Logout</a></li>
+                                <!--<li><?php echo $qls->user_info['email']; ?></li>-->
+                                <li><a href="user/logout.php">Logout</a></li>
                             </ul>
                     </div>
                 </li>
+
+                <?php
+                }
+                ?>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
 </div>
 
-<div class="container" data-ng-view=""></div> <!-- /container -->
+<div class="" data-ng-view=""></div> <!-- /container -->
 
 <!-- Le javascript
 ================================================== -->
@@ -90,6 +109,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/directives/ui-bootstrap-custom-0.6.0.min.js"></script>
 <script src="js/directives/ui-bootstrap-custom-tpls-0.6.0.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/controllers/controllers.js"></script>
 </body>

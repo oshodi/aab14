@@ -73,6 +73,36 @@ app.factory('Service', function($http) {
                 }
             })
         },
+        getSessionsById: function(inputs) {
+            return $http({
+                method: 'POST',
+                url: 'rest/getSessionsById',
+                data: inputs,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                }
+            })
+        },
+        getSessionVoteById: function(inputs) {
+            return $http({
+                method: 'POST',
+                url: 'rest/getSessionVoteById',
+                data: inputs,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                }
+            })
+        },
+        updateSession: function(inputs) {
+            return $http({
+                method: 'POST',
+                url: 'rest/editSession',
+                data: inputs,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                }
+            })
+        },
         getSessionData: function() {
             return $http.get('rest/getSessionData');
         },
@@ -81,6 +111,19 @@ app.factory('Service', function($http) {
         },
         getUserData: function(id) {
             return $http.get('rest/user?id=' + id);
+        },
+        castVote: function(inputs) {
+            return $http({
+                method: 'POST',
+                url: 'rest/castVote',
+                data: inputs,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                }
+            })
+        },
+        getLeaderboard: function() {
+            return $http.get('rest/getOverallLeaderboard');
         }
     }
 });
@@ -89,4 +132,8 @@ app.directive('reviewWidget', function() {
     return {
         templateUrl:'partials/reviewWidget.html'
     }
+});
+
+app.run(function($rootScope, $location) {
+    $rootScope.location = $location;
 });

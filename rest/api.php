@@ -22,7 +22,23 @@
 		// const DB_USER = "aabapi";
 		// const DB_PASSWORD = "Ba1l3y12#";
 		// const DB = "aabapi";
-		
+
+		// const DB_SERVER = "localhost:8889";
+		// const DB_USER = "root";
+		// const DB_PASSWORD = "root";
+		// const DB = "aabapi";
+
+// SELECT votes.sessionid,
+// COUNT(votes.sessionid) votes_total, 
+// session_table.sessionTitle, 
+// AVG(votes.content) content, 
+// AVG(votes.applicability) app, 
+// AVG(votes.speaker) speaker,
+// AVG(votes.content + votes.applicability + votes.speaker)/3.0 overall_avg
+// FROM `votes`,`session_table` 
+// WHERE votes.sessionid = session_table.id 
+// GROUP BY votes.sessionid
+// ORDER BY overall_avg DESC	
 
 
 		private $db = NULL;
@@ -228,6 +244,83 @@
 			}
 		}
 
+		private function editSession() {
+			if($this->get_request_method() != "POST"){
+				$this->response('',406);
+			}
+
+			$sessionLength = $this->_request['length'];
+			$sessionid = $this->_request['sessionid'];
+
+
+			if(!empty($sessionLength)) {
+				$sql = "UPDATE session_table SET session_length='$sessionLength' WHERE id='$sessionid'";
+				if(mysql_query($sql, $this->db)) {
+					$success = array('status' => "Success", "msg" => "Successfully updated your session(s)");
+					$this->response($this->json($success),200);
+				} else {
+					$error = array('status' => "Failed", "msg" => mysql_error());
+					$this->response($this->json($error), 400);
+				}
+
+
+			} else {
+				$error = array('status' => "Failed", "msg" => "The required information is not available, please complete the form and resubmit");
+				$this->response($this->json($error), 400);
+			}
+		}
+
+		private function getSessionsById() {
+			if($this->get_request_method() != "POST"){
+				$this->response('',406);
+			}
+
+			$code = $this->_request['id'];
+
+			$sql = "SELECT * FROM session_table WHERE md5(email) = '$code'";
+			$query = mysql_query($sql, $this->db);
+			$number = mysql_num_rows($query);
+			$rows = array();
+
+			if($number > 0) {
+				while ($arraySessions = mysql_fetch_array($query,MYSQL_ASSOC)) { 
+        			$rows[] = $arraySessions; 
+        		}
+				$success = array("sessions" => $rows);
+				$this->response($this->json($success),200);
+			} else {
+				$error = array('status' => "Failed", "msg" => 'No id found in database', "id" => $code);
+				$this->response($this->json($error), 400);
+			}
+
+		}
+
+		private function getSessionVoteById() {
+			if($this->get_request_method() != "POST"){
+				$this->response('',406);
+			}
+
+			$sessionid = $this->_request['sessionid'];
+			$userid = $this->_request['userid'];
+
+			$sql = "SELECT * FROM votes WHERE userrid='$userid' AND sessionid='$sessionid'";
+			$query = mysql_query($sql, $this->db);
+			$number = mysql_num_rows($query);
+			$rows = array();
+
+			if($number > 0) {
+				while ($arraySessions = mysql_fetch_array($query,MYSQL_ASSOC)) { 
+        			$rows[] = $arraySessions; 
+        		}
+				$success = array("sessions" => $rows);
+				$this->response($this->json($rows),200);
+			} else {
+				$error = array('status' => "Failed", "msg" => 'No id found in database', "id" => $userid);
+				$this->response($this->json($error), 204);
+			}
+
+		}
+
 		private function getSchedule() {
 			if($this->get_request_method() != "GET"){
 				$this->response('',406);
@@ -312,13 +405,20 @@
 			}
 
 			$sessionid = (int)$this->_request['session'];
-			$voteType = (int)$this->_request['vote'];
+			$contentRating = (int)$this->_request['content'];
+			$speakerRating = (int)$this->_request['speaker'];
+			$audience = $this->_request['audience'];
+			$appRating = (int)$this->_request['applicability'];
+			$note = mysql_real_escape_string(trim($this->_request['note']));
+			$timestamp = date("Y-m-d H:i:s"); 
 			$userid = (int)$this->_request['userid'];
 
-			$sql = "INSERT INTO votes (userrid, sessionid, votetype) 
-					VALUES ('$userid', '$sessionid','$voteType')
+			$sql = "INSERT INTO votes (userrid, sessionid, content, applicability, speaker, note, time_stamp,audience) 
+					VALUES ('$userid', '$sessionid','$contentRating','$appRating','$speakerRating', '$note', '$timestamp','$audience')
 					ON DUPLICATE KEY UPDATE
-					votetype='$voteType'";
+ 					content='$contentRating',applicability='$appRating',speaker='$speakerRating',note='$note',time_stamp='$timestamp',audience='$audience'";
+
+ 					
 
 			$query = mysql_query($sql, $this->db);
 			if($query) {
@@ -327,6 +427,39 @@
         		$this->response(mysql_error(),406);
         	}
 
+        }
+
+        private function getOverallLeaderboard() {
+        	if($this->get_request_method() != "GET"){
+				$this->response('',406);
+			}
+
+        	$sql = "SELECT votes.sessionid,COUNT(votes.sessionid) votes_total, 
+					session_table.sessionTitle,
+					session_table.firstName,
+					session_table.lastName, 
+					AVG(votes.content) content, 
+					AVG(votes.applicability) app, 
+					AVG(votes.speaker) speaker,
+					AVG(votes.content + votes.applicability + votes.speaker)/3.0 overall_avg
+					FROM `votes`,`session_table` 
+					WHERE votes.sessionid = session_table.id 
+					GROUP BY votes.sessionid
+					ORDER BY overall_avg DESC";
+
+			$query = mysql_query($sql, $this->db);
+            $rows = array();
+
+            if($query) {
+        		
+        		while ($array = mysql_fetch_array($query,MYSQL_ASSOC)) { 
+        			$rows[] = $array; 
+        		}
+
+        		//return array("number" => $totalNumberOfSessionsSubmitted, "sessions" => $rows);
+        	}
+
+			$this->response($this->json($rows), 200);
         }
 
         private function getNumberOfAcceptedSessions() {

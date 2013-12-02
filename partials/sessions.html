@@ -1,44 +1,44 @@
 <div class="content sessions panel">
     <div class="panel-body">
-        <h2>Sessions</h2>
-        <div data-ng-show="acceptingProposals">
-            <p>Agile and beyond is now accepting submissions for session talks.  Please submit yours today!</p>
+        <div class="top session">
+            <div class="callout">
+                <h2>Sessions</h2>
+                <p>We are currently working through all the awesome proposals that have been submited for Agile and Beyond 2014.  We hope to have the schedule settled by the first week of December.  Check back for details soon.</p>
 
-            <a href="#/Presenters" class="btn btn-primary btn-lg" ng-show="acceptingProposals">Submit a proposal today!</a>
-        </div>
-        
+                <p>In the meantime, Early bird registration is now open!  Register today!
+                    <br/><br/>
+                    <a class="btn btn-primary register" href="http://aab2014-es2.eventbrite.com/">Register Today!</a>
+                </p>
+            </div>
+    </div>
+    <div class="container features">
+       <div class="row">
+           <h2>Archived Sessions</h2>
 
-        <p>We are currently working through all the awesome proposals that have been submited for Agile and beyond 2014.  We hope to have the schedule settled by the first week of December.  Check back for details soon.</p>
+           <ul class="nav nav-tabs">
+               <!--<li><a href="#" data-ng-click="getSessions($event)" eat-click>2014</a></li>-->
+               <li class="active"><a href="#" data-ng-click="getSessions($event)" eat-click>2012</a></li>
+               <li><a href="#" data-ng-click="getSessions($event)" eat-click>2013</a></li>
+           </ul>
+           <div class="no-data" data-ng-show="!sessionData">
+               Please select a schedule to view
+           </div>
+           <div class="list-group" data-ng-repeat="timeslot in sessionData">
 
-        <p>In the meantime, Early bird registration is now open!  Register today!
-            <br/><br/>
-                <a class="btn btn-primary register" href="http://aab2014-es2.eventbrite.com/">Register Today!</a>
-        </p>
-
-        <h2>Archived Sessions</h2>
-
-        <ul class="nav nav-tabs">
-            <!--<li><a href="#" data-ng-click="getSessions($event)" eat-click>2014</a></li>-->
-            <li class="active"><a href="#" data-ng-click="getSessions($event)" eat-click>2012</a></li>
-            <li><a href="#" data-ng-click="getSessions($event)" eat-click>2013</a></li>
-        </ul>
-        <div class="no-data" data-ng-show="!sessionData">
-            Please select a schedule to view
-        </div>
-        <div class="list-group" data-ng-repeat="timeslot in sessionData">
-
-                <h4 class="list-group-item-heading">{{timeslot.time || timeslot.lable}}</h4>
-                <p data-ng-repeat="session in timeslot.sessions" class="list-group-item-text">
-                    <a href="#" class="list-group-item" eat-click data-ng-click="session.info = !session.info">
-                        {{session.title || session.sessionTitle}} - {{session.speaker || (session.firstName)}} {{session.lastName}}
+               <h4 class="list-group-item-heading">{{timeslot.time || timeslot.lable}}</h4>
+               <p data-ng-repeat="session in timeslot.sessions" class="list-group-item-text">
+                   <a href="#" class="list-group-item" eat-click data-ng-click="session.info = !session.info">
+                       {{session.title || session.sessionTitle}} - {{session.speaker || (session.firstName)}} {{session.lastName}}
 
                     <span class="session-description" data-ng-class="{true: 'hidden', false:''}[!session.info] ">
                         {{session.description || session.sessionAbstract}}
                     </span>
-                    </a>
+                   </a>
 
-                </p>
+               </p>
 
-        </div>
+           </div>
+       </div>
+    </div>
     </div>
 </div>

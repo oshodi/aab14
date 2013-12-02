@@ -1,4 +1,15 @@
 #aab {
+
+  .square {
+
+      text-align: center;
+      margin-bottom: 20px;
+
+  }
+
+  .panel-body {
+    padding: 15px 0 15px 0;
+  }
   .list-group {
     &.liked {
       .list-group-item {
@@ -24,21 +35,92 @@
     }
   }
 
-  .home {
-    .jumbotron {
-      padding: 5px 20px;
-      overflow: hidden;
+ .top {
 
-      .adr {
-        float: left;
+    height: 402px;
+    margin-bottom: 60px;
+
+    .callout {
+      background: url(../img/bg/callout.png);
+      padding: 20px;
+      width: 968px;
+      height: 272px;
+      position: relative;
+      top: 55px;
+      left: 40px;
+
+      h1, h2, p {
+        color: #ffffff;
       }
 
       p {
-        float: left;
-        margin-left: 35%;
-        margin-top: -79px;
+        padding-right: 60px;
+      }
+
+      a {
+        border-radius: 0;
+        padding: 10px 40px;
+      }
+
+    }
+
+   &.home {
+     background: url('../img/bg/detroit_bg.jpg') no-repeat;
+     background-position: right;
+   }
+
+   &.location {
+     background: url('../img/bg/adoba.jpg') no-repeat;
+     background-position: right;
+   }
+
+   &.session {
+     background: url('../img/bg/sessions.jpg') no-repeat;
+     background-position: right;
+   }
+
+   &.speaker {
+     background: url('../img/bg/speakers.jpg') no-repeat;
+     background-position: left;
+   }
+
+   &.team {
+     background: url('../img/bg/team.jpg') no-repeat;
+     background-position: left;
+   }
+
+   &.sponsor {
+     background: url('../img/bg/sponsors.jpg') no-repeat;
+     background-position: left;
+   }
+  }
+
+
+  .home {
+
+    .sponsors {
+      .col-lg-3 {
+        text-align: center;
+        height: 130px;
+        vertical-align: middle;
+
+        img {
+          width: 130px;
+
+        }
+
+        h3 {
+          display: none;
+        }
       }
     }
+
+    .features {
+
+    }
+
+
+
 
     .register-btn {
       width: 50%;
@@ -60,36 +142,53 @@
     }
   }
   .nav {
-    .register {
-      padding: 6px;
-      color: #ffffff;
-      margin: 9px 0 0 10px;
-      text-transform: uppercase;
-    }
+
 
     .user-login {
       .dropdown-menu {
         padding: 15px;
         padding-bottom: 0px;
         width: 300px;
+
+        ul {
+          padding: 0 0 20px 0;
+          margin: 0;
+          list-style-type: none;
+        }
       }
     }
   }
-
   .navbar {
-    
+    padding: 10px 0 10px 0;
+  }
+
+  .navbar-nav {
+    margin: 14px 0 0 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #000000;
+  }
+
+  .navbar .navbar-nav a.register {
+    padding: 6px;
+    color: #ffffff;
+    margin: 9px 0 0 10px;
+    text-transform: uppercase;
+  }
+
+  .navbar .navbar-nav>.active>a {
+    background: none;
+    color: #2b99ce;
   }
   .navbar-brand {
-    background: url("../img/agilelogo.png") no-repeat left center;
+    background: url("../img/logo/agilelogo2.png") no-repeat left center;
     display: inline-block;
     width: 298px;
     height: 61px;
     text-indent: -9999px;
     margin: 10px 10px 0 5px;
   }
-
-  background: url("../img/bg/detroit_skyline_dramatic_900x675.jpg");
-  background-size: cover;
 
   img.pull-left {
     margin-right: 15px;
@@ -117,8 +216,7 @@
   
   
   .panel {
-    background-image: url("../img/bg/90white.png");
-    background-color: transparent;
+
   }
 
   .table-bordered {
@@ -159,6 +257,11 @@
     }
   }
 
+
+  #leader_table {
+    margin: 35px 0 0 0;
+  }
+
 }
 
 .sessions {
@@ -176,7 +279,7 @@
 }
 
 .review {
-  width: 250px;
+  width: 350px;
   border: 1px solid #ccc;
   border-radius: 8px;
   position: absolute;
@@ -253,9 +356,66 @@
         }
       }
     }
+
+
+    .review-comment {
+      width: 98%;
+      font-size: 12px;
+      min-height: 100px;
+      padding: 5px;
+    }
   }
 
   footer {
     padding: 8px;
+  }
+}
+
+.admin {
+
+
+
+
+  .dash-widget  {
+    overflow: hidden;
+
+    img {
+      margin: 0 auto;
+      width: 48px;
+      height: 48px;
+      float: left;
+      margin-right: 8px;
+    }
+
+    .data-content {
+      float: left;
+
+      h5 {
+        border-bottom: 1px #333 dotted;
+        margin: 0 0 8px 0;
+        color: #2b99ce;
+
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+
+      li {
+       list-style-type: none;
+      }
+    }
+
+    }
+
+  }
+}
+
+
+.fixsessions {
+  td, th {
+    padding: 5px;
   }
 }

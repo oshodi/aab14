@@ -1,63 +1,122 @@
-<div class="content register panel">
+<div class="content admin panel">
     <div class="panel-body">
-        <h1>Admin Dashboard</h1>
+
+        <div class="container">
+            <h1>Admin Dashboard</h1>
 
 
-        <!-- dashboard -->
-        <div class="container" data-ng-show="!isLoggedIn">
+            <!-- dashboard -->
+            <div class="container" data-ng-show="!isLoggedIn">
 
-            <div class="col-lg-4">
-                <h5>Session Submissions</h5>
-                <ul>
-                    <li><a href="javascript:void(0)" data-ng-click="getSessions($event)" eat-click>Submitted: {{submittedSessions}}</a></li>
-                    <li>Accepted: {{acceptedSessions}}</li>
-                </ul>
-
-
-            </div>
-        </div>
-
-
-        <div id="session_table">
-            <div class="list-group {{session.selected}}" data-ng-repeat="session in allSessions" data-ng-controller="itemController">
-                <div class="list-group-item" id="{{session.id}}">
-
-                    <a href="#" data-ng-show="auth.isAuthenticated" class="reviewBtn btn btn-primary btn-xs pull-right" data-ng-click="showVotePanel(session.id,$index,$event)" eat-click >review</a>
-
-                    <h4 class="list-group-item-heading">{{session.sessionTitle}}</h4>
-                    <pre class="list-group-item-text">{{session.sessionAbstract}}</pre>
-                    <a eat-click href="javascript:void(0)" data-ng-click="session.speakerInfo = !session.speakerInfo">Presenter Information <span class="glyphicon glyphicon-arrow-right"></span> </a>
-                    <div class="presenter-information alert alert-success" data-ng-class="{true: 'hidden', false:''}[!session.speakerInfo] ">
+                <div class="col-lg-3 dash-widget" >
+                    <img src="img/bg/sessions_icon.png" class="img-thumbnail" >
+                    <div class="data-content">
+                        <h5>Session Data:</h5>
                         <ul>
-                            <li data-ng-show="session.firstName"><strong>Presenter: </strong> {{session.firstName}} {{session.middleName}} {{session.lastName}}</li>
-                            <li data-ng-show="session.twitter"><strong>Twitter: </strong> <a href="https://www.twitter.com/{{session.twitter}}">{{session.twitter}}</a></li>
-                            <li data-ng-show="session.personalSite"><strong>Personal site: </strong><a href="http://{{session.personalSite}}">{{session.personalSite}}</a></li>
+                            <li><a href="javascript:void(0)" data-ng-click="getSessions($event)" eat-click>Submitted: {{submittedSessions}}</a></li>
+                            <li>Accepted: {{acceptedSessions}}</li>
                         </ul>
+                    </div>
+
+                </div>
+                <div class="col-lg-3 dash-widget" >
+                    <img src="img/bg/sessions_icon.png" class="img-thumbnail" >
+                    <div class="data-content">
+                        <h5>Leader Board:</h5>
+                        <ul>
+                            <li><a href="javascript:void(0)" data-ng-click="getLeaders($event)" eat-click>View Session Leaderboard</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="session_table" data-ng-show="showSessions">
+                <div class="list-group {{session.selected}}" data-ng-repeat="session in allSessions" data-ng-controller="itemController">
+                    <div class="list-group-item" id="{{session.id}}">
+
+                        <a href="#" data-ng-show="auth.isAuthenticated" class="reviewBtn btn btn-primary btn-xs pull-right" data-ng-click="showVotePanel(session.id,$index,$event)" eat-click >review</a>
+
+                        <h4 class="list-group-item-heading">{{session.sessionTitle}}</h4>
+                        <pre class="list-group-item-text">{{session.sessionAbstract}}</pre>
+                        <pre class="list-group-item-text" data-ng-show="session.sessionInformation">{{session.sessionInformation}}</pre>
+                        <a eat-click href="javascript:void(0)" data-ng-click="session.speakerInfo = !session.speakerInfo">Presenter Information <span class="glyphicon glyphicon-arrow-right"></span> </a>
+                        <div class="presenter-information alert alert-success">
+                            <ul>
+
+                                <li data-ng-show="session.firstName"><strong>Presenter: </strong> {{session.firstName}} {{session.middleName}} {{session.lastName}}</li>
+                                <li data-ng-show="session.twitter"><strong>Twitter: </strong> <a href="https://www.twitter.com/{{session.twitter}}">{{session.twitter}}</a></li>
+                                <li data-ng-show="session.personalSite"><strong>Personal site: </strong><a href="http://{{session.personalSite}}">{{session.personalSite}}</a></li>
+                                <li data-ng-show="session.copresenter"><strong>Copresenter: </strong> {{session.copresenter}}</li>
+                                <li data-ng-show="session.sessionAudience"><strong>Audience Level: </strong>{{session.sessionAudience}}</li>
+                                <li data-ng-show="session.sessionLevel"><strong>Session Level: </strong>{{session.sessionLevel}}</li>
+                                <li data-ng-show="session.session_length"><strong>Session Length: </strong>{{session.session_length}}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div id="leader_table" data-ng-show="showLeaders">
+                <table data-ng-show="leaderData" class="table table-bordered">
+                    <tr>
+                        <th>Place</th>
+                        <th>Session Title</th>
+                        <th>Presenter</th>
+                        <th>Speaker Rating</th>
+                        <th>Content Rating</th>
+                        <th>Applicability Rating</th>
+                        <th>Overall Rating</th>
+                    </tr>
+                    <tr data-ng-repeat="session in leaderData">
+                        <td>{{$index + 1}}</td>
+                        <td>{{session.sessionTitle}}</td>
+                        <td>{{session.firstName}} {{session.lastName}}</td>
+                        <td>{{session.speaker | number: 2}}</td>
+                        <td>{{session.content | number: 2}}</td>
+                        <td>{{session.app | number: 2}}</td>
+                        <td>{{session.overall_avg | number: 2}}</td>
+                    </tr>
+                </table>
+
+            </div>
+
         </div>
-
     </div>
-</div>
-<div class="review" ng-style="review.positionReviewProp" data-ng-controller="ratingsWidget" data-ng-show="review.showWidget">
-    <header>
-        <span class="title">{{review.data.sessionTitle}}</span>  <a class="pull-right" eat-click data-ng-click="closeReview()"><span class="glyphicon glyphicon-remove-circle"></span>&nbsp</a> </header>
-    <article>
-        <p>What do you think of this proposal?</p>
-        <ul>
-            <li><label>Content: </label> <rating class="content_rating" value="review.contentRate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating></li>
-            <li><label>Speaker: </label> <rating class="speaker_rating" value="review.speakerRate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating></li>
-            <li><label>Applicability: </label> <rating class="applicability_rating" value="review.applicabilityRate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating></li>
-        </ul>
+    <div class="review" ng-style="review.positionReviewProp" data-ng-controller="ratingsWidget" data-ng-show="review.showWidget">
+        <header>
+            <span class="title">{{review.data.sessionTitle}}</span>  <a class="pull-right" eat-click data-ng-click="closeReview()"><span class="glyphicon glyphicon-remove-circle"></span>&nbsp</a> </header>
+        <article>
+            <p>What do you think of this proposal?</p>
+            <ul>
+                <li><label>Content: </label> <rating class="content_rating" value="review.contentRate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating></li>
+                <li><label>Speaker: </label> <rating class="speaker_rating" value="review.speakerRate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating></li>
+                <li><label>Applicability: </label> <rating class="applicability_rating" value="review.applicabilityRate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating></li>
+            </ul>
+            <p class="form-group">
+                <label for="audience">Session Audience: </label>
 
-        <textarea class="input-lg review-comment" data-ng-model="review.reviewComment"></textarea>
-    </article>
+                    <select ng-model="review.sessionAudience" class="form-control">
+                        <option selected value="">Please choose one...</option>
+                        <option>Beginner</option>
+                        <option>Agile Engineering</option>
+                        <option>Team</option>
+                        <option>Organization</option>
+                        <option>Product Development</option>
+                        <option>Personal Development</option>
+                        <option>Other...</option>
+                    </select>
 
-    <footer>
-        <button class="btn btn-primary btn-sm review-submit" data-session-id="{{review.data.id}}" data-ng-click="saveRating($event)">Save Rating</button>
-        <a class="btn-link" href="#" data-ng-click="closeReview()" eat-click>Cancel</a>
+            </p>
+            <textarea class="form-control review-comment" data-ng-model="review.reviewComment"></textarea>
+        </article>
 
-    </footer>
+        <footer>
+            <button class="btn btn-primary btn-sm review-submit" data-session-id="{{review.data.id}}" data-ng-click="saveRating($event)">Save Rating</button>
+            <a class="btn-link" href="#" data-ng-click="closeReview()" eat-click>Cancel</a>
+
+        </footer>
+    </div>
 </div>
 </div>
