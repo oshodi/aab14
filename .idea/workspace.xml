@@ -14,7 +14,7 @@
     <file path="/controllersSpec.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1381521833081" ignored="false" />
     <file path="/home.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1385094047066" ignored="false" />
     <file path="/app.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1386003593764" ignored="false" />
-    <file path="/sponsors.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1384980570999" ignored="false" />
+    <file path="/sponsors.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1386009385548" ignored="false" />
     <file path="/location.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1384958334461" ignored="false" />
     <file path="/sessions.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1385094162057" ignored="false" />
     <file path="/api.php" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1379354709150" ignored="false" />
@@ -82,10 +82,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.less" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="218" column="11" selection-start="3483" selection-end="3483" vertical-scroll-proportion="0.6666667">
+            <state line="218" column="11" selection-start="3483" selection-end="3483" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sponsors.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partials/sponsors.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="66" selection-start="1997" selection-end="1997" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
@@ -120,10 +129,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="home.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/partials/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="90" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
+            <state line="48" column="20" selection-start="2862" selection-end="2862" vertical-scroll-proportion="0.30669144">
               <folding />
             </state>
           </provider>
@@ -152,10 +161,8 @@
         <option value="$PROJECT_DIR$/user/login_process.php" />
         <option value="$PROJECT_DIR$/partials/location.html" />
         <option value="$PROJECT_DIR$/partials/speaker.html" />
-        <option value="$PROJECT_DIR$/partials/sponsors.html" />
         <option value="$PROJECT_DIR$/partials/team.html" />
         <option value="$PROJECT_DIR$/user/includes/database_info.php" />
-        <option value="$PROJECT_DIR$/partials/home.html" />
         <option value="$PROJECT_DIR$/partials/sessions.html" />
         <option value="$PROJECT_DIR$/updatesessions.php" />
         <option value="$PROJECT_DIR$/index.php" />
@@ -163,6 +170,8 @@
         <option value="$PROJECT_DIR$/js/controllers/controllers.js" />
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/css/main.less" />
+        <option value="$PROJECT_DIR$/partials/sponsors.html" />
+        <option value="$PROJECT_DIR$/partials/home.html" />
       </list>
     </option>
   </component>
@@ -422,21 +431,9 @@
         <state line="6" column="397" selection-start="602" selection-end="602" vertical-scroll-proportion="0.20905924" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/sponsors.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="31" selection-start="97" selection-end="97" vertical-scroll-proportion="0.05226481" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partials/location.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="29" selection-start="762" selection-end="825" vertical-scroll-proportion="0.026737968" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="90" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/sessions.html">
@@ -492,7 +489,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="218" column="11" selection-start="3483" selection-end="3483" vertical-scroll-proportion="0.6666667">
+        <state line="218" column="11" selection-start="3483" selection-end="3483" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/sponsors.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="66" selection-start="1997" selection-end="1997" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="20" selection-start="2862" selection-end="2862" vertical-scroll-proportion="0.30669144">
           <folding />
         </state>
       </provider>
