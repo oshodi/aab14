@@ -155,6 +155,7 @@ controllers.sessionsAdminController = function($scope,$http,Service) {
 
     $scope.getLeaders = function($event,sessionFilter) {
         var filter;
+        $scope.leaderData = null;
         $scope.filterName = (sessionFilter === 'null'? 'Overall' : sessionFilter);
         if(!sessionFilter) {
             filter = {filter: null};

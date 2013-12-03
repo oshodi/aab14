@@ -470,9 +470,13 @@
 			$filter = $this->_request['filter'];
 
 			if($filter != 'null') {
-				$where_filter = "AND session_table.sessionAudience = '$filter'";
+				if($filter == 'Other') {
+					$where_filter = "AND session_table.sessionAudience NOT IN ('Organization','Agile Engineering','Team','Personal Development','Product Development','Beginner')";		
+				} else {
+					$where_filter = "AND session_table.sessionAudience = '$filter'";
+				}	
 			} else {
-				$where_filter = '';
+				$where_filter = "";
 			}
 
         	$sql = "SELECT votes.sessionid,COUNT(votes.sessionid) votes_total, 
