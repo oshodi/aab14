@@ -50,10 +50,7 @@ controllers.mainController = function($scope,$rootScope) {
 }
 
 controllers.sessionsController = function($scope, $http, Service) {
-
     $scope.sessionYear = "";
-
-
     $scope.getSessions = function($event) {
 
         if($event.target.innerText && $event.target.innerText != "") {
@@ -64,10 +61,15 @@ controllers.sessionsController = function($scope, $http, Service) {
         });
 
     }
+}
 
+controllers.sessionsViewController = function($scope, Service, $routeParams) {
+    $scope.sessionData = null;
 
-
-
+    Service.getSessionDetails($.param($routeParams)).success(function(data) {
+        $scope.sessionData = data;
+        console.log($scope.sessionData);
+    });
 
 
 }
@@ -138,7 +140,7 @@ controllers.sessionsAdminController = function($scope,$http,Service) {
     $scope.showLeaders = false;
     $scope.allSessions = null;
     $scope.leaderData = null;
-
+    $scope.sessionFilters = ['Beginner ','Agile Engineering','Team','Organization','Product Development','Personal Development','Other']
 
     Service.getSessionData().success(function(data, status, headers, config) {
         $scope.submittedSessions = data.totalNumberOfSessionsSubmitted.number;
@@ -151,9 +153,19 @@ controllers.sessionsAdminController = function($scope,$http,Service) {
             $scope.showSessions = $scope.showSessions === false ? true: false;
     };
 
-    $scope.getLeaders = function($event) {
-        $scope.showLeaders = $scope.showLeaders === false ? true: false;
-        Service.getLeaderboard().success(function(data) {
+    $scope.getLeaders = function($event,sessionFilter) {
+        var filter;
+        $scope.filterName = (sessionFilter === 'null'? 'Overall' : sessionFilter);
+        if(!sessionFilter) {
+            filter = {filter: null};
+
+        } else {
+            filter = {filter: sessionFilter};
+
+        }
+        //$scope.showLeaders = $scope.showLeaders === false ? true: false;
+
+        Service.getLeaderboard($.param(filter)).success(function(data) {
             $scope.leaderData = data;
         });
     };

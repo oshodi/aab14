@@ -429,24 +429,67 @@
 
         }
 
-        private function getOverallLeaderboard() {
-        	if($this->get_request_method() != "GET"){
+        private function getSessionDetails() {
+        	if($this->get_request_method() != "POST"){
 				$this->response('',406);
-				
 			}
 
-        	$sql = "SELECT votes.sessionid,COUNT(votes.sessionid) votes_total, 
-					session_table.sessionTitle,
-					session_table.firstName,
-					session_table.lastName, 
+			$sessionid = (int)$this->_request['sessionId'];
+
+        	$sql = "SELECT COUNT(votes.sessionid) votes_total, 
+					session_table.*, 
 					AVG(votes.content) content, 
 					AVG(votes.applicability) app, 
 					AVG(votes.speaker) speaker,
 					AVG(votes.content + votes.applicability + votes.speaker)/3.0 overall_avg
 					FROM `votes`,`session_table` 
-					WHERE votes.sessionid = session_table.id 
+					WHERE votes.sessionid = '$sessionid' AND session_table.id = '$sessionid' 
+					";
+
+			$query = mysql_query($sql, $this->db);
+            $rows = array();
+
+            if($query) {
+        		
+        		while ($array = mysql_fetch_array($query,MYSQL_ASSOC)) { 
+        			$rows[] = $array; 
+        		}
+
+        		//return array("number" => $totalNumberOfSessionsSubmitted, "sessions" => $rows);
+        	}
+
+			$this->response($this->json($rows), 200);
+        }
+
+        private function getOverallLeaderboard() {
+        	if($this->get_request_method() != "POST"){
+				$this->response('',406);
+
+			}
+
+			$filter = $this->_request['filter'];
+
+			if($filter != 'null') {
+				$where_filter = "AND session_table.sessionAudience = '$filter'";
+			} else {
+				$where_filter = '';
+			}
+
+        	$sql = "SELECT votes.sessionid,COUNT(votes.sessionid) votes_total, 
+					session_table.sessionTitle,
+					session_table.firstName,
+					session_table.lastName,
+					session_table.session_length, 
+					AVG(votes.content) content, 
+					AVG(votes.applicability) app, 
+					AVG(votes.speaker) speaker,
+					AVG(votes.content + votes.applicability + votes.speaker)/3.0 overall_avg
+					FROM `votes`,`session_table` 
+					WHERE votes.sessionid = session_table.id $where_filter
 					GROUP BY votes.sessionid
 					ORDER BY overall_avg DESC";
+
+					error_log($sql);
 
 			$query = mysql_query($sql, $this->db);
             $rows = array();

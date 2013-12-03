@@ -14,8 +14,8 @@ app.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'partials/sessions.html',
             controller: 'sessionsController'
         }).when('/Sessions/:sessionId',{
-            templateUrl: 'partials/sessions.html',
-            controller: 'sessionsController'
+            templateUrl: 'partials/sessionView.html',
+            controller: 'sessionsViewController'
         }).when('/Admin',{
             templateUrl: 'partials/sessionsAdmin.html',
             controller: 'sessionsAdminController'
@@ -122,9 +122,26 @@ app.factory('Service', function($http) {
                 }
             })
         },
-        getLeaderboard: function() {
-            return $http.get('rest/getOverallLeaderboard');
+        getLeaderboard: function(inputs) {
+            return $http({
+                method: 'POST',
+                url: 'rest/getOverallLeaderboard',
+                data: inputs,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                }
+            })
 
+        },
+        getSessionDetails: function(inputs) {
+            return $http({
+                method: 'POST',
+                url: 'rest/getSessionDetails',
+                data: inputs,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                }
+            })
         }
     }
 });

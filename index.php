@@ -104,7 +104,8 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery.min.js"></script>
-<script src="js/angular.min.js"></script>
+<!--<script src="js/angular.min.js"></script>-->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 <script src="js/angular-cookies.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/directives/ui-bootstrap-custom-0.6.0.min.js"></script>

@@ -201,6 +201,10 @@
 #aab #leader_table table .out {
   background: red;
 }
+#aab #leader_table table a {
+  color: #000000;
+  text-decoration: underline;
+}
 .sessions .no-data {
   padding: 10px;
   background: #ffffff;

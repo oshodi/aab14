@@ -19,12 +19,13 @@
                     </div>
 
                 </div>
-                <div class="col-lg-3 dash-widget" >
-                    <img src="img/bg/sessions_icon.png" class="img-thumbnail" >
+                <div class="col-lg-6 dash-widget" >
+                    <img src="img/leaderboard.png" class="img-thumbnail" >
                     <div class="data-content">
                         <h5>Leader Board:</h5>
                         <ul>
-                            <li><a href="javascript:void(0)" data-ng-click="getLeaders($event)" eat-click>View Session Leaderboard</a></li>
+                            <li><a href="javascript:void(0)" data-ng-click="getLeaders($event,'null')" eat-click>View Overall Session Leaderboard</a></li>
+                            <li data-ng-repeat="filter in sessionFilters"><a href="javascript:void(0)" data-ng-click="getLeaders($event,filter)" >View {{filter}} Leaderboard</a></li>
                         </ul>
                     </div>
 
@@ -58,8 +59,8 @@
                 </div>
             </div>
 
-            <div id="leader_table" data-ng-show="showLeaders ">
-                <h3>Overall Session Leaderboard</h3>
+            <div id="leader_table">
+                <h3 data-ng-show="filterName">{{filterName}} Session Leaderboard</h3>
 
                 <table data-ng-show="leaderData" class="table table-bordered">
                     <tr>
@@ -73,9 +74,9 @@
                         <th>Total Votes</th>
                     </tr>
                    <tbody>
-                       <tr data-ng-repeat="session in leaderData" data-ng-class="{'include': ($index+1 < 20),'probable': ($index+1 >= 20 && $index+1 <= 34),'out': ($index+1 > 34)}">
+                       <tr data-ng-repeat="session in leaderData" data-ng-class="{'include': ({{session.overall_avg | number: 2}} >= 4.00),'probable': ({{session.overall_avg | number: 2}} < 4.00 && {{session.overall_avg | number: 2}} >= 3.67 ),'out': ({{session.overall_avg | number: 2}} < 3.67)}">
                            <td>{{$index + 1}}</td>
-                           <td>{{session.sessionTitle}}</td>
+                           <td><a href="#/Sessions/{{session.sessionid}}">{{session.sessionTitle}}</a></td>
                            <td>{{session.firstName}} {{session.lastName}}</td>
                            <td>{{session.speaker | number: 2}}</td>
                            <td>{{session.content | number: 2}}</td>
