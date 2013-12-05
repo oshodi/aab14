@@ -1,46 +1,12 @@
+'use strict';
 describe('Testing Agile and beyond page', function() {
+    var scope;
+    beforeEach(angular.mock.module('AgileAndBeyondApp'));
 
-    describe('App', function() {
-        var $scope = null;
-        var ctrl = null;
-
-        //you need to indicate your module in a test
-        beforeEach(module('AgileAndBeyondApp'));
-
-
-
-       describe('Test speakerSubmissionController', function() {
-           beforeEach(inject(function($rootScope, $controller) {
-               $scope = $rootScope.$new();
-
-               ctrl = $controller('speakerSubmissionController', {
-                   $scope: $scope
-               });
-           }));
-
-           it('should set submit button to false', function() {
-               expect($scope.isSubmitDisabled).toBeFalsy();
-           })
-
-
-       });
-
-
-       describe('mainController', function() {
-           beforeEach(inject(function($rootScope,$controller) {
-               $scope = $rootScope.$new();
-               ctrl = $controller('mainController', {
-                   $scope: $scope
-               });
-           }));
-
-           it('should be true', function() {
-
-           })
-       });
-
-    });
-
-
-
+    beforeEach(angular.mock.inject(function($rootScope, $controller){
+        //create an empty scope
+        scope = $rootScope.$new();
+        //declare the controller and inject our empty scope
+        //$controller('MainCtrl', {$scope: scope});
+    }));
 });

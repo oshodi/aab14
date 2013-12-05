@@ -39,7 +39,7 @@ controllers.mainController = function($scope,$rootScope) {
 
     $scope.setActive = function(item) {
         $scope.selected = item;
-    }
+    };
 
     $scope.setActive($scope.pages[0]);
 
@@ -47,21 +47,21 @@ controllers.mainController = function($scope,$rootScope) {
     $scope.itemClass = function(item) {
         return item === $scope.selected ? 'active' : undefined;
     };
-}
+};
 
 controllers.sessionsController = function($scope, $http, Service) {
     $scope.sessionYear = "";
     $scope.getSessions = function($event) {
 
-        if($event.target.innerText && $event.target.innerText != "") {
+        if($event.target.innerText && $event.target.innerText !== "") {
             $scope.sessionYear = $event.target.innerText;
         }
         Service.getAllSessions($scope.sessionYear).success(function(results) {
             $scope.sessionData = results;
         });
 
-    }
-}
+    };
+};
 
 controllers.sessionsViewController = function($scope, Service, $routeParams) {
     $scope.sessionData = null;
@@ -72,7 +72,7 @@ controllers.sessionsViewController = function($scope, Service, $routeParams) {
     });
 
 
-}
+};
 
 controllers.speakerSubmissionController = function($scope, $http,$rootScope,Service) {
     $scope.defaultForm = {
@@ -127,11 +127,8 @@ controllers.speakerSubmissionController = function($scope, $http,$rootScope,Serv
             $('.modal').modal({show: true});
 
         });
-    }
-
-
-
-}
+    };
+};
 
 controllers.sessionsAdminController = function($scope,$http,Service) {
     $scope.acceptedSessions = 0;
@@ -140,7 +137,7 @@ controllers.sessionsAdminController = function($scope,$http,Service) {
     $scope.showLeaders = false;
     $scope.allSessions = null;
     $scope.leaderData = null;
-    $scope.sessionFilters = ['Beginner ','Agile Engineering','Team','Organization','Product Development','Personal Development','Other']
+    $scope.sessionFilters = ['Beginner ','Agile Engineering','Team','Organization','Product Development','Personal Development','Other'];
 
     Service.getSessionData().success(function(data, status, headers, config) {
         $scope.submittedSessions = data.totalNumberOfSessionsSubmitted.number;
@@ -150,7 +147,7 @@ controllers.sessionsAdminController = function($scope,$http,Service) {
     });
 
     $scope.getSessions = function($event) {
-            $scope.showSessions = $scope.showSessions === false ? true: false;
+            $scope.showSessions = $scope.showSessions === false? false : true;
     };
 
     $scope.getLeaders = function($event,sessionFilter) {
@@ -170,7 +167,7 @@ controllers.sessionsAdminController = function($scope,$http,Service) {
             $scope.leaderData = data;
         });
     };
-}
+};
 
 controllers.itemController = function($scope,$attrs,Service) {
     $scope.showVotePanel = function(id,index,event) {
@@ -185,14 +182,14 @@ controllers.itemController = function($scope,$attrs,Service) {
         $scope.review.positionReviewProp =  {
             left: event.pageX - 320,
             top: event.pageY -20
-        }
+        };
         $scope.review.showWidget = true;
        $scope.review.data = $scope.allSessions[index];
 
         var checkSession = {
             userid: AAB_USER_ID,
             sessionid: $scope.review.data.id
-        }
+        };
 
         Service.getSessionVoteById($.param(checkSession)).success(function(data, status, headers, config) {
 
@@ -207,11 +204,8 @@ controllers.itemController = function($scope,$attrs,Service) {
 
         });
 
-    }
-
-
-
-}
+    };
+};
 
 controllers.ratingsWidget = function($scope,Service) {
     $scope.review.speakerRate = 0;
@@ -219,7 +213,7 @@ controllers.ratingsWidget = function($scope,Service) {
     $scope.review.applicabilityRate = 0;
     $scope.max = 5;
     $scope.isReadonly = false;
-    var sessionVote = {}
+    var sessionVote = {};
 
 
     $scope.hoveringOver = function(value) {
@@ -243,7 +237,7 @@ controllers.ratingsWidget = function($scope,Service) {
             speaker: $scope.review.speakerRate,
             note: $scope.review.reviewComment,
             audience: $scope.review.sessionAudience
-        }
+        };
 
         Service.castVote($.param(sessionVote)).success(function(data, status, headers, config) {
             toastr.success('Your vote has been cast');
@@ -253,24 +247,22 @@ controllers.ratingsWidget = function($scope,Service) {
                 toastr.warning("Oh Snap!  there was an error. Our Bad.  Please Try again.");
         });
 
-    }
+    };
 
     $scope.closeReview = function() {
         $scope.review.showWidget = false;
         $scope.review.positionReviewProp =  {
             left: "auto",
             top: "auto"
-        }
-    }
-}
+        };
+    };
+};
 
 controllers.sponsorController = function($scope) {
     $scope.buyNow = function(event) {
         window.open("http://aab14sponsors.eventbrite.com/");
-    }
-
-
-}
+    };
+};
 
 controllers.userRegistrationController = function($scope,$http,Service,$rootScope) {
 
@@ -296,8 +288,8 @@ controllers.userRegistrationController = function($scope,$http,Service,$rootScop
             error(function(data) {
                 console.log(data);
             });
-    }
-}
+    };
+};
 
 
 controllers.updateSession = function($scope,$location,Service) {
@@ -306,7 +298,7 @@ controllers.updateSession = function($scope,$location,Service) {
     $scope.audienceOptions = ["Agile Engineering"];
     var sessionData = {
         id: AAB_ID
-    }
+    };
 
     if(sessionData.id) {
         Service.getSessionsById($.param(sessionData)).success(function(data){
@@ -325,11 +317,11 @@ controllers.updateSession = function($scope,$location,Service) {
             Service.updateSession($.param(editdata)).success(function(data) {
                 toastr.info('Your session(s) have been updated');
             });
-        })
+        });
 
-    }
+    };
 
-}
+};
 
 app.controller(controllers);
 

@@ -12,7 +12,7 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.min.css" rel="stylesheet" />
-    <script src="js/respond.min.js"></script>
+    <script src="js/thirdparty/respond.min.js"></script>
     <style>
         body {
             padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -26,7 +26,7 @@
     <link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="favicon.ico">
     <!--[if lte IE 8]>
-    <script src="js/json2.js"></script>
+    <script src="js/thirdparty/json2.js"></script>
     <![endif]-->
 
     <script type="text/javascript">
@@ -125,10 +125,9 @@
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery.min.js"></script>
-<script src="js/angular.min.js"></script>
-<script src="js/angular-cookies.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="js/thirdparty/jquery.min.js"></script>
+<script src="js/thirdparty/angular.min.js"></script>
+<script src="js/thirdparty/bootstrap.min.js"></script>
 <script src="js/directives/ui-bootstrap-custom-0.6.0.min.js"></script>
 <script src="js/directives/ui-bootstrap-custom-tpls-0.6.0.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.min.js"></script>

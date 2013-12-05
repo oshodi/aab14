@@ -67,6 +67,7 @@
                         <th>Place</th>
                         <th>Session Title</th>
                         <th>Presenter</th>
+                        <th>Length</th>
                         <th>Speaker Rating</th>
                         <th>Content Rating</th>
                         <th>Applicability Rating</th>
@@ -79,6 +80,7 @@
                            <td><a href="#/Sessions/{{session.sessionid}}">{{session.sessionTitle}}</a></td>
                            <td>{{session.firstName}} {{session.lastName}}</td>
                            <td>{{session.speaker | number: 2}}</td>
+                           <td>{{session.session_length}}</td>
                            <td>{{session.content | number: 2}}</td>
                            <td>{{session.app | number: 2}}</td>
                            <td>{{session.overall_avg | number: 2}}</td>
