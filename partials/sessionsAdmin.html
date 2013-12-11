@@ -14,7 +14,7 @@
                         <h5>Session Data:</h5>
                         <ul>
                             <li><a href="javascript:void(0)" data-ng-click="getSessions($event)" eat-click>Submitted: {{submittedSessions}}</a></li>
-                            <li>Accepted: {{acceptedSessions}}</li>
+                            <li><a href="javascript:void(0)" data-ng-click="getSessions($event)" eat-click>Accepted: {{acceptedSessions}}</a></li>
                         </ul>
                     </div>
 
@@ -34,7 +34,7 @@
 
 
             <div id="session_table" data-ng-show="showSessions">
-                <div class="list-group {{session.selected}}" data-ng-repeat="session in allSessions" data-ng-controller="itemController">
+                <div class="list-group {{session.selected}}" data-ng-repeat="session in allSessions | filter:searchFilter" data-ng-controller="itemController">
                     <div class="list-group-item" id="{{session.id}}">
 
                         <a href="#" data-ng-show="auth.isAuthenticated" class="reviewBtn btn btn-primary btn-xs pull-right" data-ng-click="showVotePanel(session.id,$index,$event)" eat-click >review</a>
@@ -69,22 +69,28 @@
                         <th>Presenter</th>
                         <th>Length</th>
                         <th>Speaker Rating</th>
+
                         <th>Content Rating</th>
                         <th>Applicability Rating</th>
                         <th>Overall Rating</th>
                         <th>Total Votes</th>
+                        <th>Accept/Reject</th>
                     </tr>
                    <tbody>
-                       <tr data-ng-repeat="session in leaderData" data-ng-class="{'include': ({{session.overall_avg | number: 2}} >= 4.00),'probable': ({{session.overall_avg | number: 2}} < 4.00 && {{session.overall_avg | number: 2}} >= 3.67 ),'out': ({{session.overall_avg | number: 2}} < 3.67)}">
+                       <tr data-ng-repeat="session in leaderData" data-ng-class="{'include': (session.accepted > 0),'out': (session.accepted < 1)}">
                            <td>{{$index + 1}}</td>
                            <td><a href="#/Sessions/{{session.sessionid}}">{{session.sessionTitle}}</a></td>
                            <td>{{session.firstName}} {{session.lastName}}</td>
-                           <td>{{session.speaker | number: 2}}</td>
                            <td>{{session.session_length}}</td>
+                           <td>{{session.speaker | number: 2}}</td>
+
                            <td>{{session.content | number: 2}}</td>
                            <td>{{session.app | number: 2}}</td>
                            <td>{{session.overall_avg | number: 2}}</td>
                            <td>{{session.votes_total}}</td>
+                           <td>
+                               <a data-ng-show="session.accepted < 1" class="btn btn-success" data-ng-click="setStatus(session,1)">Accept</a>
+                               <a data-ng-show="session.accepted > 0" class="btn btn-warning" data-ng-click="setStatus(session, 0)">Reject</a> </td>
                        </tr>
                    </tbody>
 

@@ -42,8 +42,8 @@ app.directive('eatClick', function() {
 
 app.factory('Service', function($http) {
     return {
-        getAllSessions: function(year) {
-            return $http.get('rest/getSchedule?year=' + year);
+        getAllSessions: function(year, filter) {
+            return $http.get('rest/getSchedule?year=' + year + '&filter=' + filter);
         },
         logout: function() {
             return $http.get('rest/logout');
@@ -137,6 +137,16 @@ app.factory('Service', function($http) {
             return $http({
                 method: 'POST',
                 url: 'rest/getSessionDetails',
+                data: inputs,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                }
+            });
+        },
+        setSessionStatus: function(inputs) {
+            return $http({
+                method: 'POST',
+                url: 'rest/setSessionStatus',
                 data: inputs,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'

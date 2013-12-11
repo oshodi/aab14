@@ -461,6 +461,28 @@
 			$this->response($this->json($rows), 200);
         }
 
+        private function setSessionStatus() {
+        	if($this->get_request_method() != "POST"){
+				$this->response('',406);
+
+			}
+
+			$type = $this->_request['status'];
+			$sessionid = $this->_request['sessionid'];
+
+
+			$sql = "UPDATE session_table SET accepted='$type' WHERE id='$sessionid'";
+
+			if(mysql_query($sql, $this->db)) {
+				$success = array('status' => "Success", "msg" => 'Your session updated', "id" => $sessionid);
+				$this->response($this->json($success), 200);
+			} else {
+				$error = array('status' => "Failed", "msg" => 'No id found in database', "id" => $sessionid);
+				$this->response($this->json($error), 204);
+			}
+
+        }
+
         private function getOverallLeaderboard() {
         	if($this->get_request_method() != "POST"){
 				$this->response('',406);
@@ -483,7 +505,8 @@
 					session_table.sessionTitle,
 					session_table.firstName,
 					session_table.lastName,
-					session_table.session_length, 
+					session_table.session_length,
+					session_table.accepted, 
 					AVG(votes.content) content, 
 					AVG(votes.applicability) app, 
 					AVG(votes.speaker) speaker,

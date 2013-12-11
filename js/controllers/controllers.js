@@ -147,10 +147,16 @@ controllers.sessionsAdminController = function($scope,$http,Service) {
     });
 
     $scope.getSessions = function($event) {
-            $scope.showSessions = $scope.showSessions === false? false : true;
+            $scope.showSessions = $scope.showSessions === false? true : false;
+    };
+
+    $scope.getSessionsAccepted = function($event) {
+        $scope.showSessions = $scope.showSessions === false? true : false;
+        $scope.searchFilter = {accepted: '1'}
     };
 
     $scope.getLeaders = function($event,sessionFilter) {
+        $scope.showSessions = false;
         var filter;
         $scope.leaderData = null;
         $scope.filterName = (sessionFilter === 'null'? 'Overall' : sessionFilter);
@@ -165,6 +171,17 @@ controllers.sessionsAdminController = function($scope,$http,Service) {
 
         Service.getLeaderboard($.param(filter)).success(function(data) {
             $scope.leaderData = data;
+        });
+    };
+
+    $scope.setStatus = function(session, type) {
+        var inputs = session;
+        inputs.status = type;
+
+        Service.setSessionStatus($.param(inputs)).success(function(data) {
+            console.log(data);
+            var alertText = (type == 1)? 'accepted' : 'rejected';
+            toastr.success('You have ' + alertText + ' this session');
         });
     };
 };
