@@ -74,7 +74,7 @@
                         <th>Applicability Rating</th>
                         <th>Overall Rating</th>
                         <th>Total Votes</th>
-                        <th>Accept/Reject</th>
+                        <th data-ng-show="auth.isAuthenticated">Accept/Reject</th>
                     </tr>
                    <tbody>
                        <tr data-ng-repeat="session in leaderData" data-ng-class="{'include': (session.accepted > 0),'out': (session.accepted < 1)}">
@@ -88,7 +88,7 @@
                            <td>{{session.app | number: 2}}</td>
                            <td>{{session.overall_avg | number: 2}}</td>
                            <td>{{session.votes_total}}</td>
-                           <td>
+                           <td data-ng-show="auth.isAuthenticated">
                                <a data-ng-show="session.accepted < 1" class="btn btn-success" data-ng-click="setStatus(session,1)">Accept</a>
                                <a data-ng-show="session.accepted > 0" class="btn btn-warning" data-ng-click="setStatus(session, 0)">Reject</a> </td>
                        </tr>
