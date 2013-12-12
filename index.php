@@ -15,10 +15,11 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="js/thirdparty/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="js/thirdparty/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="js/thirdparty/toastr/toastr.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
-    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.min.css" rel="stylesheet" />
+
     <script src="js/thirdparty/respond.min.js"></script>
     <style>
         body {
@@ -65,7 +66,7 @@
                     if ($qls->user_info['username'] == '') {
                 ?>
                 <li class="dropdown user-login">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown" eat-click>Sign In <strong class="caret"></strong></a>
                     <div class="dropdown-menu">
 
                         <?php
@@ -80,7 +81,7 @@
                 ?>
                 <li class="dropdown user-login">
                     <input type="hidden" id="authorized" value="true" />
-                    <a class="dropdown-toggle" href="#" id="user" data-id="<?php echo $qls->user_info['id']; ?>" data-toggle="dropdown">Welcome, <?php echo $qls->user_info['username']; ?> <strong class="caret"></strong></a>
+                    <a class="dropdown-toggle" href="#" id="user" data-id="<?php echo $qls->user_info['id']; ?>" data-toggle="dropdown" eat-click>Welcome, <?php echo $qls->user_info['username']; ?> <strong class="caret"></strong></a>
                     <div class="dropdown-menu">
 
                             <ul>
@@ -103,13 +104,11 @@
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/thirdparty/jquery.min.js"></script>
-<!--<script src="js/angular.min.js"></script>-->
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-<script src="js/thirdparty/bootstrap.min.js"></script>
-<script src="js/directives/ui-bootstrap-custom-0.6.0.min.js"></script>
-<script src="js/directives/ui-bootstrap-custom-tpls-0.6.0.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.min.js"></script>
+<script src="js/thirdparty/jquery/jquery.min.js"></script>
+<script src="js/thirdparty/angular/angular.min.js"></script>
+<script src="js/thirdparty/angular-route/angular-route.min.js"></script>
+<script src="js/thirdparty/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/thirdparty/toastr/toastr.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/controllers/controllers.js"></script>
 </body>

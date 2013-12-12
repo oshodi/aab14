@@ -26,8 +26,8 @@
 #aab .top .callout {
   background: url(../img/bg/callout.png);
   padding: 20px;
-  width: 968px;
-  height: 272px;
+  width: 68%;
+  min-height: 272px;
   position: relative;
   top: 55px;
   left: 40px;
@@ -113,6 +113,8 @@
 }
 #aab .navbar {
   padding: 10px 0 10px 0;
+  margin-bottom: 0;
+  background: #FFFFFF;
 }
 #aab .navbar-nav {
   margin: 14px 0 0 0;
@@ -125,6 +127,9 @@
   color: #ffffff;
   margin: 9px 0 0 10px;
   text-transform: uppercase;
+}
+#aab .navbar .navbar-nav a.register:hover {
+  background-color: #2d6ca2;
 }
 #aab .navbar .navbar-nav > .active > a {
   background: none;

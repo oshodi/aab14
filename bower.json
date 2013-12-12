@@ -1,0 +1,16 @@
+{
+    "name": "agile-and-beyond",
+    "version":"4.0.1",
+    "directory": "js/thirdparty",
+    "dependencies": {
+        "jquery": "~2.0.3",
+        "angular": "1.2.3",
+        "angular-route": "1.2.3",
+        "angular-animate": "1.2.3",
+        "angular-mocks": "1.2.3",
+        "angular-ui-bower": "*",
+        "toastr": "*",
+        "bootstrap": "*",
+        "angular-ui-bootstrap": "*"
+    }
+}

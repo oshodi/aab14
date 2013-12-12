@@ -1,13 +1,11 @@
 
 var controllers = {};
 
-controllers.homeController = function() {};
-
 controllers.mainController = function($scope,$rootScope) {
     $scope.sessionData = {};
     $rootScope.acceptingProposals = false;
     $scope.auth = {};
-    //$scope.auth.isAuthenticated = false;
+
     $scope.review = {
         showWidget: false
     };
@@ -153,6 +151,7 @@ controllers.sessionsAdminController = function($scope,$http,Service) {
     $scope.getSessionsAccepted = function($event) {
         $scope.showSessions = $scope.showSessions === false? true : false;
         $scope.searchFilter = {accepted: '1'}
+        var apple = "McIntosh";
     };
 
     $scope.getLeaders = function($event,sessionFilter) {

@@ -1,4 +1,4 @@
-var app = angular.module('AgileAndBeyondApp',['ui.bootstrap']);
+var app = angular.module('AgileAndBeyondApp',['ngRoute']);
 
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/Home',{

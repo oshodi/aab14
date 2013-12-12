@@ -4,8 +4,24 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
       // Make sure code styles are up to par and there are no obvious mistakes
-      jshint: {
+    jshint: {
           all: ['Gruntfile.js', 'js/controllers/*.js', 'js/app.js']
+    },
+    karma: {
+        options: {
+            configFile: 'karma.conf.js',
+            runnerPort: 9999
+        },
+        continuous: {
+            singleRun: true,
+            browsers: ['PhantomJS']
+        },
+        unit: {
+            singleRun: false,
+            autoWatch: true,
+            browsers: ['Chrome']
+        }
+
     },
     jasmine: {
         src: ['js/thirdparty/angular*.js','js/app.js', 'js/controllers/controllers.js'],
@@ -50,6 +66,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-karma');
 
   // Default task(s).
   grunt.registerTask('default', ['uglify']);
