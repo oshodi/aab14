@@ -13,13 +13,14 @@
                     <div class="data-content">
                         <h5>Session Data:</h5>
                         <ul>
-                            <li><a href="javascript:void(0)" data-ng-click="getSessions($event)" eat-click>Submitted: {{submittedSessions}}</a></li>
-                            <li><a href="javascript:void(0)" data-ng-click="getSessions($event)" eat-click>Accepted: {{acceptedSessions}}</a></li>
+                            <li><a href="javascript:void(0)" data-ng-click="getSessions({})" eat-click>Submitted: {{submittedSessions}}</a></li>
+                            <li><a href="javascript:void(0)" data-ng-click="getSessions({accepted: 1})" eat-click>Accepted: {{acceptedSessions}}</a></li>
+                            <li><a href="javascript:void(0)" data-ng-click="getSessions({accepted: 0} || {accepted: null} || {accepted: ''})" eat-click>Not Accepted: {{declinedSessions}}</a></li>
                         </ul>
                     </div>
 
                 </div>
-                <div class="col-lg-6 dash-widget" >
+                <div class="col-lg-5 dash-widget" >
                     <img src="img/leaderboard.png" class="img-thumbnail" >
                     <div class="data-content">
                         <h5>Leader Board:</h5>
@@ -30,11 +31,26 @@
                     </div>
 
                 </div>
+
+                <div class="col-lg-4 dash-widget" data-ng-show="filterName">
+                    <h4>Key</h4>
+                    <div class="data-content" id="small_leader_table" >
+                        <table >
+                            <tr class="agile engineering"><td>Agile Engineering</td></tr>
+                            <tr class="team"><td>Team</td></tr>
+                            <tr class="organization"><td>Organization</td></tr>
+                            <tr class="personal development"><td>Personal Development</td></tr>
+                            <tr class="include"><td>Product Development</td></tr>
+                        </table>
+                    </div>
+
+                </div>
+
             </div>
 
 
             <div id="session_table" data-ng-show="showSessions">
-                <div class="list-group {{session.selected}}" data-ng-repeat="session in allSessions | filter:searchFilter" data-ng-controller="itemController">
+                <div class="list-group {{session.selected}}" data-ng-repeat="session in allSessions | filter:filterBy" data-ng-controller="itemController">
                     <div class="list-group-item" id="{{session.id}}">
 
                         <a href="#" data-ng-show="auth.isAuthenticated" class="reviewBtn btn btn-primary btn-xs pull-right" data-ng-click="showVotePanel(session.id,$index,$event)" eat-click >review</a>
@@ -77,7 +93,7 @@
                         <th data-ng-show="auth.isAuthenticated">Accept/Reject</th>
                     </tr>
                    <tbody>
-                       <tr data-ng-repeat="session in leaderData" data-ng-class="{'include': (session.accepted > 0),'out': (session.accepted < 1)}">
+                       <tr data-ng-repeat="session in leaderData" data-ng-class="{'include': (session.accepted > 0),'out': (session.accepted < 1)}" class="{{session.sessionAudience | lowercase}}">
                            <td>{{$index + 1}}</td>
                            <td><a href="#/Sessions/{{session.sessionid}}">{{session.sessionTitle}}</a></td>
                            <td>{{session.firstName}} {{session.lastName}}</td>

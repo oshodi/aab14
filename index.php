@@ -18,9 +18,10 @@
     <link href="js/thirdparty/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="js/thirdparty/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="js/thirdparty/toastr/toastr.css" rel="stylesheet" />
+    <link href="js/thirdparty/blueimp-file-upload/css/jquery.fileupload.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
 
-    <script src="js/thirdparty/respond.min.js"></script>
+    <!--<script src="js/thirdparty/respond.min.js"></script>-->
     <style>
         body {
             padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -33,8 +34,9 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="favicon.ico">
+
     <!--[if lte IE 8]>
-    <script src="js/thirdparty/json2.js"></script>
+    <script src="js/thirdparty/json3.min.js"></script>
     <![endif]-->
 
     <script type="text/javascript">
@@ -99,16 +101,19 @@
     </div>
 </div>
 
-<div class="" data-ng-view=""></div> <!-- /container -->
+<div data-ng-view=""></div> <!-- /container -->
 
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/thirdparty/jquery/jquery.min.js"></script>
-<script src="js/thirdparty/angular/angular.min.js"></script>
-<script src="js/thirdparty/angular-route/angular-route.min.js"></script>
+<script src="js/thirdparty/jquery.min.js"></script>
+<script src="js/thirdparty/angular/angular.js"></script>
+<script src="js/thirdparty/angular-route/angular-route.js"></script>
 <script src="js/thirdparty/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="js/thirdparty/toastr/toastr.min.js"></script>
+<script src="js/thirdparty/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+<script src="js/thirdparty/blueimp-file-upload/js/jquery.fileupload.js"></script>
+<script src="js/thirdparty/blueimp-file-upload/js/jquery.fileupload-angular.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/controllers/controllers.js"></script>
 </body>

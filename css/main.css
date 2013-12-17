@@ -1,3 +1,8 @@
+#aab iframe {
+  border: none;
+  width: 90%;
+  height: 350px;
+}
 #aab .square {
   text-align: center;
   margin-bottom: 20px;
@@ -101,6 +106,10 @@
   /* Safari and Chrome */
 
 }
+#aab .accept .tab-pane {
+  border: 1px solid #cccccc;
+  padding: 10px;
+}
 #aab .nav .user-login .dropdown-menu {
   padding: 15px;
   padding-bottom: 0px;
@@ -194,21 +203,42 @@
 #aab .list-group-item .presenter-information ul li {
   list-style-type: none;
 }
-#aab #leader_table {
+#aab #leader_table,
+#aab #small_leader_table {
   margin: 35px 0 0 0;
 }
-#aab #leader_table table .include {
+#aab #leader_table table .include,
+#aab #small_leader_table table .include {
   background: darkseagreen;
 }
-#aab #leader_table table .probable {
+#aab #leader_table table .probable,
+#aab #small_leader_table table .probable {
   background: #ffff00;
 }
-#aab #leader_table table .out {
+#aab #leader_table table .out,
+#aab #small_leader_table table .out {
   background: red;
 }
-#aab #leader_table table a {
+#aab #leader_table table a,
+#aab #small_leader_table table a {
   color: #000000;
   text-decoration: underline;
+}
+#aab #leader_table table .organization,
+#aab #small_leader_table table .organization {
+  background: #0066bb;
+}
+#aab #leader_table table .agile.engineering,
+#aab #small_leader_table table .agile.engineering {
+  background: indianred;
+}
+#aab #leader_table table .team,
+#aab #small_leader_table table .team {
+  background: aquamarine;
+}
+#aab #leader_table table .personal.development,
+#aab #small_leader_table table .personal.development {
+  background: #ffff00;
 }
 .sessions .no-data {
   padding: 10px;

@@ -249,12 +249,55 @@
 				$this->response('',406);
 			}
 
-			$sessionLength = $this->_request['length'];
-			$sessionid = $this->_request['sessionid'];
+			$accepted = (empty($this->_request['accepted']))? "":$this->_request['accepted'];
+			$active = (empty($this->_request['active']))? "":$this->_request['active'];
+			$copresenter = (empty($this->_request['copresenter']))? "":$this->_request['copresenter'];
+			$copresenter_email = (empty($this->_request['copresenter_email']))? "":$this->_request['copresenter_email'];
+			$email = (empty($this->_request['email']))? "":$this->_request['email'];
+			$firstName = (empty($this->_request['firstName']))? "":$this->_request['firstName'];
+			$sessionid = (empty($this->_request['id']))? "":$this->_request['id'];
+			$lastName = (empty($this->_request['lastName']))? "":$this->_request['lastName'];
+			$middleName = (empty($this->_request['middleName']))? "":$this->_request['middleName'];
+			$personalSite = (empty($this->_request['personalSite']))? "":$this->_request['personalSite'];
+			$sessionAbstract = (empty($this->_request['sessionAbstract']))? "":addslashes($this->_request['sessionAbstract']);
+			$sessionAudience = (empty($this->_request['sessionAudience']))? "":$this->_request['sessionAudience'];
+			$sessionInformation = (empty($this->_request['sessionInformation']))? "":addslashes($this->_request['sessionInformation']);
+			$sessionLevel = (empty($this->_request['sessionLevel']))? "":$this->_request['sessionLevel'];
+			$sessionPresented = (empty($this->_request['sessionPresented']))? "":$this->_request['sessionPresented'];
+			$sessionTitle = (empty($this->_request['sessionTitle']))? "":addslashes($this->_request['sessionTitle']);
+			$session_length = (empty($this->_request['session_length']))? "":$this->_request['session_length'];
+			$speakerBio = (empty($this->_request['speakerBio']))? "":addslashes($this->_request['speakerBio']);
+			$speakerImage = (empty($this->_request['speakerImage']))? "":$this->_request['speakerImage'];
+			$time = (empty($this->_request['time']))? "":$this->_request['time'];
+			$twitter = (empty($this->_request['twitter']))? "":$this->_request['twitter'];
+			$sessionLength = (empty($this->_request['session_length']))? "":$this->_request['session_length'];
+			$timestamp = date("Y-m-d H:i:s"); 
 
 
-			if(!empty($sessionLength)) {
-				$sql = "UPDATE session_table SET session_length='$sessionLength' WHERE id='$sessionid'";
+			if(!empty($sessionid)) {
+				$sql = "UPDATE session_table SET 
+				session_length='$sessionLength', 
+				accepted='$accepted',
+				active='$active',
+				copresenter='$copresenter',
+				copresenter_email='$copresenter_email',
+				email='$email',
+				firstName='$firstName',
+				lastName='$lastName',
+				middleName='$middleName',
+				personalSite='$personalSite',
+				sessionAbstract='$sessionAbstract',
+				sessionAudience='$sessionAudience',
+				sessionInformation='$sessionInformation',
+				sessionLevel='$sessionLevel',
+				sessionPresented='$sessionPresented',
+				sessionTitle='$sessionTitle',
+				session_length='$session_length',
+				speakerBio='$speakerBio',
+				speakerImage='$speakerImage',
+				twitter='$twitter',
+				updated='$timestamp'
+				WHERE id='$sessionid'";
 				if(mysql_query($sql, $this->db)) {
 					$success = array('status' => "Success", "msg" => "Successfully updated your session(s)");
 					$this->response($this->json($success),200);
@@ -277,7 +320,7 @@
 
 			$code = $this->_request['id'];
 
-			$sql = "SELECT * FROM session_table WHERE md5(email) = '$code'";
+			$sql = "SELECT * FROM session_table WHERE md5(sessionTitle) = '$code' AND accepted='1'";
 			$query = mysql_query($sql, $this->db);
 			$number = mysql_num_rows($query);
 			$rows = array();
@@ -290,7 +333,7 @@
 				$this->response($this->json($success),200);
 			} else {
 				$error = array('status' => "Failed", "msg" => 'No id found in database', "id" => $code);
-				$this->response($this->json($error), 400);
+				$this->response($this->json($error), 204);
 			}
 
 		}
@@ -506,7 +549,8 @@
 					session_table.firstName,
 					session_table.lastName,
 					session_table.session_length,
-					session_table.accepted, 
+					session_table.accepted,
+					session_table.sessionAudience, 
 					AVG(votes.content) content, 
 					AVG(votes.applicability) app, 
 					AVG(votes.speaker) speaker,
@@ -516,7 +560,7 @@
 					GROUP BY votes.sessionid
 					ORDER BY overall_avg DESC";
 
-					error_log($sql);
+				
 
 			$query = mysql_query($sql, $this->db);
             $rows = array();
@@ -545,6 +589,18 @@
         	return $totalNumberOfAcceptedSessions;
         }
 
+        private function getNumberOfDeclinedSessions() {
+        	$sql = "SELECT * FROM session_table WHERE accepted = 0 OR accepted = '' OR accepted IS NULL";
+            $query = mysql_query($sql, $this->db);
+            if($query) {
+        		$totalNumberOfDeclinedSessions = mysql_num_rows($query);
+        	} else {
+        		$totalNumberOfDeclinedSessions = mysql_error();
+        	}
+
+        	return $totalNumberOfDeclinedSessions;
+        }
+
         private function getSessionId() {
         	session_start();
 			$sessionid = array('current_session_id' => session_id());
@@ -555,11 +611,13 @@
         private function getSessionData() {
         	$submittedSessions = $this->getNumberOfSessions();
         	$acceptedSessions = $this->getNumberOfAcceptedSessions();
+        	$declinedSessions = $this->getNumberOfDeclinedSessions();
         	session_start();
 			$sessionid = session_id();
 
         	$results = array('totalNumberOfSessionsSubmitted' => $submittedSessions, 
         		'totalNumberOfAcceptedSessions' => $acceptedSessions,
+        		'totalNumberOfDeclinedSessions' => $declinedSessions,
         		'current_session' => $sessionid
         		);
         	$this->response($this->json($results), 200);

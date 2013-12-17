@@ -1,0 +1,142 @@
+<div class="content accept panel">
+    <div class="panel-body" data-ng-show="sessionWorkflow">
+
+        <div class="container">
+            <h1>Session Acceptance</h1>
+            <p>
+                Congratulations on the acceptance of you session, {{sessionTitle}}!  We are excited to have you on the docket.  Agile and Beyond is a grassroots effort, put on by an all volunteer team, so we appreciate the hard work that goes into developing a great and engaging talk.  We also know that sometimes priorities change or other things come up that make it impossible to commit to giving you session at the conference.  We all have lives.  We need you to commit to doing your very best and making Agile and Beyond 2014 a success.  To that end, please read over our code of conduct and fill in the info below.  Once we have that info, we can begin the process of putting the actual schedule together.  Thank you in advance!
+            </p>
+
+<div class="container">
+    <div class="col-lg-2 navigation">
+        <ul class="nav nav-pills nav-stacked nav-tabs">
+            <li class="active" id="codeTab"><a href="#code" data-toggle="tab" eat-click>Code of Conduct</a></li>
+            <li id="personalTab"><a href="#personal" data-toggle="tab" eat-click>Speaker Info</a></li>
+            <li id="sessionTab"><a href="#session" data-toggle="tab" eat-click>Session Info</a></li>
+        </ul>
+    </div>
+    <div class="col-lg-10 tab-content">
+
+            <div class="tab-pane active" id="code">
+                <iframe src="partials/codeofconduct.html" width="90%" height="350px" frameborder="0"></iframe>
+                <br>
+                <input type="checkbox" value="true" data-ng-model="session.accepted"> <label>By clicking this checkbox, you are agreeing to abide by the Agile and Beyond Code of Conduct.</label>
+
+                <div class=" form-group">
+                    <button class="btn btn-danger" data-ng-click="declineSession()">Decline Session</button>
+                    <button class="btn btn-primary" data-ng-click="moveNext($event)">Agree & Accept Session</button>
+
+                </div>
+            </div>
+            <div class="tab-pane" id="personal">
+                <form name="submitProposal" role="form">
+
+
+
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <label>Speaker Name</label>
+                        <div class="form-group form-inline">
+
+                            <input type="text" class="form-control col-md-3" placeholder="First" ng-model="user.firstName" required >
+                            <input type="text" class="form-control col-md-3" placeholder="Middle" ng-model="user.middleName" >
+                            <input type="text" class="form-control col-md-3" placeholder="Last" ng-model="user.lastName" >
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" class="email form-control span5" ng-model="user.email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Twitter</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">@</span>
+                                <input class="form-control" id="twitter-id" type="text" placeholder="Twitter Handle" ng-model="user.twitter">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Website/Blog</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">http://</span>
+                                <input type="text" id="personal-site" class="form-control" ng-model="user.personalSite">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Co-presenter</label>
+                            <input type="text" class="form-control" data-ng-model="user.copresenter">
+                        </div>
+                        <div class="form-group">
+                            <label>Co-presenter Email</label>
+                            <input type="text" class="form-control" data-ng-model="user.copresenter_email">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Speaker(s) Bio</label>
+                            <textarea id="speaker-bio" class="form-control" rows="6" ng-model="user.speakerBio"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Speaker picture</label>
+                             <iframe src="upload/basic.html" width="90%" height="350px" frameborder="0"></iframe>
+    </span>
+                        </div>
+                    </fieldset>
+
+
+                    <div class="form-actions form-group">
+                        <button data-ng-click="moveNext()" class="btn btn-primary">Next</button>
+
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane" id="session">
+                <fieldset>
+                    <legend>Session Details</legend>
+
+                    <div class="form-group">
+                        <label>Session Title</label>
+                        <input type="text" id="session-title" class="form-control" ng-model="user.sessionTitle" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Session Abstract</label>
+                        <textarea id="session-abstract" class="form-control" rows="6" ng-model="user.sessionAbstract" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Other Information/Requirments</label>
+                        <p class="help-inline">
+                            Please provide additional information information that you feel would be helpful at the conference this year.  Please indicate if you need power, or other non-standard items to present.  We'll do our best to accomodate your requests.
+                        </p>
+
+                        <textarea id="other-information" class="form-control" rows="6" ng-model="user.sessionInformation"></textarea>
+                    </div>
+
+                    <div class="form-actions form-group">
+                        <button data-ng-click="acceptSession()" class="btn btn-primary" >Save</button>
+                        <button type="button" class="btn" data-ng-click="resetForm()">Cancel</button>
+                    </div>
+
+
+                </fieldset>
+            </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <div class=" container panel-body" data-ng-show="declinedSession">
+        <h3>Bummer!</h3>
+        <p>We're sorry that you have decided not to participate in the conference this year, if there was anything that we could have done to make it more desirable,  <a href="mailto:agileandbeyond@gmail.com">please let us know.</a></p>
+    </div>
+    <div class="container panel-body" data-ng-show="acceptedSession">
+        <h3>Woohoo! We're so excited!</h3>
+        <p>Thank you for accepting and updating your session and personal information.  We will be in contact as the conference gets closer to let you know about your presentation time and any other speaker details you may need. If you should need anything,  <a href="mailto:agileandbeyond@gmail.com">please let us know.</a></p>
+    </div>
+    <div class="container panel-body" data-ng-show="sessionNotFound">
+        <h3>Well, this is embarrassing!</h3>
+        <p>Sorry to say, but we cant find this session.  You may have already accepted your session, if so, we'll be in touch shortly. If you feel like you have a session that needs to be accepted <a href="mailto:agileandbeyond@gmail.com">please contact us</a> and we can give you a hand.  Sorry for the inconvenience,  please let us know.</p>
+    </div>
+</div>

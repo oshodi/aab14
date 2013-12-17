@@ -1,30 +1,41 @@
 
 var controllers = {};
+toastr.options = {
+    "positionClass": "toast-bottom-full-width"
+}
+controllers.homeController = function() {};
 
 controllers.mainController = function($scope,$rootScope) {
     $scope.sessionData = {};
     $rootScope.acceptingProposals = false;
     $scope.auth = {};
-
     $scope.review = {
         showWidget: false
     };
 
-    if($('#authorized').length > 0) {
+    if(angular.element('#authorized').length > 0) {
         $scope.auth.isAuthenticated = true;
     }
 
 
     $scope.aUrl = $rootScope.location.absUrl();
 
-
-    var startDate = new Date('Mon Sep 30 2013');
-    var endDate = new Date('Tue Nov 11 2013');
-    var today = new Date();
-
-    if((today >= startDate) && (today <= endDate)) {
-        $rootScope.acceptingProposals = true;
+    var dateConfig = {
+        openDate: 'Mon Sep 30 2013',
+        closeDate: 'Tue Nov 11 2013'
     }
+
+    $scope.acceptingProposalsCheck = function(config) {
+        var startDate = new Date(config.openDate);
+        var endDate = new Date(config.closeDate);
+        var today = new Date();
+
+        if((today >= startDate) && (today <= endDate)) {
+            $rootScope.acceptingProposals = true;
+        }
+    };
+
+    $scope.acceptingProposalsCheck(dateConfig);
 
     $scope.pages = [
         {'page': 'Home'},
@@ -66,7 +77,6 @@ controllers.sessionsViewController = function($scope, Service, $routeParams) {
 
     Service.getSessionDetails($.param($routeParams)).success(function(data) {
         $scope.sessionData = data;
-        console.log($scope.sessionData);
     });
 
 
@@ -131,7 +141,8 @@ controllers.speakerSubmissionController = function($scope, $http,$rootScope,Serv
 controllers.sessionsAdminController = function($scope,$http,Service) {
     $scope.acceptedSessions = 0;
     $scope.submittedSessions = 0;
-    $scope.showSessions = false;
+    $scope.declinedSessions = 0;
+    $scope.showSessions = true;
     $scope.showLeaders = false;
     $scope.allSessions = null;
     $scope.leaderData = null;
@@ -141,11 +152,13 @@ controllers.sessionsAdminController = function($scope,$http,Service) {
         $scope.submittedSessions = data.totalNumberOfSessionsSubmitted.number;
         $scope.allSessions = data.totalNumberOfSessionsSubmitted.sessions;
         $scope.acceptedSessions = data.totalNumberOfAcceptedSessions;
+        $scope.declinedSessions = data.totalNumberOfDeclinedSessions;
 
     });
 
-    $scope.getSessions = function($event) {
-            $scope.showSessions = $scope.showSessions === false? true : false;
+    $scope.getSessions = function(filterType) {
+        $scope.filterBy = filterType;
+        //$scope.showSessions = $scope.showSessions === false? true : false;
     };
 
     $scope.getSessionsAccepted = function($event) {
@@ -338,6 +351,101 @@ controllers.updateSession = function($scope,$location,Service) {
     };
 
 };
+
+controllers.sessionAcceptanceController = function($scope,Service,$routeParams) {
+    $scope.sessionWorkflow = false;
+    $scope.declinedSession = false;
+    $scope.acceptedSession = false;
+    $scope.sessionNotFound = false;
+    $scope.user = {
+        speakerImage: null
+    };
+
+    function listener(event){
+        //        if ( event.origin !== "http://javascript.info" )
+        //        return;
+        $scope.user.speakerImage = event.data;
+
+    }
+
+    if (window.addEventListener){
+        addEventListener("message", listener, false)
+    } else {
+        attachEvent("onmessage", listener)
+    }
+
+
+
+    $scope.session = {
+        accepted: false
+    };
+
+
+    $scope.currentSession = {id: $routeParams.sessionId};
+
+    Service.getSessionsById($.param($scope.currentSession)).success(function(data,status) {
+      if(status == 200) {
+          $scope.user = data.sessions[0];
+          $scope.sessionWorkflow = true;
+      }
+
+      if(status == 204) {
+          $scope.sessionWorkflow = false;
+          $scope.sessionNotFound = true;
+      }
+    });
+
+
+
+    $scope.moveNext = function() {
+        if($scope.user.files) {
+            Service.uploadSpeakerImages($.param({}))
+        };
+        if($scope.session.accepted === true) {
+            angular.element('.tab-pane.active').removeClass('active').next().addClass('active');
+            angular.element('ul.nav-tabs li.active').removeClass('active').next().addClass('active');
+        } else {
+            toastr.warning('You must accept the Code of Conduct');
+        }
+
+    }
+
+    $scope.acceptSession = function() {
+        Service.updateSession($.param($scope.user)).success(function(data,status) {
+            toastr.success('Your Session has been updated');
+            $scope.acceptedSession = true;
+            $scope.sessionWorkflow = false;
+        });
+    }
+
+    $scope.declineSession = function() {
+
+        var decline = prompt("Please type DECLINE to decline your session","");
+
+       if(decline === 'DECLINE') {
+            var inputs = {
+                status: 0,
+                sessionid: $scope.user.id,
+                title: $scope.user.sessionTitle
+            }
+
+
+
+            Service.setSessionStatus($.param(inputs)).success(function(data, status) {
+                console.log(status);
+                if(status == 200) {
+                  toastr.error('Your session, ' + inputs.title + " has been declined");
+
+                    $scope.sessionWorkflow = false;
+                    $scope.declinedSession = true;
+
+                }
+
+
+            });
+        }
+    }
+}
 
 app.controller(controllers);
 

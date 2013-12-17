@@ -28,6 +28,9 @@ app.config(['$routeProvider', function($routeProvider) {
         }).when('/Team',{
             templateUrl: 'partials/team.html',
             controller: 'userRegistrationController'
+        }).when('/SpeakerAcceptance/:sessionId',{
+            templateUrl: 'partials/acceptSession.html',
+            controller: 'sessionAcceptanceController'
         }).otherwise({redirectTo: '/Home'});
 }]);
 

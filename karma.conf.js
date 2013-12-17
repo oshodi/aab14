@@ -1,17 +1,19 @@
 module.exports = function(config) {
     config.set({
         files : [
-            'aab14/js/thirdparty/jquery/jquery.min.js',
-            'aab14/js/thirdparty/angular/angular.js',
-            'aab14/js/thirdparty/angular-route/angular-route.js',
-            'aab14/js/thirdparty/angular-mocks/angular-mocks.js',
-            'aab14/js/app.js',
-            'aab14/js/controllers/controllers.js',
-            'aab14/spec/*Spec.js'
+            './js/thirdparty/jquery/jquery.min.js',
+            './js/thirdparty/angular/angular.js',
+            './js/thirdparty/angular-route/angular-route.js',
+            './js/thirdparty/angular-mocks/angular-mocks.js',
+            './spec-helpers/**/*.js',
+            './js/thirdparty/toastr/toastr.min.js',
+            './js/app.js',
+            './js/controllers/controllers.js',
+            './spec/*Spec.js'
         ],
         basePath: '../',
         frameworks: ['jasmine'],
-        reporters: ['progress'],
+        reporters: ['coverage'],
         browsers: ['Chrome'],
         autoWatch: false,
         singleRun: true,

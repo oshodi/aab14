@@ -1,0 +1,8 @@
+.DS_Store
+.idea/*
+img/.DS_Store
+js/.DS_Store
+testlogin.php
+upload/
+js/thirdparty/.DS_Store
+
