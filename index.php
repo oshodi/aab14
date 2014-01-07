@@ -115,6 +115,19 @@
 <script src="js/thirdparty/blueimp-file-upload/js/jquery.fileupload.js"></script>
 <script src="js/thirdparty/blueimp-file-upload/js/jquery.fileupload-angular.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/controllers/homeController.js"></script>
+<script type="text/javascript" src="js/controllers/itemController.js"></script>
+<script type="text/javascript" src="js/controllers/mainController.js"></script>
+<script type="text/javascript" src="js/controllers/ratingsWidget.js"></script>
+<script type="text/javascript" src="js/controllers/sessionAcceptanceController.js"></script>
+<script type="text/javascript" src="js/controllers/sessionAdminController.js"></script>
+<script type="text/javascript" src="js/controllers/sessionController.js"></script>
+<script type="text/javascript" src="js/controllers/sessionController.js"></script>
+<script type="text/javascript" src="js/controllers/sessionViewController.js"></script>
+<script type="text/javascript" src="js/controllers/speakerSubmissionController.js"></script>
+<script type="text/javascript" src="js/controllers/sponsorController.js"></script>
+<script type="text/javascript" src="js/controllers/updateSessionController.js"></script>
+<script type="text/javascript" src="js/controllers/userRegistrationController.js"></script>
 <script type="text/javascript" src="js/controllers/controllers.js"></script>
 </body>
 </html>

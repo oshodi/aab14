@@ -84,6 +84,15 @@
 #aab .home .sponsors .col-lg-3 h3 {
   display: none;
 }
+#aab .home .specials {
+  margin: 50px 0 0 -30px;
+}
+#aab .home .specials .silver h3 {
+  display: none;
+}
+#aab .home .specials .silver img {
+  width: 140px;
+}
 #aab .home .register-btn {
   width: 50%;
   margin: 25px auto 0 auto;
@@ -387,4 +396,10 @@
 .fixsessions td,
 .fixsessions th {
   padding: 5px;
+}
+.session-abstract pre {
+  font-family: helvectica, sans-serif;
+  background: white;
+  border-radius: 0;
+  border: none;
 }

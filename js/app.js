@@ -1,4 +1,7 @@
 var app = angular.module('AgileAndBeyondApp',['ngRoute']);
+var controllers = {};
+toastr.options = {"positionClass": "toast-bottom-full-width"}
+app.conferenceYear = '2014';
 
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/Home',{
@@ -47,6 +50,9 @@ app.factory('Service', function($http) {
     return {
         getAllSessions: function(year, filter) {
             return $http.get('rest/getSchedule?year=' + year + '&filter=' + filter);
+        },
+        getAcceptedSessions: function(year) {
+            return $http.get('rest/getSessions?year=' + year);
         },
         logout: function() {
             return $http.get('rest/logout');

@@ -28,18 +28,6 @@
 		// const DB_PASSWORD = "root";
 		// const DB = "aabapi";
 
-// SELECT votes.sessionid,
-// COUNT(votes.sessionid) votes_total, 
-// session_table.sessionTitle, 
-// AVG(votes.content) content, 
-// AVG(votes.applicability) app, 
-// AVG(votes.speaker) speaker,
-// AVG(votes.content + votes.applicability + votes.speaker)/3.0 overall_avg
-// FROM `votes`,`session_table` 
-// WHERE votes.sessionid = session_table.id 
-// GROUP BY votes.sessionid
-// ORDER BY overall_avg DESC	
-
 
 		private $db = NULL;
 
@@ -71,7 +59,7 @@
 				$this->response('',404);				// If the method not exist with in this class, response would be "Page not found".
 		}
 
-				/* 
+		/* 
 		 *	Simple login API
 		 *  Login must be POST method
 		 *  email : <USER EMAIL>
@@ -413,16 +401,25 @@
 			}
 		}
 
+
+
 		private function getSessions() {
 			if($this->get_request_method() != "GET"){
 				$this->response('',406);
 			}
-
-			$sql = "SELECT * FROM schedule_times ORDER BY id";
+			
+			
+			$sql = "SELECT * FROM session_table WHERE accepted = '1'";
 			$query = mysql_query($sql, $this->db);
+			$rows = array();
 
+            if($query) {
+        		while ($arraySessions = mysql_fetch_array($query,MYSQL_ASSOC)) { 
+        			$rows[] = $arraySessions; 
+        		}
+        	}
 
-			$this->response($this->json($array), 200);
+			$this->response($this->json($rows), 200);
 		}
 
         private function getNumberOfSessions() {

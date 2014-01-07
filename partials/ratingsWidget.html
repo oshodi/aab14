@@ -1,0 +1,32 @@
+<header>
+    <span class="title">{{review.data.sessionTitle}}</span>  <a class="pull-right" eat-click data-ng-click="closeReview()"><span class="glyphicon glyphicon-remove-circle"></span>&nbsp</a> </header>
+<article>
+    <p>What do you think of this proposal?</p>
+    <ul>
+        <li><label>Content: </label> <rating class="content_rating" value="review.contentRate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating></li>
+        <li><label>Speaker: </label> <rating class="speaker_rating" value="review.speakerRate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating></li>
+        <li><label>Applicability: </label> <rating class="applicability_rating" value="review.applicabilityRate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating></li>
+    </ul>
+    <p class="form-group">
+        <label for="audience">Session Audience: </label>
+
+        <select ng-model="review.sessionAudience" class="form-control">
+            <option selected value="">Please choose one...</option>
+            <option>Beginner</option>
+            <option>Agile Engineering</option>
+            <option>Team</option>
+            <option>Organization</option>
+            <option>Product Development</option>
+            <option>Personal Development</option>
+            <option>Other...</option>
+        </select>
+
+    </p>
+    <textarea class="form-control review-comment" data-ng-model="review.reviewComment"></textarea>
+</article>
+
+<footer>
+    <button class="btn btn-primary btn-sm review-submit" data-session-id="{{review.data.id}}" data-ng-click="saveRating($event)">Save Rating</button>
+    <a class="btn-link" href="#" data-ng-click="closeReview()" eat-click>Cancel</a>
+
+</footer>

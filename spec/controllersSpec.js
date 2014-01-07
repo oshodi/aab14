@@ -1,5 +1,5 @@
 'use strict';
-describe('Testing Agile and beyond page', function() {
+xdescribe('Testing Agile and beyond page', function() {
     var $compile,$rootScope, scope, ctrl, mockedService;
 
     beforeEach(module('AgileAndBeyondApp', function($provide) {

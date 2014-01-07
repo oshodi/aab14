@@ -1,22 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c22f39f3-7c49-4612-a308-c8cd8a5841a2" name="Default" comment="" />
+    <list default="true" id="c22f39f3-7c49-4612-a308-c8cd8a5841a2" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/partials/reviewWidget.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/sponsors/cengage.learning.gold_.jpg" afterPath="$PROJECT_DIR$/img/sponsors/cengage.learning.gold_.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/AgileAndBeyond.min.js" afterPath="$PROJECT_DIR$/build/AgileAndBeyond.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest/api.php" afterPath="$PROJECT_DIR$/rest/api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/controllers.js" afterPath="$PROJECT_DIR$/js/controllers/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllersSpec.js" afterPath="$PROJECT_DIR$/spec/controllersSpec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/home.html" afterPath="$PROJECT_DIR$/partials/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/karma.conf.js" afterPath="$PROJECT_DIR$/karma.conf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.less" afterPath="$PROJECT_DIR$/css/main.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/sessionView.html" afterPath="$PROJECT_DIR$/partials/sessionView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/sessions.html" afterPath="$PROJECT_DIR$/partials/sessions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/test.js" afterPath="$PROJECT_DIR$/css/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="aab14.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/index.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1382712833344" ignored="false" />
     <file path="/controllers.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387292863229" ignored="false" />
-    <file path="/main.less" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387294188385" ignored="false" />
+    <file path="/main.less" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1389029242700" ignored="false" />
     <file path="/speaker.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1385321873030" ignored="false" />
     <file path="/submitProposalController.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1377632027245" ignored="false" />
     <file path="/mindtap-code/henley/henleyui/src/henley/dash/js/controls/dash.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1377799305075" ignored="false" />
     <file path="/SpecRunner.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1377800209434" ignored="false" />
-    <file path="/controllersSpec.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387036162601" ignored="false" />
-    <file path="/home.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1386778726121" ignored="false" />
-    <file path="/app.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387165597754" ignored="false" />
+    <file path="/controllersSpec.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1389030020054" ignored="false" />
+    <file path="/home.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387726733172" ignored="false" />
+    <file path="/app.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387518650020" ignored="false" />
     <file path="/sponsors.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1386009385548" ignored="false" />
     <file path="/location.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1384958334461" ignored="false" />
-    <file path="/sessions.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1385094162057" ignored="false" />
+    <file path="/sessions.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387639128974" ignored="false" />
     <file path="/api.php" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1379354709150" ignored="false" />
     <file path="/aabapi.module" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1378825433627" ignored="false" />
     <file path="/Rest.inc.php" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1378825879608" ignored="false" />
@@ -25,27 +43,34 @@
     <file path="/config.json" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1379026785968" ignored="false" />
     <file path="/testdb.php" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1379305551502" ignored="false" />
     <file path="/team.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1384980694124" ignored="false" />
-    <file path="/sessionsAdmin.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387294350128" ignored="false" />
-    <file path="/Dummy.txt" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1381521598685" ignored="false" />
+    <file path="/sessionsAdmin.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387517118941" ignored="false" />
+    <file path="/Dummy.txt" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1389064955699" ignored="false" />
     <file path="/2013sessions.php" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1379968099408" ignored="false" />
-    <file path="/index.php" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387049225736" ignored="false" />
+    <file path="/index.php" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387517399634" ignored="false" />
     <file path="/createAccount.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1384305623481" ignored="false" />
-    <file path="$PROJECT_DIR$/css/main.css" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1386780197419" ignored="false" />
     <file path="/ui-bootstrap-custom-tpls-0.6.0.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1383155908200" ignored="false" />
     <file path="/login_form.php" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1384306284943" ignored="false" />
     <file path="/register_form.php" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1384310067496" ignored="false" />
     <file path="/login_process.php" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1384318114615" ignored="false" />
     <file path="/updatesessions.php" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1385261483426" ignored="false" />
-    <file path="/sessionView.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1386044261355" ignored="false" />
+    <file path="/sessionView.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1389029141105" ignored="false" />
     <file path="/Gruntfile.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1386788850445" ignored="false" />
     <file path="/package.json" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1386780864489" ignored="false" />
-    <file path="/test.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1386347058623" ignored="false" />
+    <file path="/test.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1389065112884" ignored="false" />
     <file path="/bower.json" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1386988574962" ignored="false" />
     <file path="/karma.conf.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1386788682833" ignored="false" />
     <file path="/acceptSession.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387174379094" ignored="false" />
     <file path="/codeofconduct.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1386968028536" ignored="false" />
     <file path="/testlogin.php" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387064309936" ignored="false" />
     <file path="/basic.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387164062572" ignored="false" />
+    <file path="/email_holidays.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387639574660" ignored="false" />
+    <file path="/fragment.js2" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387514855068" ignored="false" />
+    <file path="/ratingsWidget.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387518227565" ignored="false" />
+    <file path="/sessionController.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387559328081" ignored="false" />
+    <file path="/a.dummy" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1387558900622" ignored="false" />
+    <file path="/speakerView.html" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1389029358507" ignored="false" />
+    <file path="/speakerViewController.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1389029645938" ignored="false" />
+    <file path="/speakerViewControllerSpec.js" changelist="c22f39f3-7c49-4612-a308-c8cd8a5841a2" time="1389030579304" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,75 +90,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/controllers/controllers.js">
+      <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partials/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="23" selection-start="4495" selection-end="4503" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="42" selection-start="2993" selection-end="3008" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1387165611000" expanded="true" signature="1753:5525" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="acceptSession.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/partials/acceptSession.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="83" selection-start="4917" selection-end="4917" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basic.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/upload/basic.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="65" selection-start="3280" selection-end="3280" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bower.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bower.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="34" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sessionsAdmin.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/partials/sessionsAdmin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="74" selection-start="1805" selection-end="1805" vertical-scroll-proportion="-0.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="karma.conf.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/karma.conf.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="61" selection-start="296" selection-end="296" vertical-scroll-proportion="0.12396694">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="81" selection-start="4991" selection-end="4991" vertical-scroll-proportion="0.0">
+            <state line="96" column="38" selection-start="4565" selection-end="4565" vertical-scroll-proportion="-11.833333">
               <folding />
             </state>
           </provider>
@@ -142,7 +102,79 @@
       <file leaf-file-name="main.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="281" column="35" selection-start="4500" selection-end="4500" vertical-scroll-proportion="0.0">
+            <state line="497" column="16" selection-start="9198" selection-end="9198" vertical-scroll-proportion="-24.692308">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="speakerView.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partials/speakerView.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="28" selection-start="64" selection-end="64" vertical-scroll-proportion="-0.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="speakerViewController.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/controllers/speakerViewController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="1" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="speakerViewControllerSpec.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/speakerViewControllerSpec.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="0" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="11" selection-start="52" selection-end="52" vertical-scroll-proportion="0.042674255">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controllersSpec.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/controllersSpec.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="12" selection-start="912" selection-end="1084" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/controllers/controllers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="karma.conf.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/karma.conf.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="33" selection-start="577" selection-end="577" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sessionView.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partials/sessionView.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="0" selection-start="0" selection-end="313" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
@@ -166,22 +198,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/spec/karma.conf.js" />
-        <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/partials/codeofconduct.html" />
-        <option value="$PROJECT_DIR$/bower.json" />
-        <option value="$PROJECT_DIR$/spec-helpers/jasmine.jquery.js" />
-        <option value="$PROJECT_DIR$/spec/controllersSpec.js" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/karma.conf.js" />
-        <option value="$PROJECT_DIR$/testlogin.php" />
-        <option value="$PROJECT_DIR$/upload/basic.html" />
-        <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/partials/acceptSession.html" />
         <option value="$PROJECT_DIR$/js/controllers/controllers.js" />
-        <option value="$PROJECT_DIR$/css/main.less" />
+        <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/partials/sessionsAdmin.html" />
+        <option value="$PROJECT_DIR$/js/controllers/sessionController.js" />
+        <option value="$PROJECT_DIR$/email/email_holidays.html" />
+        <option value="$PROJECT_DIR$/partials/sessions.html" />
+        <option value="$PROJECT_DIR$/partials/speaker.html" />
+        <option value="$PROJECT_DIR$/partials/home.html" />
+        <option value="$PROJECT_DIR$/partials/sessionView.html" />
+        <option value="$PROJECT_DIR$/css/main.less" />
+        <option value="$PROJECT_DIR$/partials/speakerView.html" />
+        <option value="$PROJECT_DIR$/spec/controllersSpec.js" />
+        <option value="$PROJECT_DIR$/js/controllers/speakerViewController.js" />
+        <option value="$PROJECT_DIR$/karma.conf.js" />
+        <option value="$PROJECT_DIR$/spec/speakerViewControllerSpec.js" />
+        <option value="$PROJECT_DIR$/css/test.js" />
       </list>
     </option>
   </component>
@@ -190,7 +222,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="17" />
+    <option name="x" value="2" />
     <option name="y" value="22" />
     <option name="width" value="1438" />
     <option name="height" value="874" />
@@ -250,21 +282,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="upload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aab14" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aab14" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
+              <option name="myItemId" value="spec" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -292,6 +310,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aab14" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aab14" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -302,17 +338,36 @@
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Quality-Assessor" />
-    <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="PublishConfig" serverName="Agileandbeyond.com" serverId="4099e158-6976-478e-bc91-523036a5f4f8">
+    <servers>
+      <server id="4099e158-6976-478e-bc91-523036a5f4f8">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="" />
+          </mappings>
+        </serverdata>
+      </server>
+    </servers>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js/controllers" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/js/thirdparty" />
@@ -389,9 +444,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="17" y="22" width="1438" height="874" extended-state="0" />
+    <frame x="2" y="22" width="1438" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.49964663" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24911785" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -406,6 +462,8 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27188328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.6710875" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32891247" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -472,120 +530,104 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/partials/codeofconduct.html">
+    <entry file="file://$PROJECT_DIR$/partials/sessionsAdmin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="108" selection-start="1219" selection-end="1219" vertical-scroll-proportion="-8.791667">
-          <folding />
-        </state>
+        <state line="118" column="129" selection-start="7026" selection-end="7026" vertical-scroll-proportion="-22.416666" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/sessionView.html">
+    <entry file="file://$PROJECT_DIR$/email/email_holidays.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="95" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
+        <state line="35" column="152" selection-start="850" selection-end="850" vertical-scroll-proportion="-5.75" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/speaker.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="23" selection-start="2272" selection-end="8661" vertical-scroll-proportion="-1.2916666">
-          <folding />
-        </state>
+        <state line="11" column="117" selection-start="568" selection-end="665" vertical-scroll-proportion="0.35791758" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec-helpers/jasmine.jquery.js">
+    <entry file="file://$PROJECT_DIR$/partials/sessions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="700" column="0" selection-start="25190" selection-end="25190" vertical-scroll-proportion="0.9636752">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="9" column="117" selection-start="542" selection-end="639" vertical-scroll-proportion="0.31034482" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/controllersSpec.js">
+    <entry file="file://$PROJECT_DIR$/js/controllers/sessionController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="9" selection-start="5356" selection-end="5356" vertical-scroll-proportion="0.39102563">
-          <folding>
-            <element signature="e#4264#4399#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="19" column="0" selection-start="574" selection-end="574" vertical-scroll-proportion="0.54702497" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/thirdparty/blueimp-file-upload/js/jquery.fileupload-angular.js">
+    <entry file="file://$PROJECT_DIR$/partials/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="277" column="61" selection-start="11075" selection-end="11075" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testlogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="20" selection-start="36" selection-end="36" vertical-scroll-proportion="0.13129103" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/upload/basic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="65" selection-start="3280" selection-end="3280" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="42" selection-start="2993" selection-end="3008" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1387165611000" expanded="true" signature="1753:5525" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="81" selection-start="4991" selection-end="4991" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/acceptSession.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="83" selection-start="4917" selection-end="4917" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="23" selection-start="4495" selection-end="4503" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="34" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
+        <state line="96" column="38" selection-start="4565" selection-end="4565" vertical-scroll-proportion="-11.833333">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="281" column="35" selection-start="4500" selection-end="4500" vertical-scroll-proportion="0.0">
+        <state line="497" column="16" selection-start="9198" selection-end="9198" vertical-scroll-proportion="-24.692308">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/sessionsAdmin.html">
+    <entry file="file://$PROJECT_DIR$/partials/sessionView.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="74" selection-start="1805" selection-end="1805" vertical-scroll-proportion="-0.625">
+        <state line="5" column="0" selection-start="0" selection-end="313" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/speakerView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="28" selection-start="64" selection-end="64" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/sessionViewController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="2" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/karma.conf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="61" selection-start="296" selection-end="296" vertical-scroll-proportion="0.12396694">
+        <state line="12" column="33" selection-start="577" selection-end="577" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/controllersSpec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="12" selection-start="912" selection-end="1084" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/speakerViewController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="1" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/speakerViewControllerSpec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="11" selection-start="52" selection-end="52" vertical-scroll-proportion="0.042674255">
           <folding />
         </state>
       </provider>

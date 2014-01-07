@@ -11,14 +11,43 @@
                 </p>
             </div>
     </div>
-    <div class="container features">
+    <div class="container active-session">
+
+
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Panel heading</div>
+            <div class="panel-body">
+                <p style="padding: 20px">
+
+                    Here is a list of the accepted Sessions for Agile and Beyond 2014!  We are finalizing the schedule as we speak and will release that soon.  Please check back often for details.
+
+                </p>
+            </div>
+
+            <!-- Table -->
+            <table class="table" data-ng-show="currentSchedule">
+                <tr>
+                    <th>&nbsp;</th><th>Speaker</th><th>Session</th><th>Time</th><th>Room</th>
+                </tr>
+                <tr data-ng-repeat="session in currentSchedule">
+                    <td class="flag">&nbsp;</td>
+                    <td>{{session.firstName}} {{session.lastName}}</td>
+                    <td><a href='#/Sessions/{{session.id}}'>{{session.sessionTitle}}</a></td>
+                    <td>{{session.time}}</td>
+                    <td>{{session.room}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="container features archive" data-ng-show="showArchive">
        <div class="row">
            <h2>Archived Sessions</h2>
 
            <ul class="nav nav-tabs">
                <!--<li><a href="#" data-ng-click="getSessions($event)" eat-click>2014</a></li>-->
-               <li class="active"><a href="#" data-ng-click="getSessions($event)" eat-click>2012</a></li>
-               <li><a href="#" data-ng-click="getSessions($event)" eat-click>2013</a></li>
+               <li class="active"><a href="#" data-ng-click="getArchivedSessions($event)" eat-click>2012</a></li>
+               <li><a href="#" data-ng-click="getArchivedSessions($event)" eat-click>2013</a></li>
            </ul>
            <div class="no-data" data-ng-show="!sessionData">
                Please select a schedule to view

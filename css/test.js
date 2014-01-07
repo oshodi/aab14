@@ -1,5 +1,6 @@
 var sampleData = [6,3,1,4,7,4,2,8,9,2];
 
+var apples;
 
 function duplicates (sampleData) {
 
