@@ -2,6 +2,18 @@ controllers.sessionsController = function($scope, $http, Service) {
     $scope.sessionYear = "";
     $scope.showArchive = false;
     $scope.activeSession = {};
+    $scope.showListView = false;
+    $scope.showGridView = true;
+
+    $scope.toggleList = function(type) {
+        if(type == 'list') {
+            $scope.showListView = true;
+            $scope.showGridView = false;
+        } else {
+            $scope.showListView = false;
+            $scope.showGridView = true;
+        }
+    }
 
 
     $scope.getArchivedSessions = function($event) {

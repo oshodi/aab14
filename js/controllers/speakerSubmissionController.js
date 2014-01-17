@@ -52,4 +52,13 @@ controllers.speakerSubmissionController = function($scope, $http,$rootScope,Serv
 
         });
     };
+
+    //display speakers.  Might want to move this to another controller in the future
+
+    $scope.speakerData = [];
+
+    Service.getSpeakers().success(function(data,status,headers,config) {
+        $scope.speakerData = data;
+    });
+
 };

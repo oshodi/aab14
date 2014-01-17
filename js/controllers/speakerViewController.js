@@ -7,4 +7,6 @@ controllers.speakerViewController = function($scope,Service) {
         speakerBio: null,
         speakerImage: null
     }
+
+
 }

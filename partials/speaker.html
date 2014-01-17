@@ -1,4 +1,4 @@
-<div class="panel  ">
+<div class="panel speakers">
     <div class="panel-body">
         <div class="top speaker">
             <div class="callout">
@@ -15,8 +15,11 @@
         </div>
         <section class="content">
             <div class="container" data-ng-show="!acceptingProposals">
-                <h1>Proposal Submission</h1>
-                <p>Agile and Beyond proposal submission is currently closed.  Check back soon for more information.</p>
+                <div class="speaker_block col-lg-3" data-ng-click="showPresenter({{speakers.speakerid}})" data-ng-repeat="speakers in speakerData">
+                    <img class="img-circle" src="img/bios/{{speakers.image}}">
+                    <h4>{{speakers.firstName}} {{speakers.lastName}}</h4>
+                    <p>{{speakers.truncatedBio}}</p>
+                </div>
             </div>
             <div class="speaker_submission" data-ng-show="acceptingProposals">
                 <h1>Speaker Submission Form</h1>

@@ -161,6 +161,9 @@ app.factory('Service', function($http) {
                     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
                 }
             });
+        },
+        getSpeakers: function() {
+            return $http.get('rest/getSpeakers');
         }
     };
 });

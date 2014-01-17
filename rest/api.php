@@ -403,13 +403,13 @@
 
 
 
-		private function getSessions() {
+		private function getSpeakers() {
 			if($this->get_request_method() != "GET"){
 				$this->response('',406);
 			}
 			
 			
-			$sql = "SELECT * FROM session_table WHERE accepted = '1'";
+			$sql = "SELECT * FROM speakers ORDER BY lastName";
 			$query = mysql_query($sql, $this->db);
 			$rows = array();
 
@@ -421,6 +421,27 @@
 
 			$this->response($this->json($rows), 200);
 		}
+
+		private function getSessions() {
+			if($this->get_request_method() != "GET"){
+				$this->response('',406);
+			}
+			
+			
+			$sql = "SELECT s.*,r.*,tm.* FROM session_table as s JOIN rooms as r ON s.room = r.roomid JOIN schedule_times as tm ON s.time = tm.id WHERE s.accepted='1' ORDER BY s.time,s.room";
+			$query = mysql_query($sql, $this->db);
+			$rows = array();
+
+            if($query) {
+        		while ($arraySessions = mysql_fetch_array($query,MYSQL_ASSOC)) { 
+        			$rows[] = $arraySessions; 
+        		}
+        	}
+
+			$this->response($this->json($rows), 200);
+		}
+
+		
 
         private function getNumberOfSessions() {
             

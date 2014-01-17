@@ -1,0 +1,102 @@
+
+table.Basic-Table {
+	border-color:#231f20;
+	border-style:solid;
+	border-width:1px;
+	margin-bottom:-4px;
+	margin-top:4px;
+}
+p.Basic-Paragraph {
+	color:#231f20;
+	font-family:"Minion Pro", serif;
+	font-size:12px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.2;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	widows:1;
+}
+table.TableOverride-1 {
+	border-color:#2997ce;
+	border-width:0px;
+}
+table.TableOverride-2 {
+	border-width:0.25px;
+}
+td.CellOverride-1 {
+	background-color:#2997ce;
+}
+td.CellOverride-2 {
+	padding-left:6px;
+}
+p.ParaOverride-1 {
+	text-align:center;
+}
+span.CharOverride-1 {
+	font-family:Alef, sans-serif;
+	font-size:60px;
+	font-style:normal;
+	font-weight:normal;
+}
+span.CharOverride-2 {
+	font-family:Alef, sans-serif;
+	font-size:24px;
+	font-style:normal;
+	font-weight:bold;
+}
+span.CharOverride-3 {
+	color:#2997ce;
+	font-family:"Droid Sans", sans-serif;
+	font-size:60px;
+	font-style:normal;
+	font-weight:normal;
+}
+span.CharOverride-4 {
+	font-family:Alef, sans-serif;
+	font-size:24px;
+	font-style:normal;
+	font-weight:normal;
+}
+span.CharOverride-5 {
+	font-family:"Droid Sans", sans-serif;
+	font-size:24px;
+	font-style:normal;
+	font-weight:bold;
+}
+span.CharOverride-6 {
+	color:#ffffff;
+	font-family:Alef, sans-serif;
+	font-size:8px;
+	font-style:normal;
+	font-weight:bold;
+}
+span.CharOverride-7 {
+	font-family:"Droid Sans", sans-serif;
+	font-size:8px;
+	font-style:normal;
+	font-weight:normal;
+}
+span.CharOverride-8 {
+	font-family:"Droid Sans", sans-serif;
+	font-size:8px;
+	font-style:normal;
+	font-weight:bold;
+}
+span.CharOverride-9 {
+	font-family:"Droid Sans", sans-serif;
+	font-style:normal;
+	font-weight:normal;
+}
+div._idGenPageitem-1 {
+	text-align:center;
+}
