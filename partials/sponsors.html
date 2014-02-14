@@ -1,6 +1,6 @@
 <div class="content sponsors panel">
     <div class="panel-body">
-        <div class="top sponsor">
+        <div class="top sponsor hidden-xs">
             <div class="callout">
                 <h2>Sponsor</h2>
                 <p>It is time to start planning for the February 22, 2014, conference, which will once again be held at the Adoba Hotel in Dearborn.  Now in it’s fifth year, this annual conference attracts over 600 agile enthusiasts and consistently sells out every year by drawing premier speakers and the highest caliber technologists in the industry.  The conference is a one day, multi-track event that covers all aspects of high performance technology solution delivery.</p>
@@ -11,9 +11,20 @@
 
 
         <div class="container">
-            <h1>Sponsorship Levels</h1>
+            <h1>Sponsors</h1>
 
 
+            <div class="sponsor_block" data-ng-repeat="level in sponsorData" class="{{level.label}} row">
+                <h3>{{level.label}}</h3>
+
+                    <div data-ng-repeat="sponsors in level.sponsors" class="{{sponsors.name}} col-lg-4">
+                        <img src="img/sponsors/{{sponsors.image}}" />
+                    </div>
+
+            </div>
+
+
+          <div style="display: none">
             <p>It is time to start planning for the February 22, 2014, conference, which will once again be held at the Adoba Hotel in Dearborn.  Now in it’s fifth year, this annual conference attracts over 600 agile enthusiasts and consistently sells out every year by drawing premier speakers and the highest caliber technologists in the industry.  The conference is a one day, multi-track event that covers all aspects of high performance technology solution delivery.</p>
 
             <p>Are you looking to hire professionals versed in agile? Do you have a product to sell that helps teams become or improve their ability to deliver? Please review the enclosed sponsorship prospectus to discover the benefits of partnering with us for this event.  Sponsorship opportunities are limited, and this year we have enhanced the sponsorship packages with blocks of tickets you can use to reward your highest profile customers or employees.</p>
@@ -112,7 +123,7 @@
 
 
             <p class="alert alert-success">Agile & Beyond is a not-for-profit organization. Proceeds from the Agile & Beyond 2014 Conference will support our mission to promote craftsmanship in the disciplines of agile and lean practices.</p>
-
+        </div>
         </div>
 
 

@@ -1,4 +1,80 @@
 #aab {
+
+    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+
+  .navbar {
+    padding: 10px 0 10px 0;
+    margin-bottom: 0;
+    background: #FFFFFF;
+  }
+
+  .sponsor_block {
+    clear: both;
+
+    img {
+      width: 170px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    padding-top: 0;
+
+    .speaker_block {
+      h4 {
+        font-size: 0.9em;
+      }
+    }
+
+    .sponsor_block {
+      img {
+        width: 95px;
+      }
+    }
+
+    .panel-default {
+      border: none;
+    }
+
+    .list-group {
+      list-style-type: none;
+      border: none;
+      margin: 0 -36px 0 -36px;
+      padding: 0;
+
+      li {
+        padding: 5px;
+        list-style-type: none;
+
+        &:nth-child(odd) {
+          background-color: #ccc;
+        }
+
+        h5 {
+
+        }
+      }
+    }
+
+    .navbar {
+      padding: 0;
+      margin-bottom: 8px;
+      background: transparent;
+    }
+
+    .navbar-toggle .icon-bar {
+      display: block;
+      width: 22px;
+      height: 2px;
+      border-radius: 1px;
+      border: 1px solid #0066bb;
+    }
+
+    .top {
+      display: none;
+    }
+
+  }
+
   iframe {
     border: none;
     width: 90%;
@@ -41,7 +117,7 @@
 
  .top {
 
-    height: 402px;
+    height: 312px;
     margin-bottom: 60px;
 
     .callout {
@@ -50,7 +126,7 @@
       width: 68%;
       min-height: 272px;
       position: relative;
-      top: 55px;
+      top: 25px;
       left: 40px;
 
       h1, h2, p {
@@ -182,11 +258,7 @@
       }
     }
   }
-  .navbar {
-    padding: 10px 0 10px 0;
-    margin-bottom: 0;
-    background: #FFFFFF;
-  }
+
 
   .navbar-nav {
     margin: 14px 0 0 0;
@@ -219,6 +291,19 @@
     height: 61px;
     text-indent: -9999px;
     margin: 10px 10px 0 5px;
+  }
+
+  @media (max-width: 1000px) {
+
+
+
+    .navbar-brand {
+      background: url("../img/bg/square_logo.png") no-repeat left center;
+      width: 60px;
+      height: 60px;
+      margin: 0 0 0 15px;
+      background-size: 100%;
+    }
   }
 
   img.pull-left {
@@ -343,6 +428,8 @@
     padding: 10px;
     background: #ffffff;
   }
+
+
 }
 
 .review {
@@ -536,6 +623,10 @@
     border-right: 1px solid #2997ce;
     padding: 4px;
 
+    a {
+      cursor: pointer;
+    }
+
     &.ae {
       background: url(../img/ae_bg.jpg) repeat-y;
     }
@@ -660,6 +751,8 @@ table.tablekey {
     padding: 0 8px;
     font-size: 12px;
 
+
+
     &.ae {
       background: url(../img/ae_bg.jpg) repeat-y;
     }
@@ -715,4 +808,9 @@ table.tablekey {
       width: 30%;
     }
   }
+}
+
+.modal-dialog {
+  width: 80%!important;
+  margin: 20px auto!important;
 }

@@ -1,7 +1,10 @@
-<div class="content speaker panel">
-    <div class="panel-body">
-        <div class="container">
-            <h1>{{sessionData[0].sessionTitle}} <br/><small>{{sessionData[0].firstName}} {{sessionData[0].lastName}}<span data-ng-show="sessionData[0].copresenter">/{{sessionData[0].copresenter}}</span> </small></h1>
-        </div>
-    </div>
+<div class="modal-header">
+   <img src="img/bios/{{speaker.image}}" class="img-rounded" width="48px" style="float: left; margin-right: 15px"> <h3>{{ speaker.firstName }} {{ speaker.lastName }}</h3>
+</div>
+<div class="modal-body">
+    <p>{{speaker.bio}}</p>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
 </div>

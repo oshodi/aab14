@@ -3,11 +3,10 @@
         <div class="top speaker">
             <div class="callout">
                 <h2>Speakers</h2>
-                <p>We are currently working through all the awesome proposals that have been submitted for Agile and
-                    Beyond 2014.  We hope to have the schedule settled by the first week of December.  Check back for
-                    details soon.</p>
+                <p>We have assemled some of the best and brightest minds in the Agile and Lean communities.  Over 30 great national and regional presenters will be on hand to give great information and insight!
+                </p>
 
-                <p>In the meantime, Early bird registration is now open!  Register today!
+                <p>You don't want to miss out on this great event!  Register today!
                     <br/><br/>
                     <a class="btn btn-primary register" href="http://aab2014-es2.eventbrite.com/">Register Today!</a>
                 </p>
@@ -15,7 +14,7 @@
         </div>
         <section class="content">
             <div class="container" data-ng-show="!acceptingProposals">
-                <div class="speaker_block col-lg-3" data-ng-click="showPresenter({{speakers.speakerid}})" data-ng-repeat="speakers in speakerData">
+                <div class="speaker_block col-lg-3 col-xs-6" data-ng-click="open($index)" data-ng-repeat="speakers in speakerData">
                     <img class="img-circle" src="img/bios/{{speakers.image}}">
                     <h4>{{speakers.firstName}} {{speakers.lastName}}</h4>
                     <p>{{speakers.truncatedBio}}</p>

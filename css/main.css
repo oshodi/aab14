@@ -1,3 +1,61 @@
+#aab {
+  padding-top: 60px;
+  /* 60px to make the container go all the way to the bottom of the topbar */
+
+}
+#aab .navbar {
+  padding: 10px 0 10px 0;
+  margin-bottom: 0;
+  background: #FFFFFF;
+}
+#aab .sponsor_block {
+  clear: both;
+}
+#aab .sponsor_block img {
+  width: 170px;
+}
+@media (max-width: 1000px) {
+  #aab {
+    padding-top: 0;
+  }
+  #aab .speaker_block h4 {
+    font-size: 0.9em;
+  }
+  #aab .sponsor_block img {
+    width: 95px;
+  }
+  #aab .panel-default {
+    border: none;
+  }
+  #aab .list-group {
+    list-style-type: none;
+    border: none;
+    margin: 0 -36px 0 -36px;
+    padding: 0;
+  }
+  #aab .list-group li {
+    padding: 5px;
+    list-style-type: none;
+  }
+  #aab .list-group li:nth-child(odd) {
+    background-color: #ccc;
+  }
+  #aab .navbar {
+    padding: 0;
+    margin-bottom: 8px;
+    background: transparent;
+  }
+  #aab .navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    border: 1px solid #0066bb;
+  }
+  #aab .top {
+    display: none;
+  }
+}
 #aab iframe {
   border: none;
   width: 90%;
@@ -25,7 +83,7 @@
   margin-right: 5px;
 }
 #aab .top {
-  height: 402px;
+  height: 312px;
   margin-bottom: 60px;
 }
 #aab .top .callout {
@@ -34,7 +92,7 @@
   width: 68%;
   min-height: 272px;
   position: relative;
-  top: 55px;
+  top: 25px;
   left: 40px;
 }
 #aab .top .callout h1,
@@ -129,11 +187,6 @@
   margin: 0;
   list-style-type: none;
 }
-#aab .navbar {
-  padding: 10px 0 10px 0;
-  margin-bottom: 0;
-  background: #FFFFFF;
-}
 #aab .navbar-nav {
   margin: 14px 0 0 0;
 }
@@ -160,6 +213,15 @@
   height: 61px;
   text-indent: -9999px;
   margin: 10px 10px 0 5px;
+}
+@media (max-width: 1000px) {
+  #aab .navbar-brand {
+    background: url("../img/bg/square_logo.png") no-repeat left center;
+    width: 60px;
+    height: 60px;
+    margin: 0 0 0 15px;
+    background-size: 100%;
+  }
 }
 #aab img.pull-left {
   margin-right: 15px;
@@ -438,6 +500,9 @@
   border-right: 1px solid #2997ce;
   padding: 4px;
 }
+.schedule-table table td a {
+  cursor: pointer;
+}
 .schedule-table table td.ae {
   background: url(../img/ae_bg.jpg) repeat-y;
 }
@@ -582,4 +647,8 @@ table.tablekey th {
 }
 .speakers .speaker_block img {
   width: 30%;
+}
+.modal-dialog {
+  width: 80%!important;
+  margin: 20px auto!important;
 }

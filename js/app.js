@@ -1,4 +1,4 @@
-var app = angular.module('AgileAndBeyondApp',['ngRoute']);
+var app = angular.module('AgileAndBeyondApp',['ngRoute','ui.bootstrap']);
 var controllers = {};
 toastr.options = {"positionClass": "toast-bottom-full-width"}
 app.conferenceYear = '2014';
@@ -164,6 +164,9 @@ app.factory('Service', function($http) {
         },
         getSpeakers: function() {
             return $http.get('rest/getSpeakers');
+        },
+        getSponsors: function() {
+            return $http.get('rest/getSponsors');
         }
     };
 });

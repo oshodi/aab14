@@ -12,13 +12,13 @@
     </div>
     <div class="container active-session">
 
-<div class="schedule_header">
+<div class="schedule_header hidden-phone">
     <table class="tablekey pull-right" data-ng-show="showGridView">
         <tr>
             <th colspan="3">Key</th>
         </tr>
         <tr>
-            <td class="ae">Agile Enineering</td>
+            <td class="ae">Agile Engineering</td>
             <td class="beginner">Beginner</td>
             <td class="org">Organization</td>
         </tr>
@@ -29,33 +29,157 @@
         </tr>
     </table>
     <h2>Conference Schedule
-        <div class="btn-group">
-            <button type="button" data-ng-class="{true: 'active', false: ''}[showGridView]" class="btn btn-default active" data-ng-click="toggleList('grid',$event)"><span class="glyphicon glyphicon-th"></span></button>
-            <button type="button" data-ng-class="{true: 'active', false: ''}[showListView]" class="btn btn-default" data-ng-click="toggleList('list',$event)"><span class="glyphicon glyphicon-th-list"></span> </button>
-        </div>
     </h2>
 
 </div>
 
-        <div class="panel panel-default schedule-list" data-ng-show="showListView">
+        <div class="panel panel-default schedule-list visible-phone">
+            <ul class="list-group">
+                <li class="table" data-ng-repeat="session in currentSchedule">
+                    <a data-ng-click="open(session.sessionId)" href='javascript:void(0)'>
+                        <h5 class="list-group-item-heading">{{session.sessionTitle}}</h5>
+                    </a>
+                        <p class="list-group-item-text">{{session.firstName}} {{session.lastName}}</p>
 
+                </li>
+            </ul>
             <!-- Table -->
-            <table class="table" data-ng-show="currentSchedule">
-                <tr>
-                    <th>&nbsp;</th><th>Speaker</th><th>Session</th><th>Time</th><th>Room</th>
-                </tr>
-                <tr data-ng-repeat="session in currentSchedule">
-                    <td class="flag">&nbsp;</td>
-                    <td>{{session.firstName}} {{session.lastName}}</td>
-                    <td><a href='#/Sessions/{{session.id}}'>{{session.sessionTitle}}</a></td>
-                    <td>{{session.lable}}</td>
-                    <td>{{session.roomName}}</td>
-                </tr>
-            </table>
+            <!--<table class="table" data-ng-show="currentSchedule">-->
+                <!--<tr>-->
+                    <!--<th>&nbsp;</th><th>Speaker</th><th>Session</th><th>Day</th><th>Time</th><th>Room</th>-->
+                <!--</tr>-->
+                <!--<tr data-ng-repeat="session in currentSchedule">-->
+                    <!--<td class="flag">&nbsp;</td>-->
+                    <!--<td>{{session.firstName}} {{session.lastName}}</td>-->
+                    <!--<td><a data-ng-click="open(session.sessionId)" href='javascript:void(0)'>{{session.sessionTitle}}</a></td>-->
+                    <!--<td>{{(session.day == '1') && 'Friday' || 'Saturday'}}</td>-->
+                    <!--<td>{{session.lable}}</td>-->
+                    <!--<td>{{session.rmname}}</td>-->
+                <!--</tr>-->
+            <!--</table>-->
         </div>
-        <div class="schedule-table" data-ng-show="showGridView">
+        <div class="schedule-table hidden-phone" data-ng-show="showGridView">
 
-        <table id="table-1" class="Basic-Table TableOverride-1 grid">
+        <h3>Friday Sessions</h3>
+        <table id="table-2" class="Basic-Table TableOverride-1 grid friday">
+        <colgroup>
+            <col width="11%">
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tbody>
+        <tr>
+            <td>
+            </td><td class="CellOverride-1">
+            <p class="Basic-Paragraph ParaOverride-1"><span class="CharOverride-6">Room 1</span></p>
+        </td>
+            <td class="CellOverride-1">
+                <p class="Basic-Paragraph ParaOverride-1"><span class="CharOverride-6">Room 2</span></p>
+            </td>
+            <td class="CellOverride-1">
+                <p class="Basic-Paragraph ParaOverride-1"><span class="CharOverride-6">Room 3</span></p>
+            </td>
+            <td class="CellOverride-1">
+                <p class="Basic-Paragraph ParaOverride-1"><span class="CharOverride-6">Room 4</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">5:00 PM - 9:00 PM</span></p>
+            </td>
+            <td colspan="4">
+                <p class="Basic-Paragraph ParaOverride-1"><span class="CharOverride-8">CONFERENCE OPEN/REGISTRATION</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">6:00 PM - 6:45 PM</span></p>
+            </td>
+            <td class="CellOverride-2 ae">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(93)">Git gone wild </a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Magnus Stahre)</span></p>
+            </td>
+            <td class="CellOverride-2 team">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(117)">Advancing in a resurgent economy using Agile Methodology</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Jagdish Karira)</span></p>
+            </td>
+            <td class="CellOverride-2 team">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(113)">Stop Thinking & Start Doing</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Daniel Davis)</span></p>
+            </td>
+            <td class="CellOverride-2 org">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(49)">Why tests provide more than code coverage... the business value behind a test.
+                </a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(DJ Daugherty)</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">7:00 PM - 7:45 PM</span></p>
+            </td>
+            <td class="CellOverride-2 team">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(20)">45 Agile Tools in 45 Minutes</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Paul Warner)</span></p>
+            </td>
+            <td class="CellOverride-2 perd">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(95)">Take a Trip to the Principles Office</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Dan Neumann)</span></p>
+            </td>
+            <td class="CellOverride-2 ae">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(31)">Enterprise DevOps Patterns</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Steven Boone)</span></p>
+            </td>
+            <td class="CellOverride-2 pd">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(118)">Technical Debt for the Non-Technical </a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Collin Fagan)</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">8:00 PM - 8:45 PM</span></p>
+            </td>
+            <td class="CellOverride-2 ae" rowspan="2">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(18)">Test Driven Development: From the Ground Up </a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Erik Przekop/Bill Binkiewicz)</span></p>
+            </td>
+            <td class="CellOverride-2 org" rowspan="2">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(42)">Transforming a Public Sector Company - From Stone Age to Agile </a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Ardita Karaj/Jason Little)</span></p>
+            </td>
+            <td class="CellOverride-2 team" rowspan="2">
+
+            </td>
+            <td class="CellOverride-2 org" rowspan="2">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(69)">Beyond Agile Practices: The Principles Behind High Performing Teams</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(JD Sallee/Edgardo Engalan)</span></p>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">9:00 PM - 9:45 PM</span></p>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">10:00 PM - ??</span></p>
+            </td>
+            <td colspan="4">
+                <p class="Basic-Paragraph ParaOverride-1"><span class="CharOverride-8">HACKING/OPEN SPACES</span></p>
+            </td>
+
+
+        </tr>
+        </tbody>
+        </table>
+
+
+        <h3>Saturday</h3>
+
+        <table id="table-1" class="Basic-Table TableOverride-1 grid saturday">
         <colgroup>
             <col width="11%">
             <col>
@@ -104,7 +228,7 @@
                 <p class="Basic-Paragraph"><span class="CharOverride-7">8:45 AM - 9:45 AM</span></p>
             </td>
             <td colspan="7">
-                <p class="Basic-Paragraph ParaOverride-1"><span class="CharOverride-8">Joshua Kerievsky</span><span class="CharOverride-7"> - <a href="#/Sessions/126">Anzeneering (KEYNOTE)</a></span></p>
+                <p class="Basic-Paragraph ParaOverride-1"><span class="CharOverride-8">Joshua Kerievsky</span><span class="CharOverride-7"> - <a data-ng-click="open(126)">Anzeneering (KEYNOTE)</a></span></p>
             </td>
         </tr>
         <tr>
@@ -112,31 +236,31 @@
                 <p class="Basic-Paragraph"><span class="CharOverride-7">10:00 AM - 10:45 AM</span></p>
             </td>
             <td class="CellOverride-2 team">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/33">Teaching Agile Principles Through Experiential Exercises</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(33)">Teaching Agile Principles Through Experiential Exercises</a></span></p>
                 <p class="Basic-Paragraph"><span class="CharOverride-7">(Andy Brown)</span></p>
             </td>
             <td class="CellOverride-2 ae" rowspan="2">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/28">Patterns of <br>Automation</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(28)">Patterns of <br>Automation</a></span></p>
                 <p class="Basic-Paragraph"><span class="CharOverride-7">(Jeff ‘Cheezy‘ Morgan)</span></p>
             </td>
             <td class="CellOverride-2 org" rowspan="1">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/76">Lean Operations: A practical guide to delivering like a start-up in a complex environment.</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7">(Rob Keefer)</span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(76)">Lean Operations: A practical guide to delivering like a start-up in a complex environment.</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Rob Keefer/Paul Spencer)</span></p>
             </td>
             <td class="CellOverride-2 org" rowspan="2">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/88">Instill an Agile virus in your organization, empower your team, change your life.</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(88)">Instill an Agile virus in your organization, empower your team, change your life.</a></span></p>
                 <p class="Basic-Paragraph"><span class="CharOverride-7">(Gerry Kirk)</span></p>
             </td>
             <td class="CellOverride-2 team" rowspan="2">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/99">The Silence of Agile - changing the way you engage your team.</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(99)">The Silence of Agile - changing the way you engage your team.</a></span></p>
                 <p class="Basic-Paragraph"><span class="CharOverride-7">(Steve Rogalsky)</span></p>
             </td>
-            <td class="CellOverride-2 org">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/80">The Secrets of Kick-ass Software Development at Atlassian</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><br>(Dan Chuparkoff)</span></p>
+            <td class="CellOverride-2 pd">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(62)">Don’t Satisfy Your Users. Delight Them!</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Derek Poppink/Dan Marano) </span></p>
             </td>
             <td class="CellOverride-2 team">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/24">Cross-Functional Peer Review: Making Agile Development Teams Stronger</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(24)">Cross-Functional Peer Review: Making Agile Development Teams Stronger</a></span></p>
                 <p class="Basic-Paragraph"><span class="CharOverride-7"><br>(Mark Hammer)</span></p>
             </td>
         </tr>
@@ -144,82 +268,106 @@
             <td>
                 <p class="Basic-Paragraph"><span class="CharOverride-7">11:00 AM - 11:45 AM</span></p>
             </td>
-            <td class="CellOverride-2 beginner">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/120">Agile: from Principles to Practice</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7">(Nayan Hajratwala)</span></p>
+            <td class="CellOverride-2 org">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(64)">Changing the Language of Change</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Andrew Annett)</span></p>
             </td>
             <td class="CellOverride-2 team">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/65">“Wow! That was an awesome retro!”</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7">(Angela Harms)</span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(73)">One Weird Tip To Improve Collaboration</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Matthew Heusser/David Hoppe)</span></p>
             </td>
             <td class="CellOverride-2 ae">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/89">The Power of Promiscuous Pairing</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><br>(Thomas Piggott)</span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(89)">The Power of Promiscuous Pairing</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><br>(Thomas Piggott/Carol Treat Morton)</span></p>
             </td>
-            <td class="CellOverride-2 pd">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/62">Don’t Satisfy Your Users. Delight Them!</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7">(Derek Poppink) </span></p>
+            <td class="CellOverride-2 org">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(80)">The Secrets of Kick-ass Software Development at Atlassian</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><br>(Dan Chuparkoff)</span></p>
             </td>
         </tr>
         <tr>
             <td>
-                <p class="Basic-Paragraph"><span class="CharOverride-7">11:45 AM - 1:00 PM</span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">11:45 AM - 1:00 PM (LUNCH<br>Sponsor Sessions)</span></p>
             </td>
-            <td colspan="7">
-                <p class="Basic-Paragraph ParaOverride-1"><span class="CharOverride-8">LUNCH</span></p>
+            <td class="CellOverride-2 ">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(128)">Pillar - Tractors to Teslas</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><br>(Matt VanVleet/DJ Daugherty)</span></p>
+            </td>
+            <td class="CellOverride-2 ">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(130)">Rally - The Impact of Agile. Quantified.</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><br>(Joel Krooswyk)</span></p>
+            </td>
+            <td class="CellOverride-2 ">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(132)">IBM - Scaling Agile practices with Rational Team Concert</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><br>(Ed Neubecker/Eyal Abukasis)</span></p>
+            </td>
+            <td class="CellOverride-2 ">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(131)">CIBER - Applying Organizational Change and Leadership to Agile Transformations</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><br>(Joseph Vallone)</span></p>
+            </td>
+            <td class="CellOverride-2 ">
+                &nbsp;
+            </td>
+            <td class="CellOverride-2 ">
+                &nbsp;
+            </td>
+            <td class="CellOverride-2 ">
+                &nbsp;
             </td>
         </tr>
         <tr>
             <td>
                 <p class="Basic-Paragraph"><span class="CharOverride-7">1:00 PM - 1:45 PM</span></p>
             </td>
-            <td class="CellOverride-2 org" rowspan="2">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/105">Creating Partnership: Essential Conversations</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7">(Esther Derby)</span></p>
-            </td>
-            <td class="CellOverride-2 org">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/64">Changing the Language of Change</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7">(Andrew Annett)</span></p>
-            </td>
             <td class="CellOverride-2 ae">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/41">QA in an agile world</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(41)">QA in an agile world</a></span></p>
                 <p class="Basic-Paragraph"><span class="CharOverride-7">(Tom Churchwell)</span></p>
             </td>
+            <td class="CellOverride-2 beginner">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(120)">Agile: from Principles to Practice</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Nayan Hajratwala)</span></p>
+            </td>
+            <td class="CellOverride-2 org" rowspan="2">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(105)">Creating Partnership: Essential Conversations</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Esther Derby/Susan DiFabio)</span></p>
+            </td>
             <td class="CellOverride-2 pd" rowspan="2">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/53">Following Your Fear: The Connection Between Agile, Improv, and Fear</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(53)">Following Your Fear: The Connection Between Agile, Improv, and Fear</a></span></p>
                 <p class="Basic-Paragraph"><span class="CharOverride-7">(Todd Charron)</span></p>
             </td>
             <td class="CellOverride-2 team">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/73">One Weird Tip To Improve Collaboration</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7">(Matthew Heusser)</span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(65)">“Wow! That was an awesome retro!”</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Angela Harms)</span></p>
             </td>
             <td class="CellOverride-2 org">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/57">Building Your Road-map to Agility</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7">(Jason Little)</span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(57)">Building Your Road-map to Agility</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Jason Little/Andrew Annett)</span></p>
             </td>
-            <td class="CellOverride-2 team" rowspan="2">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/26">See the Value</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7">(Jeff ‘Cheezy‘ Morgan)</span></p>
+            <td class="CellOverride-2 pd" rowspan="2">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(68)">Agile Portfolio Management: Maximizing Return While Managing Risk in a Dynamic Marketplace</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(John Rudd)</span></p>
             </td>
         </tr>
         <tr>
             <td>
                 <p class="Basic-Paragraph"><span class="CharOverride-7">2:00 PM - 2:45 PM</span></p>
             </td>
-            <td class="CellOverride-2 pd">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/39">Beyond Requirements Dictator: How Agile Helped a Business Analyst Discover Her Real Value</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7">(Diane Zajac-Woodie)</span></p>
-            </td>
             <td class="CellOverride-2 org">
-
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(127)" href="javascript:void(0)">The Distributed Agile Team - Effective Collaboration from Opposite Sides of the Globe</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Dan Chuparkoff)</span></p>
             </td>
+            <td class="CellOverride-2 pd">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(44)">From I to T - Collaboration of roles in Agile teams</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Ardita Karaj)</span></p>
+            </td>
+
             <td class="CellOverride-2 team">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/112">What do Google, Zappos and Spotify have that your company doesn’t? (SPOILER ALERT: A Strong Culture)</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(112)">What do Google, Zappos and Spotify have that your company doesn’t? (SPOILER ALERT: A Strong Culture)</a></span></p>
                 <p class="Basic-Paragraph"><span class="CharOverride-7">(Aimme Keener)</span></p>
             </td>
             <td class="CellOverride-2 org">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/121">You are not as Agile as you think you are!</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7">(Daniel Davis)</span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(30)">Want to empower your people? Just BEGIN!</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Shawn Button/Chris Farrell)</span></p>
             </td>
         </tr>
         <tr>
@@ -235,32 +383,32 @@
                 <p class="Basic-Paragraph"><span class="CharOverride-7">3:00 PM - 3:45 PM</span></p>
             </td>
             <td class="CellOverride-2 ae">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/50">Defects, tech debt and user stories... they are all the same.</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(50)">Defects, tech debt and user stories... they are all the same.</a></span></p>
                 <p class="Basic-Paragraph"><span class="CharOverride-7">(DJ Daugherty)</span></p>
             </td>
             <td class="CellOverride-2 team" rowspan="2">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/52">Communicate With Styles - Employing And Enjoying Our Differences</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(52)">Communicate With Styles - Employing And Enjoying Our Differences</a></span></p>
                 <p class="Basic-Paragraph"><span class="CharOverride-7">(Susan Johnston)</span></p>
             </td>
             <td class="CellOverride-2 org">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/71">Who needs an Estimate anyway? A roving discussion of #NoEstimates</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7">(Matthew Heusser)</span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(71)">Who needs an Estimate anyway? A roving discussion of #NoEstimates</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Matthew Heusser/David Hoppe/Steve Rogalsky/Angela Harms)</span></p>
             </td>
             <td class="CellOverride-2 pd">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/63">Removing the UX Roadblock</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(63)">Removing the UX Roadblock</a></span></p>
                 <p class="Basic-Paragraph"><span class="CharOverride-7">(Tonya McCarley)</span></p>
             </td>
             <td class="CellOverride-2 org">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/23">The Scaled Agile Framework - What it is, What it isn’t, and what it means for Agile</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(23)">The Scaled Agile Framework - What it is, What it isn’t, and what it means for Agile</a></span></p>
                 <p class="Basic-Paragraph"><span class="CharOverride-7">(Holly Bielawa)</span></p>
             </td>
-            <td class="CellOverride-2 pd" rowspan="2">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/68">Agile Portfolio Management: Maximizing Return While Managing Risk in a Dynamic Marketplace</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7">(John Rudd)</span></p>
+            <td class="CellOverride-2 team" rowspan="2">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(26)">See the Value</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Jeff ‘Cheezy‘ Morgan/Ardita Karaj)</span></p>
             </td>
             <td class="CellOverride-2 org">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/30">Want to empower your people? Just BEGIN!</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7">(Shawn Button)</span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(39)">Beyond Requirements Dictator: How Agile Helped a Business Analyst Discover Her Real Value</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Diane Zajac-Woodie)</span></p>
             </td>
         </tr>
         <tr>
@@ -268,23 +416,24 @@
                 <p class="Basic-Paragraph"><span class="CharOverride-7">4:00 PM - 4:45 PM</span></p>
             </td>
             <td class="CellOverride-2 ae">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/119">Beyond the Unit Test: An Acceptance and Regression testing primer</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(119)">Beyond the Unit Test: An Acceptance and Regression testing primer</a></span></p>
                 <p class="Basic-Paragraph"><span class="CharOverride-7">(Dan Putman)</span></p>
             </td>
             <td class="CellOverride-2 team">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/44">From I to T - Collaboration of roles in Agile teams</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7">(Ardita Karaj)</span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(87)">Lifecycle of a Storycard</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Nate Shiff/Megan Graham)</span></p>
             </td>
-            <td class="CellOverride-2 ae">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/87">Lifecycle of a Storycard</a></span></p>
-                <p class="Basic-Paragraph"><span class="CharOverride-7">(Nate Shiff)</span></p>
+            <td class="CellOverride-2 org">
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(121)">You are not as Agile as you think you are!</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7">(Daniel Davis)</span></p>
+
             </td>
             <td class="CellOverride-2 team">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/90">Are Decision Dilemmas Slowing You Down?</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(90)">Are Decision Dilemmas Slowing You Down?</a></span></p>
                 <p class="Basic-Paragraph"><span class="CharOverride-7">(Gerry Kirk)</span></p>
             </td>
             <td class="CellOverride-2 org">
-                <p class="Basic-Paragraph"><span class="CharOverride-7"><a href="#/Sessions/70">Selling Agile in a Waterfall World</a></span></p>
+                <p class="Basic-Paragraph"><span class="CharOverride-7"><a data-ng-click="open(70)">Selling Agile in a Waterfall World</a></span></p>
                 <p class="Basic-Paragraph"><span class="CharOverride-7">(Jason Lukas)</span></p>
             </td>
         </tr>
@@ -293,7 +442,7 @@
                 <p class="Basic-Paragraph"><span class="CharOverride-7">5:00 PM - 10:00 PM</span></p>
             </td>
             <td colspan="7">
-                <p class="Basic-Paragraph ParaOverride-1"><span class="CharOverride-8">AFTERSPLOTION</span><span class="CharOverride-7"> - Come celebrate and network with FREE food and beverages</span></p>
+                <p class="Basic-Paragraph ParaOverride-1"><span class="CharOverride-8">AFTERSPLOSION</span><span class="CharOverride-7"> - Come celebrate and network with FREE food and beverages</span></p>
             </td>
         </tr>
         </tbody>

@@ -1,4 +1,4 @@
-controllers.speakerSubmissionController = function($scope, $http,$rootScope,Service) {
+controllers.speakerSubmissionController = function($scope,$modal,$log,$rootScope,Service) {
     $scope.defaultForm = {
         firstName:"",
         middleName:"",
@@ -61,4 +61,32 @@ controllers.speakerSubmissionController = function($scope, $http,$rootScope,Serv
         $scope.speakerData = data;
     });
 
+
+    $scope.items = ['item1', 'item2', 'item3'];
+
+    $scope.open = function (index) {
+
+        var modalInstance = $modal.open({
+            templateUrl: 'partials/speakerView.html',
+            controller: controllers.ModalInstanceCtrl,
+            resolve: {
+                items: function () {
+                    return $scope.items;
+                },
+                speaker: function() {
+                    //$scope.speakerData[index].bio = $scope.speakerData[index].bio.replace(/\n/g, '<br />');
+                    return $scope.speakerData[index];
+
+                }
+            }
+        });
+
+        modalInstance.result.then(function (selectedItem) {
+            $scope.selected = selectedItem;
+        }, function () {
+            $log.info('Modal dismissed at: ' + new Date());
+        });
+    };
 };
+
+

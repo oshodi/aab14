@@ -10,6 +10,11 @@ controllers.mainController = function($scope,$rootScope) {
         $scope.auth.isAuthenticated = true;
     }
 
+    $scope.toggleNav = function() {
+
+        $('#mainNav').toggleClass('collapse');
+    };
+
 
     $scope.aUrl = $rootScope.location.absUrl();
 
@@ -41,6 +46,9 @@ controllers.mainController = function($scope,$rootScope) {
 
     $scope.setActive = function(item) {
         $scope.selected = item;
+        if($('#mainNav').is(':visible')) {
+            $('#mainNav').toggleClass('collapse');
+        }
     };
 
     $scope.setActive($scope.pages[0]);

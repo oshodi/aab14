@@ -376,25 +376,59 @@
 			}
 		}
 
-		private function retrieveSessions() {
-			$sql = "SELECT * FROM schedule_times ORDER BY id";
+		private function getSponsors() {
+			if($this->get_request_method() != "GET"){
+				$this->response('',406);
+			}
+			$rows = array();
+			$sql = "SELECT * FROM sponsor_levels ORDER BY levelid";
 			$query = mysql_query($sql, $this->db);
 			if($query) {
-				$result = array();
+				
 				while($rlt = mysql_fetch_array($query,MYSQL_ASSOC)){
-					$id = $rlt['id'];
-					$result[$id] = $rlt;
-					$result[$id]['sessions'] = array();
-
-					$secAql = "SELECT * FROM session_table WHERE time=$id";
+					$label = $rlt['level'];
+					$id = $rlt['levelid'];
+					$rlt['sponsors'] = array();
+					
+					$secAql = "SELECT * FROM sponsors WHERE level=$id";
 					$query2 = mysql_query($secAql, $this->db);
 					while($rlt2 = mysql_fetch_array($query2,MYSQL_ASSOC)){
-						array_push($result[$id]['sessions'], $rlt2);
+						array_push($rlt['sponsors'], $rlt2);
 					}
-					
+
+					$rows[] = $rlt;
 				}
 
-				return $result; 
+				$this->response($this->json($rows), 200);
+
+			} else {
+				$error = array('status' => "Failed", "msg" => mysql_error());
+				$this->response($this->json($error), 400);
+			}
+
+		}
+
+		private function retrieveSessions() {
+			$rows = array();
+			$sql = "SELECT * FROM schedule_times ORDER BY day,id";
+			$query = mysql_query($sql, $this->db);
+			if($query) {
+				
+				while($rlt = mysql_fetch_array($query,MYSQL_ASSOC)){
+					$id = $rlt['id'];
+					$rlt['sessions'] = array();
+
+					$secAql = "SELECT * FROM session_table st, rooms rm WHERE st.time=$id AND st.room=rm.roomid";
+					$query2 = mysql_query($secAql, $this->db);
+					while($rlt2 = mysql_fetch_array($query2,MYSQL_ASSOC)){
+						array_push($rlt['sessions'], $rlt2);
+					}
+
+					$rows[] = $rlt;
+				}
+
+				//return $result; 
+				$this->response($this->json($rows), 200);
 			} else {
 				$error = array('status' => "Failed", "msg" => mysql_error());
 				$this->response($this->json($error), 400);
@@ -408,7 +442,8 @@
 				$this->response('',406);
 			}
 			
-			
+			mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $this->db);
+
 			$sql = "SELECT * FROM speakers ORDER BY lastName";
 			$query = mysql_query($sql, $this->db);
 			$rows = array();
@@ -426,9 +461,24 @@
 			if($this->get_request_method() != "GET"){
 				$this->response('',406);
 			}
+
+			$day = (int)$this->_request['day'];
+			$filter = "";
+			if($day == '1' || $day=='2') {
+				$filter = "AND s.day='$day'";
+			}
 			
 			
-			$sql = "SELECT s.*,r.*,tm.* FROM session_table as s JOIN rooms as r ON s.room = r.roomid JOIN schedule_times as tm ON s.time = tm.id WHERE s.accepted='1' ORDER BY s.time,s.room";
+			$sql = "SELECT s.firstName,s.lastName,s.sessionTitle,s.id sessionId,s.personalSite, s.sessionAbstract, 
+			s.sessionAudience,
+			s.twitter,
+			s.middleName,
+			s.personalSite,
+			s.sessionAudience,
+			s.sessionLevel, 
+			r.roomid rid,
+			r.roomName rmname,
+			tm.* FROM session_table as s JOIN rooms as r ON s.room = r.roomid JOIN schedule_times as tm ON s.time = tm.id WHERE s.accepted='1' " . $filter . " ORDER BY s.day,s.time,s.room";
 			$query = mysql_query($sql, $this->db);
 			$rows = array();
 
@@ -506,6 +556,7 @@
 					FROM `votes`,`session_table` 
 					WHERE votes.sessionid = '$sessionid' AND session_table.id = '$sessionid' 
 					";
+			mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $this->db);
 
 			$query = mysql_query($sql, $this->db);
             $rows = array();
