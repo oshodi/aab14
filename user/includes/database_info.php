@@ -15,11 +15,11 @@ exit;
 define('SYSTEM_INSTALLED', true);
 $database_prefix = 'qls3_';
 $database_type = 'MySQL';
-// $database_server_name = 'aabapi2.db.11845101.hostedresource.com';
-// $database_username = 'aabapi2';
-// $database_password = 'Ba1l3y12#';
-// $database_name = 'aabapi2';
-// $database_port = false;
+ $database_server_name = 'aabapi2.db.11845101.hostedresource.com';
+ $database_username = 'aabapi2';
+ $database_password = 'Ba1l3y12#';
+ $database_name = 'aabapi2';
+ $database_port = false;
 
 
 // $database_server_name = 'aabapi.db.9934665.hostedresource.com';
@@ -28,11 +28,11 @@ $database_type = 'MySQL';
 // $database_name = 'aabapi';
 // $database_port = false;
 
-$database_server_name = 'localhost';
-$database_username = 'root';
-$database_password = 'root';
-$database_name = 'aabapi';
-$database_port = '8889';
+//$database_server_name = 'localhost';
+//$database_username = 'root';
+//$database_password = 'root';
+//$database_name = 'aabapi';
+//$database_port = '8889';
 
 /**
  * Use persistent connections?
